@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<link rel="stylesheet" type="text/css" href="css/style.css" />  
+		<meta charset="utf-8" />
+		<title>jeu Guyana Dream</title>
+		<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+	</head>
+	<body>
+		<header>
+			<h1>Guyana Dream - Jeu en javascript</h1>
+		
+			<p>Un projet de jeu écolo opensource sur la faune de la Guyane : <br />Comment apprendre en créant un jeu vidéo.</p>	
+
+			<nav class="mainnav">
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="graphismes.html">Graphismes</a></li>
+					<li><a href="regles.html">Règles</a></li>
+					<li><a href="tuto.html">Tuto</a></li>
+					<li><a href="liens.html">Liens</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<aside id="asidejeu">
+				<p id="consigne">Cliquez sur votre perso.</p>
+
+				<div id="perso1"></div>	
+				<div id="perso2"></div>
+	
+				<div id="pnj1"></div>
+	
+				<p>Niveau <span id="niveau"></span></p>
+	
+				<p id="score">Score = 0</p>
+	
+				<div id="inventaire">
+						<div id="fruit1"><img src="tilesets/fruit1.png" alt="fruit 1" /><span id="affichenbfruit1"></span></div><br />
+						<div id="fruit2"><img src="tilesets/fruit2.png" alt="fruit 2" /><span id="affichenbfruit2"></span></div><br />
+						<div id="fruit3"><img src="tilesets/fruit3.png" alt="fruit 3" /><span id="affichenbfruit3"></span></div>
+				</div>
+			</aside>
+
+			<section>
+		
+				<canvas width="768" height="384">Votre navigateur ne supporte pas HTML5! Je vous conseille de vous mettre à jour!</canvas><!-- fond de carte -->
+				<canvas width="768" height="384"></canvas><!-- éléments interactifs (arbres) -->
+				<canvas width="768" height="384"></canvas><!-- éléments animés -->
+				<canvas width="768" height="384"></canvas><!-- personnages -->
+				<!-- pour plus tard -->
+				<canvas width="768" height="384"></canvas><!-- messages -->
+				<canvas width="768" height="384"></canvas><!-- vie et armements -->
+				<canvas width="768" height="384"></canvas><!-- transition de carte -->
+
+				<script type="text/javascript" src="js/carte.js"></script> 
+				<script type="text/javascript" src="js/persos.js"></script> 
+				<script type="text/javascript" src="js/evenements.js"></script> 
+
+				<article class="articleindex">
+
+					<p>Tuiles de 32 * 32 px. Canvas superposés de 768 * 384 px (multiples de 16, de 24 et de 32).</p>
+					<p class="dejafait">Choisissez votre perso pour le faire apparaître. On peut changer de perso à tout moment, pas très logique, mais rigolo !
+					<br />Utilisez les flèches du pavé directionnel pour le déplacer.
+					<br />Au croisement du chemin, en utilisant les flèches bas et droite, la carte change.
+					<br />En passant sur certains fruits ou baguettes de palmier jaunies, on les fait disparaitre et on fait apparaitre des images à gauche, ainsi que le score.
+					<br />Avez-vous remarqué le petit perroquet qui bat des ailes ?</p>
+		
+					<p>Il y a de petits blocages entre certains arbres et il faut parfois contourner le chemin alors qu'il n'y a rien dessus...<br />
+					Testez! Réactualisez en cas de problèmes.<br />Il y a encore des soucis sous IE. On a ajouté <a href="http://code.google.com/p/explorercanvas/downloads/list" target="_blank">excanvas.js</a> mais ça ne suffit pas.</p>
+					<p>Décors réalisés avec <a href="http://www.blender.org" target="_blank">Blender</a> à partir de <a href="http://www.glitchthegame.com/public-domain-game-art/" target="_blank">Glitch</a> et d'<a href="documents/liens-utilises.txt">images libres de droit</a> par <a href="http://opengameart.org/users/doudoulolita" target="_blank">Doudoulolita</a> - <a href="sources/tuto.zip" target="_blank">Code javascript</a> d'après un tuto de <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5?page=1" target="_blank">jam-jam68140</a> (aide et idées bienvenues)</p>
+					<p>Scripts: fichiers <a href="js/carte.js">carte.js</a>, <a href="js/persos.js">persos.js</a>, <a href="js/evenements.js">evenements.js</a> + <a href="map.json">map.json</a> et feuille de style <a href="css/style.css">style.css</a>.</p>
+
+				<figure>
+					<img src="sprites/joueur1.png" style="margin-right:30px;"><img src="sprites/joueur2.png" style="margin-right:30px;"><img src="sprites/pnj1.png">
+					<figcaption>
+						spritesheets des personnages : atèle, capucin, ara
+					</figcaption>
+				</figure>
+
+				</article>
+			</section>
+	
+			<footer class="footerindex">
+				<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+				<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
+			</footer>
+		</main>
+	</body>
+</html>

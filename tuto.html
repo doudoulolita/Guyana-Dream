@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<link rel="stylesheet" type="text/css" href="css/style.css" />  
+		<meta charset="utf-8" />
+		<title>jeu Guyana Dream - tuto</title>
+	</head>
+	<body>
+
+		<header>
+			<h1>Guyana Dream</h1>
+
+			<h2 style="margin-top:40px;">Le but du jeu</h2>
+
+			<nav class="mainnav">
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="graphismes.html">Graphismes</a></li>
+					<li><a href="regles.html">Règles</a></li>
+					<li><a href="tuto.html">Tuto</a></li>
+					<li><a href="liens.html">Liens</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section>
+				<article>
+
+					<h3>Le tutoriel</h3>
+
+					<img src="tuto/tilesets/tileset-petit.png"  style="float:left; margin-right:20px;">
+
+					<p>Le jeu Guyana-Dream est destiné à illustrer un futur tutoriel déjà rédigé en partie par <a href="http://fr.openclassrooms.com/membres/jam-jam68140-74695" target="_blank">Jamjam68140</a> mais qui doit être revu et complété.</p>
+
+					<p>Sur <a href="http://fr.openclassrooms.com" target="_blank">Openclasssroom</a>, il y a un tutoriel nommé <a href="http://fr.openclassrooms.com/informatique/cours/creer-un-mini-rpg-en-javascript-avec-canvas" target="_blank">Créer un mini-rpg en javascript avec canvas</a> par <a href="http://fr.openclassrooms.com/membres/sebcap26-44418" target="_blank">sebcap26</a>. <a href="https://github.com/Seb-C/sources-tuto-rpg-openclassrooms" target="_blank">Les sources</a> sont disponibles sur Github</p>
+
+					<p><a href="http://fr.openclassrooms.com/membres/jam-jam68140-74695" target="_blank">Jamjam68140</a> a eu l'idée de lancer le topic <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5" target="_blank">[big-tuto] Créer un rpg avec html5</a> pour le pousuivre. Son code est un peu différent de celui de <a href="http://fr.openclassrooms.com/membres/sebcap26-44418" target="_blank">sebcap26</a> et peut-être plus simple. Mais la difficulté consiste à trouver le temps et les personnes pour travailler sur ce tutoriel.</p>
+
+				</article>
+
+				<article>
+
+					<h3>La feuille de route</h3>
+
+					<h4>Révision totale du tuto</h4>
+
+			<p>La feuille de route affichée ici se basera sur des tutoriels trouvés sur internet, en essayant de simplifier le code au maximum pour le rendre plus compréhensible.</p>
+
+		<h3>Plan du tutoriel - Première partie</h3>
+
+<p>Ce plan est susceptible de changer d'ici le rédaction complète du tutoriel.</p>
+
+		<h4>Présentation de l’architecture d’un RPG</h4>
+		<ol>
+			<li>Les éléments basiques d’un RPG</li>
+			<li>Que devra-t-on savoir programmer pour réaliser un RPG basique ?</li>
+		</ol>
+
+		<h4><a href="jeu-sdj-all/jeu-sdj2b-simplifie/index.html" target="_blank">Afficher des images sur le canvas</a></h4>
+		<ol>
+			<li><a href="tuto2/tuto00.html" target="_blank">00 - Mise en place du code HTML minimal</a></li>
+			<li><a href="tuto2/tuto01.html" target="_blank">01 - Remplir le canvas de couleur</a></li>
+			<li>Afficher une image entière sur le canvas</li>
+			<li>Afficher une petite image au coin du canvas</li>
+			<li>Afficher une petite image sur le canvas à un endroit précis</li>
+			<li>Afficher un bout d'image sur le canvas</li>
+			<li>Afficher un bout d'image sur le canvas à un endroit précis</li>
+		</ol>
+
+
+		<h4>Créer une carte de jeu</h4>
+		<ol>
+			<li>Présentation des tilesets</li>
+			<li>Notion de tuile</li>
+			<li>Numéroter les tuiles du tileset</li>
+			<li>Récupérer une tuile en fonction de son numéro et l'afficher au coin du canvas</li>
+			<li>Récupérer une tuile en fonction de son numéro et l'afficher sur le canvas à un endroit précis</li>
+			<li>Afficher la première ligne de la carte.  Voir <a href="tuto2/tuto03a/index.html" target="_blank">essai 03a</a>.</li>
+			<li>Dessiner toutes les lignes de la carte.  Voir <a href="tuto2/tuto03b/index.html" target="_blank">essai 03b</a>.</li>
+		</ol>
+
+		<h4>Créer un personnage</h4>
+		<ol>
+			<li>Déplacer un objet</li>
+			<li>Présentation des sprites et de la spritesheet</li>
+			<li>Afficher chacune des poses du personnage de la première ligne de la spritesheet à intervalles réguliers</li>
+			<li>Déplacement et animation d'un personnage à l'horizontal - <a href="tuto2/tuto04/index.html" target="_blank">essai 04</a> d'après la vidéo <a href="https://www.youtube.com/watch?v=yna816VY8rg" target="_blank">Sprites et animation - Javascript </a> par <a href="https://www.youtube.com/channel/UChXy935RrhKDL3EtFcITM5w" target="_blank">Computer Scientists</a></li>
+			<li>Animation d'un personnage dans tous les sens (en passant aux autres lignes de la spritesheet)</li>
+		</ol>
+
+		<h4>Déplacer un personnage en fonction des touches du clavier</h4>
+		<ol>
+			<li>Code des touches du clavier</li>
+			<li>Vérifier si une touche est pressée</li>
+			<li>Afficher un personnage si une touche est pressée</li>
+			<li>Déplacer un personnage dans une direction si une touche est pressée</li>
+			<li>Déplacer un personnage dans les 4 directions selon la touche pressée. Voir <a href="tuto2/tuto05/index.html" target="_blank">essai 05</a>.</li>
+			<li>Animer le personnage selon le sens de la touche</li>
+
+		</ol>
+
+		<h4>Collision</h4>
+		<ol>
+			<li>Le principe des calques pour placer le personnage au-dessus du décor</li>
+			<li>Gérer les bords du canvas où le personnage doit s'arrêter</li>
+			<li>Trouver les coordonnées de l'élément à éviter</li>
+			<li>Comparer les coordonnées de l'élément à éviter à celles du personnage</li>
+			<li>Arrêt du personnage en cas de collision avec un élement du décor à éviter</li>
+		</ol>
+
+		<h4>Attraper des objets</h4>
+		<ol>
+
+			<li>Supression d'un objet à attraper en cas de passage du personnage sur sa tuile</li>
+			<li>Placement de cet objet dans un inventaire</li>
+			<li>Comptabilisation du nombre d'objets attrapés et affichage du nombre</li>
+		</ol>
+
+		<h4>Choisir un personnage</h4>
+		<ol>
+			<li>Changer la vitesse de déplacement du personnage quand il a obtenu un certain nombre de points de nourriture</li>
+			<li>Proposer deux personnages, au choix</li>
+			<li>Afficher le personnage choisi sur la carte</li>
+			<li>L'un des persos étant plus grand que la taille d'une tuile, le petit pourra se glisser dans des ouvertures auxquelles l'autre n'aura pas accès.</li>
+			<li>changer la vitesse de déplacement d'un seul des 2 personnages en fonction de son espèce</li>
+
+		</ol>
+
+		<h4>Changer de carte</h4>
+		<ol>
+			<li>Choisir l'emplacement (ex: bord du canvas, tuile...) où se situera le changement de carte</li>
+			<li>Changer la carte lorsque le personnage passe à cet endroit</li>
+			<li>Prévoir un système de gestion des différentes cartes</li>
+		</ol>
+
+		<h4>Créer les autres personnages non joueurs (PNJ)</h4>
+		<ol>
+			<li>Dessiner un PNJ à un emplacement précis</li>
+			<li>Animer un PNJ qui reste sur place</li>
+			<li>Ne pas marcher sur les PNJ</li>
+			<li>Changer le comportement du personnage en cas de rencontre avec le PNJ</li>
+			<li>Changer le comportement du PNJ en cas de rencontre avec le personnage</li>
+			<li>Déplacer automatiquement le PNJ</li>
+		</ol>
+
+		<h4>Créer une fonction affichant du texte</h4>
+
+		<ol>
+			<li>Afficher du texte</li>
+			<li>Styliser le texte affiché</li>
+			<li>Styliser l’affichage du texte</li>
+
+					<p>Certains décors et persos ont été modélisés avec <a href="http://www.blender.org/" target="_blank">Blender 2.74</a> (rendu toon via Frestyle) par <a href="http://opengameart.org/users/doudoulolita" target="_blank">Doudoulolita</a>:</p>
+					<ul>
+						<li class="dejafait"><a href="graphismes.html#paletuvier">palétuvier</a> (arbres à longues racines visibles)</li>
+						<li class="dejafait"><a href="graphismes.html#tucum">tucum</a>  (palmier)</li>
+						<li class="dejafait"><a href="graphismes.html#cacaoyer">cacaoyer-rivière </a> - fleurs non encore modélisées</li>
+						<li><span class="dejafait"><a href="graphismes.html#atele">atèle</a> (singe-araignée) avec armature</span> </li>
+						<li><span class="dejafait"><a href="graphismes.html#capucin">capucin</a> avec armature</span></li>
+						<li><span class="dejafait"><a href="graphismes.html#ara">ara</a> (perroquet) avec armature</span></li>
+					</ul>
+
+					<p>Pour les aider à réaliser ce jeu et ce tutoriel, rendez-vous sur <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5?page=1" target="_blank">Openclassroom</a> ou  sur le <a href="http://forum.ubuntu-fr.org/viewtopic.php?pid=16598011" target="_blank">forum Ubuntu</a>.</p>
+				</article>
+			</section>
+	
+			<footer>
+				<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+				<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
+			</footer>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<link rel="stylesheet" type="text/css" href="css/style.css" />  
+		<meta charset="utf-8" />
+		<title>jeu Guyana Dream - règles</title>
+	</head>
+	<body>
+		<header>
+			<h1>Guyana Dream</h1>
+
+			<h2 style="margin-top:40px;">Objectifs</h2>
+
+			<p>Guyana-Dream est un projet de RPG écolo qui sera un rêve de Guyane plutôt que la réalité.</p>
+
+			<nav class="mainnav">
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="graphismes.html">Graphismes</a></li>
+					<li><a href="regles.html">Règles</a></li>
+					<li><a href="tuto.html">Tuto</a></li>
+					<li><a href="liens.html">Liens</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<aside>
+				<a href="sources/tileset.svg" target="_blank"><img src="tuto/tilesets/tileset.png" style="float:left; margin-right:20px;"></a>
+
+			</aside>
+
+			<section>
+				<p>Le joueur sera un singe qui doit trouver son nid, récolter et manger des fruits, échapper aux prédateurs et aux flammes, les hommes souhaitant détruire la forêt. Il cherchera une compagne (ou un compagnon si c'est une femelle) et aura des petits à protéger. Les indiens le chasseront et le drogueront, ce qui provoquera un rêve un peu fou.</p>
+
+				<p>Le jeu sera simple au début, avec un seul animal qui doit rejoindre son arbre le plus vite possible tout en récoltant à manger. Ensuite, il y aura plus d'animaux et des quêtes.</p>
+
+				<p>L'objectif de départ est de faire un exemple pour le <a href="tuto.html">tuto</a> de <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5?page=1" target="_blank">jam-jam68140</a>, donc la simplicité et la progressivité des niveaux sont de mise, avec de jolis graphismes. Fichier zip : le <a href="sources/tuto.zip" target="_blank">code du tuto</a> par <a href="http://opengameart.org/users/doudoulolita" target="_blank">Doudoulolita</a>, avec les nouveaux graphismes. Il est encore trop tôt pour publier le <a href="tuto.html">tuto</a>, qui n'est pas encore fini mais a déjà sa feuille de route.</p>
+
+				<p>A terme, le jeu doit être assez éducatif pour pouvoir s'insérer dans des animations multimédia à caractère scientifique. Une sorte de "serious game", donc.</p>
+
+				<p>Ces idées sont celles de <a href="http://opengameart.org/users/doudoulolita" target="_blank">Doudoulolita</a> mais chacun peut en proposer d'autres.</p>
+
+				<p>Pour donner un coup de main à la réalisation de ce jeu, rendez-vous sur <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5?page=1" target="_blank">Openclassroom</a> ou  sur le <a href="http://forum.ubuntu-fr.org/viewtopic.php?pid=16598011" target="_blank">forum Ubuntu</a>.</p>
+			</section>
+
+			<section>
+				<article>
+					<h3>Règles</h3>
+
+					<img src="images/clavier-fleches.png" style="float:left; margin-right:20px;">
+
+					<p>Utilisez les flèches du pavé directionnel pour déplacer l'atèle sur le <a href="index.html">décor</a>.</p>
+					<p>Testez l'exercice de l'<a href="tuto/exercice2.html" target="_blank">éditeur de cartes</a> du <a href="sources/tuto.zip" target="_blank">tuto</a> en cliquant d'abord sur le tileset puis dans le 2ème canvas, et enfin dans le 3ème.</p>
+					<p>Inspirez-vous du <a href="sources/tuto.zip" target="_blank">code</a> pour réaliser votre propre jeu, avec vos propres images. Publiez-le sous licence libre.</p>
+					<p>Profitez de l'occasion pour vous informer sur la <a href="documents/animaux-forets.doc" target="_blank">faune et la flore de Guyane</a> et voyagez virtuellement !</p>
+					<br style="clear:both;" />
+				</article>
+
+				<article>
+					<h3>Personnages</h3>
+
+					<h4>Personnages joueurs</h4>
+
+					<div  style="float:left; margin-right:30px;">
+						<img src="sprites/choix-joueur1.png"><br />
+						<img src="sprites/choix-joueur2.png"><br />
+					</div>
+
+
+						<p>Les personnages joueurs sont des singes du nouveau monde. Le <a href="http://delaunay-kourou.over-blog.com/2014/05/les-primates-singes-de-la-guyane-francaise.html" target="_blank">blog de Marie-Odile et Philippe</a> donne des détails sur différentes espèces.</p>
+							<ul style="margin-left:30px;">
+								<li><strong>Atèle</strong> : Il devrait être plus grand. Il est agile et rapide et peut se balancer à l'aide de sa queue. Il mange principalement des fruits, parfois des feuilles et des fleurs et peut jeter des branches contre les hommes, par ex. Des groupes de 4 à 8 individus se déplacent en file indienne.</li>
+								<li><strong>Capucin brun</strong> : plus petit, agile et vif, facile à observer, il a une queue préhensile. En plus des fruits, feuilles et fleurs, il mange des graines de palmier, des insectes, des petites grenouilles, oiseaux ou lézards mais se déplace peu. Il peut utiliser des cailloux ou des bouts de bois pour casser des noix. Il utilise des plantes pour se soigner. En bande de 10 à 20 individus, les capucins communiquent par des cris variés. Ils peuvent cohabiter avec le saïmiri.</li>
+
+								<li>A faire : saïmiri.</li> 
+								<li>Il faudrait prévoir des vitesses et des animations bien différentes pour chaque classe (espèce) + males, femelles et petits.<br />Certains pourraient être en haut des arbres (donc ils ont la possibilité de passer dessus sans être bloqués) et sauter d'arbre en arbre tandis que les autres pourraient marcher par terre.<br /> Actions actuelles prévues sur la spritesheet de l'atèle et du capucin: marcher, sauter, se baisser (dessus et profil)
+								<li>Un vieux singe peut enseigner des techniques et des connaissances à son disciple</li>
+							</ul>
+						
+					<h4>Personnages non joueurs</h4>
+					<div  style="float:left; margin-right:30px;">
+						<img src="sprites/choix-pnj1.png"><br />
+						<img src="sprites/choix-ennemi1.png">
+					</div>
+
+					<ul>
+						<li><strong>L'ara bleu</strong> est un PNJ qui annonce la mission à réaliser. Ce grand perroquet est très bruyant, et vit en couple au sein de petits groupes. Il niche dans des trous de palmier sec. Il se nourrit de graines et de fruits ainsi que d'argile (près des cours d'eau)</li>
+						<li><strong>Le jaguar</strong> est un ennemi grand et massif, avec des taches particulières, différentes pour chaque individu. Sa morsure est puissante, il attaque le crane de ses proies (mammifères, dont les singes, rongeurs, serpents, oiseaux...). Parcourant un grand domaine et marquant son territoire, il se repose très souvent et se baigne de temps à autre. On pourrait construire des pièges pour faire tomber le jaguar.</li>
+						<li>Dans les rivières, les crocodiles peuvent manger les singes quand ils ont la machoire ouverte, mais ceux-ci leur échappent quand leur gueule est fermée.</li>
+						<li>Pour visualiser les piranhas, le singe peut sacrifier un fruit.</li>
+						<li>Les ennemis les plus dangereux seront les hommes, qui circuleront en véhicules sur les chemins uniquement. Ils mettront le feu à la forêt en occasionnant des dégats: trous de plusieurs cases, lignes d'arbres brulés...</li>
+						<li>Les indiens, eux, chassent les singes pour leur peaux et ont des sarbacanes pour les droguer</li>
+						<li>Un des boss humains peut être un milliardaire avec un bulldozer.</li>
+						<li>Dans le rêve du singe, un dieu Jaguar apparaît, comme boss de fin de niveau (spoiler)</li>
+					</ul>
+				</article>
+
+				<article>
+					<h3>Decors et accessoires</h3>
+
+					<div  style="float:left; margin-right:30px;">
+						<img src="trees/3D-trees/tucum-3D/tucum-p-dessus.png"><br />
+						<img src="trees/3D-trees/cacaoyer-3D/cacaoyer-p-dessus.png"><br />
+						<img src="trees/3D-trees/paletuvier-3D/paletuvier-p-dessus.png">
+					</div>
+
+					<ul>
+						<li>Chemin assez large pour les véhicules. Déjà réalisé avec Inkscape</li>
+						<li>Sol de la forêt. Déjà réalisé avec Inkscape (avec fougères, feuilles de palmier jaunies)</li>
+						<li>Arbres. Palétuvier, tucum et cacaoyer-rivière sont déjà réalisés avec Inkscape et avec Blender. Il faudrait peut-être des lignes d'arbres faciles à bruler.</li>
+												<li>Rivières et lacs. Un lac a été déjà réalisé avec Inkscape, à revoir. Ne pas oublier une couche transparente pour voir crocodiles et piranhas</li>
+						<li>Arbres et sol brulés</li>
+						<li>Cachettes résistant au feu: rochers creux et cailloux de grosse taille. Peut-être aussi montagnes et grottes ?</li>
+						<li>Nids de différentes tailles pour les singes (objet de quête). Dans la montagne, ils seraient protégés des flammes mais pas dans les arbres.</li>
+						<li>Cabane et maison des humains</li>			
+					</ul>
+				</article>
+				<br style="clear:both;" />
+				<article>
+
+					<h3>Bonus et trésors</h3>
+
+					<div  style="float:left; margin-right:30px;">
+						<img src="tilesets/fruit1.png"><br />
+						<img src="tilesets/fruit2.png">
+					</div>
+
+					<ul>
+						<li>Nourriture : Fruits (apportent des points de vie). Ils seront placés dans l'inventaire. Awara (fruit du tucum) déjà réalisé avec Inkscape</li>
+						<li>Fleur du cacaoyer-rivière déjà réalisée avec Inkscape</li>
+						<li>Peut-être aussi termitière, car certains singes mangent les insectes (nécessite une brindille préparée correctement)</li>
+					</ul>	
+
+					<h3>Armes</h3>
+
+					<div  style="float:left; margin-right:30px;">
+						<img src="tilesets/fruit3.png"><br />
+					</div>
+					<ul>
+						<li>Batons pour les singes, surtout pour attraper les fruits dans les arbres</li>
+						<li>Pierres et crottes à lancer pour les singes</li>
+						<li>lianes (lassos et grappins), armes volées aux indiens...</li>
+						<li>Armure ou boucliers en écorce ou en lianes tressées que les singes doivent fabriquer</li>
+						<li>Contenants : gourdes, sacs...</li>
+						<li>Véhicules avec lance-flamme: jeep pour les ennemis humains et bulldozer pour le boss</li>
+						<li>Sarbacane pour les indiens</li>
+						<li>Utilisation magique des éléments naturels (vent, tornade, pluie)</li>
+					</ul>
+				</article>
+
+				<article>	
+	
+					<h3>Compétences</h3>
+					<ul>
+						<li>Natation</li>
+						<li>Précision des tirs</li>
+						<li>Connaître la botanique (plantes qui guérissent, baies et fruits bonnes à manger, poisons...)</li>
+						<li>Imiter le  cri d'un autre animal et même connaître sa langue </li>
+						<li>Fabriquer des objets (boucliers en lianes, grappins...)</li>
+					</ul>	
+				</article>
+
+				<article>
+					<h3>Missions</h3>
+					<ul>
+						<li>Ramasser le plus de fruits possibles dans la partie de la forêt qui va être rasée pour qu'elles ne soient pas gaspillées. <br />Les fruits donnent force et vitalité (éventuellement : rapidité plus grande, sauts plus longs). Le nombre de vies suplémentaires augmente avec un certain nombre de fruits et une seule fleur, par exemple. Ils peuvent aussi manger des feuilles mais elles apportent moins d'énergie. Certains singes attrapent aussi des termites avec une baguette mais je ne sais pas si c'est la cas des singes de Guyane. On retrouve la nourriture dans l'inventaire.</li>
+						<li>Evacuer les animaux avant que la forêt ne soit rasée. En effet, le singe peut perdre une vie s'il est brulé. <br />Ils peuvent se cacher derrière un caillou qui empêche le feu d'avancer ou dans un rocher creux.</li>
+						<li>Retarder les hommes qui détruisent la forêt pour laisser le temps aux joueurs de réaliser ces 2 missions.</li>
+					</ul>
+
+					<p>Ces différentes missions peuvent être rassemblées sous formes de 4 épisodes de 2 à 6 maps:</p>
+					<ul>
+						<li>1er épisode : Trouver un nid (objet de la quête) grâce à l'aide du perroquet (PNJ) sans se faire manger par les crocodiles (ennemi) et en récoltant des fruits pour avoir des points de vie.</li>
+						<li>2ème épisode: Trouver une compagne (ou son compagnon si on choisit une femelle!) et la protéger des flammes et des crocodiles pour rejoindre le nid avec elle.</li>
+						<li>3ème épisode: Quand arrivent les enfants, il faut changer de nid pour en trouver un plus grand et tous les protéger. Le boss de fin de niveau est un milliardaire avec un Bullldozer</li>
+						<li>4ème épisode : Les indiens chassent les singes pour leur peau. Ils les droguent avec leur sarbacane.<br />Bonus stage : le rêve du singe. Il y a de gros fruits qui donnent plein de points de vie et des pouvoirs spéciaux. <br />Les singes peuvent parler au perroquet et le boss de fin de niveau est le dieu Jaguar.<br />Au cours du rêve, le singe se retrouve dans les ruines du bagne de Cayenne avec des fantomes de prisonniers à combattre.</li>
+					</ul>
+
+					<p>L'introduction des épisodes est faite par le perroquet sous forme de bulle ou de texte défilant (et il peut être très bavard). On le voit voler à travers l'écran au début et à la fin de la mission (gros plan au final ?)</p>
+				 
+					<p>Ces idées sont celles de <a href="http://fr.openclassrooms.com/membres/jam-jam68140-74695" target="_blank">Jamjam68140</a> et de Bobzeblob mais chacun peut en proposer d'autres.</p>
+				</article>
+
+				<article>
+					<h3>Vue</h3>
+
+					<p>L'idéal serait que le jeu soit en 3D isométrique ou même en vraie 3D mais c'est compliqué à coder. On a donc prévu  que la vue de dessus se transforme en vue de profil ou de face selon la touche pressée. En effet, il faut alors que les animaux puissent grimper dans les arbres et sauter avec des lianes.</p>
+					<p>Le mode paysage semble plus adapté à la vue de profil, on l'utilisera donc sans doute pour tout le jeu.</p>
+					<p>Par exemple, dans une quête, on sera en vue de dessus quand on se promène et en vue de côté pour une course ou une tâche précise. Les joueurs seront en vue de dessus dans la partie jeu libre pour se rendre au point de rendez-vous du départ de la mission. Cela leur permettra de connaître la map (et donc la forêt)</p>
+
+				</article>
+			</section>
+
+			<footer>
+				<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+				<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
+			</footer>
+		</main>
+
+	</body>
+</html>
