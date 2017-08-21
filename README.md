@@ -2,7 +2,8 @@
 jeu en HTML5 et javascript avec l'API canvas
 ============================================
 
-    Developpement d'un mini-RPG qui servira de base à un tuto avec des notions de javascript simples.
+    Developpement d'un mini-RPG qui servira de base à un tuto
+    avec des notions de javascript simples.
 
     Graphismes libres en 3D (avec Blender) transformés en spritesheet 2D (avec Gimp).
     Thème : Guyane (faune, flore, etc...) et écologie
@@ -13,6 +14,7 @@ jeu en HTML5 et javascript avec l'API canvas
 Commment Jouer ?
 ================
     * Ouverture de index.html dans le navigateur web (avec javascript activé)
+    * Si le décor ne s'affiche pas, réactualisez avec la touche de fonction F5
 
 Contrôles
 =========
@@ -27,10 +29,15 @@ Comment gagner ?
     Il faut ramasser des fruits, des fleurs et des batons, sans oublier de passer sur le décor n°2.
 
     Le score s'affiche à gauche.
-    
 
-    * jeu à compléter (quête, etc)
-    * code à simplifier et à vérifier
+    L'objectif à long terme est de faire des quêtes plus complexes
+    et d'ajouter d'autres espèces de singes avec des compétences différentes,
+    des ennemis, des PNJs, etc...
+    
+Comment contribuer ?
+====================
+    * jeu à compléter en s'inspirant des indications de regles.html
+    * code à simplifier, structurer et vérifier
     * graphismes à ajouter (jaguar en cours)
     * tuto à faire suivant la feuille de route tuto.html
 
