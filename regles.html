@@ -26,7 +26,7 @@
 
 		<main>
 			<aside>
-				<a href="sources/tileset.svg" target="_blank"><img src="tuto/tilesets/tileset.png" style="float:left; margin-right:20px;"></a>
+				<a href="tilesets/tileset.png" target="_blank"><img src="tilesets/tileset-mini.png" style="float:left; margin-right:20px;"></a>
 
 			</aside>
 
@@ -35,13 +35,17 @@
 
 				<p>Le jeu sera simple au début, avec un seul animal qui doit rejoindre son arbre le plus vite possible tout en récoltant à manger. Ensuite, il y aura plus d'animaux et des quêtes.</p>
 
-				<p>L'objectif de départ est de faire un exemple pour le <a href="tuto.html">tuto</a> de <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5?page=1" target="_blank">jam-jam68140</a>, donc la simplicité et la progressivité des niveaux sont de mise, avec de jolis graphismes. Fichier zip : le <a href="sources/tuto.zip" target="_blank">code du tuto</a> par <a href="http://opengameart.org/users/doudoulolita" target="_blank">Doudoulolita</a>, avec les nouveaux graphismes. Il est encore trop tôt pour publier le <a href="tuto.html">tuto</a>, qui n'est pas encore fini mais a déjà sa feuille de route.</p>
+				<p>L'objectif de départ était de faire les graphismes pour un <a href="tuto.html">tuto</a>.</p>
+				<p><a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5?page=1" target="_blank">jam-jam68140</a> souhaitait poursuivre celui de sebcap26 : <a href="https://openclassrooms.com/courses/creer-un-mini-rpg-en-javascript-avec-canvas" target="_blank">Créer un mini-RPG en Javascript avec canvas</a>, mais il n'a pas eu le temps de le finaliser.
+				<p>Pour ma part, j'ai suivi les 2 tutos avec mes propres graphismes, pour apprendre le javascript en m'amusant. Mais quand le projet est resté en suspens, j'ai dû chercher par moi-même comment continuer à coder mon jeu, en espérant que quelqu'un reprenne le tuto où il en était.</p>
+
+				<p>Le tuto de jam-jam68140 n'étant pas sous licence libre et celui de sebcap26 étant un peu compliqué pour moi, j'ai commencé par faire un mix des deux puis j'ai tout repris pour simplifier et mieux comprendre le code. Le tuto n'est pas prêt mais il a déjà sa <a href="tuto.html">feuille de route.</a></p>
 
 				<p>A terme, le jeu doit être assez éducatif pour pouvoir s'insérer dans des animations multimédia à caractère scientifique. Une sorte de "serious game", donc.</p>
 
 				<p>Ces idées sont celles de <a href="http://opengameart.org/users/doudoulolita" target="_blank">Doudoulolita</a> mais chacun peut en proposer d'autres.</p>
 
-				<p>Pour donner un coup de main à la réalisation de ce jeu, rendez-vous sur <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5?page=1" target="_blank">Openclassroom</a> ou  sur le <a href="http://forum.ubuntu-fr.org/viewtopic.php?pid=16598011" target="_blank">forum Ubuntu</a>.</p>
+				<p>Pour donner un coup de main à la réalisation de ce jeu, rendez-vous sur <a href="https://github.com/doudoulolita/Guyana-Dream" target="_blank">github</a> ou  sur le <a href="https://zestedesavoir.com/forums/sujet/9176/mini-rpg-guyanadream/" target="_blank">forum Zeste de Savoir</a>.</p>
 			</section>
 
 			<section>
@@ -51,8 +55,8 @@
 					<img src="images/clavier-fleches.png" style="float:left; margin-right:20px;">
 
 					<p>Utilisez les flèches du pavé directionnel pour déplacer l'atèle sur le <a href="index.html">décor</a>.</p>
-					<p>Testez l'exercice de l'<a href="tuto/exercice2.html" target="_blank">éditeur de cartes</a> du <a href="sources/tuto.zip" target="_blank">tuto</a> en cliquant d'abord sur le tileset puis dans le 2ème canvas, et enfin dans le 3ème.</p>
-					<p>Inspirez-vous du <a href="sources/tuto.zip" target="_blank">code</a> pour réaliser votre propre jeu, avec vos propres images. Publiez-le sous licence libre.</p>
+
+					<p>Inspirez-vous de ce jeu pour réaliser le votre, avec vos propres images. Publiez-le sous licence libre.</p>
 					<p>Profitez de l'occasion pour vous informer sur la <a href="documents/animaux-forets.doc" target="_blank">faune et la flore de Guyane</a> et voyagez virtuellement !</p>
 					<br style="clear:both;" />
 				</article>
@@ -62,21 +66,21 @@
 
 					<h4>Personnages joueurs</h4>
 
+					<p>Les personnages joueurs sont des singes du nouveau monde. Le <a href="http://delaunay-kourou.over-blog.com/2014/05/les-primates-singes-de-la-guyane-francaise.html" target="_blank">blog de Marie-Odile et Philippe</a> donne des détails sur différentes espèces.</p>
+
 					<div  style="float:left; margin-right:30px;">
 						<img src="sprites/choix-joueur1.png"><br />
 						<img src="sprites/choix-joueur2.png"><br />
 					</div>
 
+					<ul style="margin-left:30px;">
 
-						<p>Les personnages joueurs sont des singes du nouveau monde. Le <a href="http://delaunay-kourou.over-blog.com/2014/05/les-primates-singes-de-la-guyane-francaise.html" target="_blank">blog de Marie-Odile et Philippe</a> donne des détails sur différentes espèces.</p>
-							<ul style="margin-left:30px;">
-								<li><strong>Atèle</strong> : Il devrait être plus grand. Il est agile et rapide et peut se balancer à l'aide de sa queue. Il mange principalement des fruits, parfois des feuilles et des fleurs et peut jeter des branches contre les hommes, par ex. Des groupes de 4 à 8 individus se déplacent en file indienne.</li>
-								<li><strong>Capucin brun</strong> : plus petit, agile et vif, facile à observer, il a une queue préhensile. En plus des fruits, feuilles et fleurs, il mange des graines de palmier, des insectes, des petites grenouilles, oiseaux ou lézards mais se déplace peu. Il peut utiliser des cailloux ou des bouts de bois pour casser des noix. Il utilise des plantes pour se soigner. En bande de 10 à 20 individus, les capucins communiquent par des cris variés. Ils peuvent cohabiter avec le saïmiri.</li>
-
-								<li>A faire : saïmiri.</li> 
-								<li>Il faudrait prévoir des vitesses et des animations bien différentes pour chaque classe (espèce) + males, femelles et petits.<br />Certains pourraient être en haut des arbres (donc ils ont la possibilité de passer dessus sans être bloqués) et sauter d'arbre en arbre tandis que les autres pourraient marcher par terre.<br /> Actions actuelles prévues sur la spritesheet de l'atèle et du capucin: marcher, sauter, se baisser (dessus et profil)
-								<li>Un vieux singe peut enseigner des techniques et des connaissances à son disciple</li>
-							</ul>
+						<li><strong>Capucin brun</strong> : plus petit, agile et vif, facile à observer, il a une queue préhensile. En plus des fruits, feuilles et fleurs, il mange des graines de palmier, des insectes, des petites grenouilles, oiseaux ou lézards mais se déplace peu. Il peut utiliser des cailloux ou des bouts de bois pour casser des noix. Il utilise des plantes pour se soigner. En bande de 10 à 20 individus, les capucins communiquent par des cris variés. Ils peuvent cohabiter avec le saïmiri.</li>
+						<li><strong>Atèle</strong> : Il est plus grand. Il est agile et rapide et peut se balancer à l'aide de sa queue. Il mange principalement des fruits, parfois des feuilles et des fleurs et peut jeter des branches contre les hommes, par ex. Des groupes de 4 à 8 individus se déplacent en file indienne.</li>
+						<li>A faire : saïmiri.</li> 
+						<li>Il faudrait prévoir des vitesses et des animations bien différentes pour chaque classe (espèce) + males, femelles et petits.<br />Certains pourraient être en haut des arbres (donc ils ont la possibilité de passer dessus sans être bloqués) et sauter d'arbre en arbre tandis que les autres pourraient marcher par terre.<br /> Actions actuelles prévues sur la spritesheet de l'atèle et du capucin: marcher, sauter, se baisser (dessus et profil)
+						<li>Un vieux singe peut enseigner des techniques et des connaissances à son disciple</li>
+					</ul>
 						
 					<h4>Personnages non joueurs</h4>
 					<div  style="float:left; margin-right:30px;">
@@ -100,7 +104,9 @@
 					<h3>Decors et accessoires</h3>
 
 					<div  style="float:left; margin-right:30px;">
-						<img src="trees/3D-trees/tucum-3D/tucum-p-dessus.png"><br />
+						<img src="tilesets/fougere-jaune.png">
+						<img src="tilesets/cachette-fougeres-jaunes.png"><br />
+						<img src="trees/3D-trees/tucum-3D/tucum-p-dessus.png">
 						<img src="trees/3D-trees/cacaoyer-3D/cacaoyer-p-dessus.png"><br />
 						<img src="trees/3D-trees/paletuvier-3D/paletuvier-p-dessus.png">
 					</div>
@@ -109,7 +115,7 @@
 						<li>Chemin assez large pour les véhicules. Déjà réalisé avec Inkscape</li>
 						<li>Sol de la forêt. Déjà réalisé avec Inkscape (avec fougères, feuilles de palmier jaunies)</li>
 						<li>Arbres. Palétuvier, tucum et cacaoyer-rivière sont déjà réalisés avec Inkscape et avec Blender. Il faudrait peut-être des lignes d'arbres faciles à bruler.</li>
-												<li>Rivières et lacs. Un lac a été déjà réalisé avec Inkscape, à revoir. Ne pas oublier une couche transparente pour voir crocodiles et piranhas</li>
+						<li>Rivières et lacs. Un lac a été déjà réalisé avec Inkscape, à revoir. Ne pas oublier une couche transparente pour voir crocodiles et piranhas</li>
 						<li>Arbres et sol brulés</li>
 						<li>Cachettes résistant au feu: rochers creux et cailloux de grosse taille. Peut-être aussi montagnes et grottes ?</li>
 						<li>Nids de différentes tailles pour les singes (objet de quête). Dans la montagne, ils seraient protégés des flammes mais pas dans les arbres.</li>
@@ -122,8 +128,10 @@
 					<h3>Bonus et trésors</h3>
 
 					<div  style="float:left; margin-right:30px;">
-						<img src="tilesets/fruit1.png"><br />
-						<img src="tilesets/fruit2.png">
+						<img src="tilesets/fruit1.png">
+						<img src="tilesets/fruit2.png"><br />
+						<img src="tilesets/fruit4.png">
+						<img src="tilesets/fruit5.png"><br />
 					</div>
 
 					<ul>
@@ -136,6 +144,7 @@
 
 					<div  style="float:left; margin-right:30px;">
 						<img src="tilesets/fruit3.png"><br />
+						<img src="tilesets/cailloux.png">
 					</div>
 					<ul>
 						<li>Batons pour les singes, surtout pour attraper les fruits dans les arbres</li>

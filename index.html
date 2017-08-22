@@ -24,11 +24,14 @@
 		</header>
 
 		<main>
+		<!-- début du jeu -->
+
+ 			<!-- partie du jeu hors canvas -->
 			<aside id="asidejeu">
 				<p id="consigne">Cliquez sur votre perso.</p>
 
-				<div id="perso1"></div>	
-				<div id="perso2"></div>
+				<div id="choixJoueur1"></div>
+				<div id="choixJoueur2"></div>
 	
 				<div id="pnj1"></div>
 	
@@ -39,50 +42,77 @@
 				<div id="inventaire">
 						<div id="fruit1"><img src="tilesets/fruit1.png" alt="fruit 1" /><span id="affichenbfruit1"></span></div><br />
 						<div id="fruit2"><img src="tilesets/fruit2.png" alt="fruit 2" /><span id="affichenbfruit2"></span></div><br />
-						<div id="fruit3"><img src="tilesets/fruit3.png" alt="fruit 3" /><span id="affichenbfruit3"></span></div>
+						<div id="fruit3"><img src="tilesets/fruit3.png" alt="fruit 3" /><span id="affichenbfruit3"></span></div><br />
+						<div id="fruit4"><img src="tilesets/fruit4.png" alt="fruit 4" /><span id="affichenbfruit4"></span></div><br />
+						<div id="fruit5"><img src="tilesets/fruit5.png" alt="fruit 5" /><span id="affichenbfruit5"></span></div>
 				</div>
+				<p><strong>Inventaire</strong></p>
 			</aside>
 
 			<section>
+
+			<!-- Balises canvas sur plusieurs layers -->
 		
-				<canvas width="768" height="384">Votre navigateur ne supporte pas HTML5! Je vous conseille de vous mettre à jour!</canvas><!-- fond de carte -->
-				<canvas width="768" height="384"></canvas><!-- éléments interactifs (arbres) -->
-				<canvas width="768" height="384"></canvas><!-- éléments animés -->
+				<canvas width="768" height="384">Votre navigateur ne supporte pas HTML5, veuillez le mettre à jour pour jouer.</canvas><!-- fond de carte -->
+				<canvas width="768" height="384"></canvas><!-- pnj animés -->
+
 				<canvas width="768" height="384"></canvas><!-- personnages -->
-				<!-- pour plus tard -->
-				<canvas width="768" height="384"></canvas><!-- messages -->
-				<canvas width="768" height="384"></canvas><!-- vie et armements -->
-				<canvas width="768" height="384"></canvas><!-- transition de carte -->
+
+				<canvas width="768" height="384"></canvas><!-- texte -->
+
+			<!-- scripts en javascript -->
 
 				<script type="text/javascript" src="js/carte.js"></script> 
 				<script type="text/javascript" src="js/persos.js"></script> 
 				<script type="text/javascript" src="js/evenements.js"></script> 
 
+		<!-- fin du jeu et explications -->
+
 				<article class="articleindex">
+				<h2>Explications du jeu</h2>
+
 
 					<p>Tuiles de 32 * 32 px. Canvas superposés de 768 * 384 px (multiples de 16, de 24 et de 32).</p>
 					<p class="dejafait">Choisissez votre perso pour le faire apparaître. On peut changer de perso à tout moment, pas très logique, mais rigolo !
+					<br />Avez-vous remarqué le petit perroquet qui bat des ailes ? C'est notre PNJ !</p>
 					<br />Utilisez les flèches du pavé directionnel pour le déplacer.
-					<br />Au croisement du chemin, en utilisant les flèches bas et droite, la carte change.
-					<br />En passant sur certains fruits ou baguettes de palmier jaunies, on les fait disparaitre et on fait apparaitre des images à gauche, ainsi que le score.
-					<br />Avez-vous remarqué le petit perroquet qui bat des ailes ?</p>
+					<br />La souris doit rester dans le cadre du jeu, pour éviter le scrolling intempestif</p>
+					<br />En passant sur certains fruits ou baguettes de palmier jaunies, on les fait disparaitre et on fait apparaitre des images dans l'inventaire, et le score augmente !
+					<br />En allant vers la droite, la carte change et vous découvrirez de nouvelles choses à attraper.</p>
+
 		
-					<p>Il y a de petits blocages entre certains arbres et il faut parfois contourner le chemin alors qu'il n'y a rien dessus...<br />
-					Testez! Réactualisez en cas de problèmes.<br />Il y a encore des soucis sous IE. On a ajouté <a href="http://code.google.com/p/explorercanvas/downloads/list" target="_blank">excanvas.js</a> mais ça ne suffit pas.</p>
-					<p>Décors réalisés avec <a href="http://www.blender.org" target="_blank">Blender</a> à partir de <a href="http://www.glitchthegame.com/public-domain-game-art/" target="_blank">Glitch</a> et d'<a href="documents/liens-utilises.txt">images libres de droit</a> par <a href="http://opengameart.org/users/doudoulolita" target="_blank">Doudoulolita</a> - <a href="sources/tuto.zip" target="_blank">Code javascript</a> d'après un tuto de <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5?page=1" target="_blank">jam-jam68140</a> (aide et idées bienvenues)</p>
-					<p>Scripts: fichiers <a href="js/carte.js">carte.js</a>, <a href="js/persos.js">persos.js</a>, <a href="js/evenements.js">evenements.js</a> + <a href="map.json">map.json</a> et feuille de style <a href="css/style.css">style.css</a>.</p>
+					<p>Testez! Réactualisez en cas de problèmes.<br />Il y a encore des soucis sous IE. On a ajouté <a href="http://code.google.com/p/explorercanvas/downloads/list" target="_blank">excanvas.js</a> mais ça ne suffit pas.</p>
+
+					<p>Il y a encore plein de choses à ajouter et la strcuture du code à améliorer. Aidez-nous sur <a href="https://github.com/doudoulolita/Guyana-Dream" target="_blank">github</a> ou  sur le <a href="https://zestedesavoir.com/forums/sujet/9176/mini-rpg-guyanadream/" target="_blank">forum Zeste de Savoir</a></p>
+
+				<h3>Fichiers utilisés</h3>
+
+				<figure  style="float:left; margin-right:30px;">
+					<img src="tilesets/tileset2.png" />
+					<figcaption>
+						Tileset
+					</figcaption>
+				</figure>
+
+				<p>Scripts: fichiers <a href="js/carte.js">carte.js</a>, <a href="js/persos.js">persos.js</a>, <a href="js/evenements.js">evenements.js</a> et feuille de style <a href="css/style.css">style.css</a>.</p>
 
 				<figure>
 					<img src="sprites/joueur1.png" style="margin-right:30px;"><img src="sprites/joueur2.png" style="margin-right:30px;"><img src="sprites/pnj1.png">
 					<figcaption>
-						spritesheets des personnages : atèle, capucin, ara
+						Spritesheets des personnages : capucin, atèle, ara
 					</figcaption>
 				</figure>
+
+				<br style="clear:both;" />
+
+				<h3>Crédits</h3>
+
+				<p>Graphismes réalisés avec <a href="http://www.blender.org" target="_blank">Blender</a>  par <a href="http://opengameart.org/users/doudoulolita" target="_blank">Doudoulolita</a>, en s'inpirant de <a href="http://www.glitchthegame.com/public-domain-game-art/" target="_blank">Glitch</a> et d'<a href="documents/liens-utilises.txt">images libres de droit</a> - Code inspiré du tuto <a href="https://openclassrooms.com/courses/creer-un-mini-rpg-en-javascript-avec-canvas" target="_blank">Créer un mini-RPG en Javascript avec canvas</a> de sebcap26 et  d'un tuto non terminé de <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5?page=1" target="_blank">jam-jam68140</a>.</p>
 
 				</article>
 			</section>
 	
-			<footer class="footerindex">
+			<footer>
 				<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
 				<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
 			</footer>

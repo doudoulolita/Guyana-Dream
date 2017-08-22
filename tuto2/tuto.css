@@ -1,0 +1,38 @@
+pre {
+	border:solid; 
+	margin-right:30px; 
+	margin-left:30px;
+}
+
+canvas {
+	border: solid; /* Ajoute une bordure au canvas */
+}
+
+.doctype {
+	color:purple;
+}
+
+.selecteur {
+	color:green;
+}
+
+.propriete {
+	color:steelblue;
+}
+
+.valeur {
+	color:fuchsia;
+}
+
+.commentaire {
+	color:blue;
+}
+
+.proprieteCss {
+	color:darkred;
+}
+
+.variable {
+	color:darkred;
+	font-weight:bold;
+}

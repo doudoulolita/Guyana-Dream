@@ -1,0 +1,24 @@
+body {
+	background-color:#c4d38f;
+}
+
+canvas {
+	position:absolute;
+	top:70px;
+	left:20px;
+	border:solid;
+}
+
+img {
+	border:0px;
+}
+
+a {
+	color:#255161;
+	text-decoration:none;
+}
+
+.dejafait {
+	color:#613a22
+}
+
