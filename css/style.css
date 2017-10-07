@@ -2,80 +2,22 @@ body {
 	background-color:#c4d38f;
 }
 
-header, section, footer, aside, nav, main, article, figure {
-	display: block;
-} 
-
 canvas {
-	position:absolute;
-	top:160px;
-	left:130px;
 	border:solid;
-}
-
-.articleindex {
-	position:relative;
-	top:10px;
-	left:10px;
-}
-
-footer {
-	position:relative;
-	top:50px;
-	font-style:italic; 
-	font-size:0.8em;
-}
-
-img {
-	border:0px;
-}
-
-a {
-	text-decoration:none;
-}
-
-.mainnav {
-	position:absolute; 
-	top:10px; 
-	left:800px;
-}
-
-.mainnav ul li {
-	list-style-image:url('../images/fougere.png');
+	position:absolute;
 }
 
 #asidejeu {
 	width:100px;
+	float:left;
+	margin-right: 20px;
 }
 
-#tilesets {
-	position:absolute; 
-	top:200px; 
-	left:770px;
-	text-align:center;
-}
-
-#infos {
-	float:right;
-	width: 30%;
-	font-style:italic; 	
-}
-
-.agauche {
-	width: 65%;
-}
-
-figcaption {
-	font-style:italic; 
-	font-size:0.8em;	
-}
 
 #choixJoueur1, #choixJoueur2 {
 	border:solid 1px black;
-	width:100px;
 	padding-top: 5px;
 	margin-bottom: 5px;
-	text-align :center;
 	font-size:0.8em;
 }
 
@@ -85,13 +27,30 @@ figcaption {
 	background-color: #5b6634;			
 }
 
-#fruit1, #fruit2, #fruit3, #fruit4, #fruit5 {
+#objet1, #objet2, #objet3, #objet4, #objet5 {
 	display:none;
 }
 
+.mainnav {
+	position:absolute; 
+	top:5px; 
+	left:800px;
+}
 
-.dejafait {
-	color:#613a22
+.mainnav ul li {
+	list-style-image:url('../images/fougere.png');
+}
+
+#tilesets {
+	position:absolute; 
+	top:200px; 
+	left:770px;
+	text-align:center;
+}
+
+footer {
+	font-style:italic; 
+	font-size:0.8em;
 }
 
 
