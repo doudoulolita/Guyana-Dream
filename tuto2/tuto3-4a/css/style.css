@@ -1,0 +1,10 @@
+canvas {
+	border: solid; /* Ajoute une bordure au canvas */
+	float:left;
+	margin-right: 20px;
+}
+
+figcaption {
+	font-style:italic; 
+	font-size:0.8em;	
+}

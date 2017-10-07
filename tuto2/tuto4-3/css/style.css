@@ -1,0 +1,16 @@
+canvas {
+	border: solid; /* Ajoute une bordure au canvas */
+	margin-right: 20px;
+	position:absolute;
+}
+
+
+figure {
+	width:100px;
+	height:192px;
+	float:left;
+	font-style:italic; 
+	font-size:0.8em;
+}
+
+

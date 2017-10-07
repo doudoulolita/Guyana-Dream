@@ -1,0 +1,116 @@
+body {
+	background-color:#c4d38f;
+}
+
+header, section, footer, aside, nav, main, article, figure {
+	display: block;
+} 
+
+canvas {
+	border:solid;
+}
+
+#canvas, #canvas3 {
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+#canvas2, #canvas4 {
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+
+
+.articleindex {
+	position:relative;
+	top:0px;
+	left:10px;
+}
+
+.footerindex {
+	position:relative;
+	top:0px;
+	font-style:italic; 
+	font-size:0.8em;
+}
+
+footer {
+	font-style:italic; 
+	font-size:0.8em;
+}
+
+img {
+	border:0px;
+}
+
+a {
+	text-decoration:none;
+}
+
+.mainnav {
+	position:absolute; 
+	top:10px; 
+	left:800px;
+}
+
+.mainnav ul li {
+	list-style-image:url('../images/fougere.png');
+}
+
+#asidejeu {
+	width:100px;
+	float:left;
+}
+
+#tilesets {
+	position:absolute; 
+	top:200px; 
+	left:770px;
+	text-align:center;
+}
+
+#infos {
+	float:right;
+	width: 30%;
+	font-style:italic; 	
+}
+
+.agauche {
+	width: 65%;
+}
+
+figcaption {
+	font-style:italic; 
+	font-size:0.8em;	
+}
+
+#perso1, #perso2, #pnj1 {
+	border:solid 1px black;
+	margin-bottom: 10px;
+}
+
+#inventaire {
+	height:128px;
+	border:solid 1px black; 			
+}
+
+/*
+#fruit1 {
+	display:none;
+}
+*/
+
+#fruit2 {
+	display:none;
+}
+
+#fruit3 {
+	display:none;
+}
+
+.dejafait {
+	color:#613a22
+}
+
+

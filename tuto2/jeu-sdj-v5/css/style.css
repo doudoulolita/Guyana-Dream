@@ -1,0 +1,49 @@
+body {
+	background-color:#c4d38f;
+}
+
+canvas {
+	border:solid;
+	position:absolute;
+}
+
+#asidejeu {
+	width:100px;
+	float:left;
+	margin-right: 20px;
+}
+
+
+#choixJoueur1, #choixJoueur2 {
+	border:solid 1px black;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	font-size:0.8em;
+}
+
+#inventaire {
+	height:192px;
+	border:solid 1px black; 
+	background-color: #5b6634;			
+}
+
+#objet1, #objet2, #objet3, #objet4, #objet5 {
+	display:none;
+}
+
+.mainnav {
+	position:absolute; 
+	top:5px; 
+	left:800px;
+}
+
+.mainnav ul li {
+	list-style-image:url('../images/fougere.png');
+}
+
+footer {
+	font-style:italic; 
+	font-size:0.8em;
+}
+
+

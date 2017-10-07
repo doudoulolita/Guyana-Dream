@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Mon RPG perso - flèches du clavier</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" /><!-- lien vers la feuille de style -->
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+    </head>
+
+    <body>
+
+	<h1>Mon RPG perso - flèches du clavier</h1><!-- titre de niveau 1 -->
+        
+		<canvas width="192" height="192">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement du jeu -->
+
+	<figure>
+		<img src="joueur1.png" />
+		<figcaption>
+			spritesheet du joueur 1
+		</figcaption>
+	</figure>
+
+	<br style="clear:both;" />
+            
+	<!-- lien vers les fichiers en javascript -->
+
+        <script type="text/javascript" charset="UTF-8" src="js/perso.js" ></script>  
+        <script type="text/javascript" charset="UTF-8" src="js/animation.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="js/clavier.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/jeu.js" ></script> 
+
+	<img src="clavier-fleches.png" style="float:left; margin:20px;" />
+	<p>Animation d'un sprite de 32 * 32 px sur un canvas de 384 * 192 px.</p>
+	<p>Sépararation des fonctions : deplacementPerso() qui change l'emplacement du personnage et  de changePose() qui gère l'animation des membres.</p>
+	<p>Les déplacements avec les flèches du clavier sont gérés par la fonction persoBouge(e) dans le fichier clavier.js. La fonction changePose est incluse dedans, afin que le personnage cesse de bouger quand on lâche la touche.</p>
+	<p>Utilisation de requestAnimationFrame() avec un callback pour que la fonction animePerso se répéte régulièrement</p>
+	<p>On peut moduler la vitesse de déplacement vx et la vitesse de passage d'une pose à l'autre avec vPose (dans le fichier <a href="js/perso.js">perso.js</a>).</p>
+
+
+	<br style="clear:both;" />
+
+	<p>Fichiers javascript :
+	<ul style="margin-bottom:30px;">
+		<li><a href="js/perso.js">perso.js</a></li>
+		<li><a href="js/animation.js">animation.js</a></li>
+		<li><a href="js/clavier.js">clavier.js</a></li>
+		<li><a href="js/jeu.js">jeu.js</a></li>
+	</ul>
+	</p>
+
+	<footer style="clear:both;">Réalisé d'après la vidéo <a href="https://www.youtube.com/watch?v=yna816VY8rg">Sprites et animation - Javascript </a> par <a href="https://www.youtube.com/channel/UChXy935RrhKDL3EtFcITM5w">Computer Scientists</a>, avec des transformations</footer>
+       
+    </body>
+</html>
