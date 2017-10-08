@@ -1,5 +1,5 @@
 /* fonction gérant les changements de direction du personnage près des bords */
-function bloqueDeplacement() {
+function bloqueBords() {
 	// condition pour éviter que le perso ne dépasse sur les bords du canvas. On enlève la largeur du perso à droite et la hauteur du perso en bas sinon, il déborde du cadre.
 	if (x < 0) {
 		x = 1;

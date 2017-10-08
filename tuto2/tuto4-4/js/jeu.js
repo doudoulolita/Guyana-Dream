@@ -4,13 +4,16 @@
 // Récupére les canvas à partir de leur id
 canvas1 = document.getElementById("tuiles");
 
+canvas2 = document.getElementById("persos");
+
+
+
 // Définit les dimensions du canvas
-canvasLargeur = canvas1.width;
-canvasHauteur = canvas1.height;
+largeurCanvas = canvas1.width;
+hauteurCanvas = canvas1.height;
 
 context1 = canvas1.getContext('2d');
 
-canvas2 = document.getElementById("persos");
 context2 = canvas2.getContext('2d');
 
 /***** lorsque l'image est chargée, la fonction animePerso() est appelée *****/
