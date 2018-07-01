@@ -7,8 +7,8 @@ var largeurPerso = 32,
     hauteurPerso = 32;
 
 /* position initiale du perso */
-var x = 0, // position de départ au milieu de l'écran en largeur
-    y= hauteurPerso; // position de départ au milieu de l'écran en hauteur
+var x = 0, // position de départ sur l'axe x, tout à gauche
+    y= hauteurPerso; // position de départ sur l'axe y
 
 var vx = 2; // vitesse de déplacement du personnage
 

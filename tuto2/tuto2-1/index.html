@@ -1,40 +1,39 @@
 <!DOCTYPE html>
-<html lang="fr">
-	<head>
-	<meta charset="utf-8">
-	<title>Mon RPG perso - dessin d'une image sur le canvas</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css" /><!-- lien vers la feuille de style -->
+<html>
+
+	<head>	
+
+		<title>Mon RPG perso - couleur du canvas</title>
+		<meta charset="utf-8" />
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" /><!-- lien vers la feuille de style -->
+
+		<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+
 	</head>
 
 	<body>
-	 
-		<h1>Mon RPG perso - dessin d'une image sur le canvas</h1>
-	 
-		<canvas width="192" height="192">
-		    	Votre navigateur ne reconnait pas la balise canvas.
-		</canvas>
+
+		<h1>Mon RPG perso - couleur du canvas</h1><!-- titre de niveau 1 -->
+
+		<canvas width="192" height="192">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement du jeu -->
+
+		<script type="text/javascript" src="js/jeu.js"></script><!-- lien vers le fichier en javascript -->
 
 	<br style="clear:both;" />
-            
-	<!-- lien vers les fichiers en javascript -->
 
-		<script type="text/javascript" src="js/jeu.js"></script>
-		<script type="text/javascript" src="js/image.js"></script>
+	<p>Affichage de la couleur verte sur un canvas de 192 * 192 px.</p>
 
-		<p>Affichage d'une image sur un canvas de 192 * 192 px, à 2 endroits différents.</p>
-		<p>Réactualisez la page (avec la touche F5) si l'image ne se charge pas immédiatement</p>
+	<p>Fichiers javascript :
+	<ul style="margin-bottom:30px;">
+		<li><a href="js/jeu.js">jeu.js</a></li>
+	</ul>
+	</p>
 
-		<figure>
-			<img src="cachette-fougeres-jaunes.png" style="border:dotted 1px grey" />
-			<figcaption>
-			Image <br />à afficher
-			</figcaption>	
-		</figure>
+	<footer style="clear:both;">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+		<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
 
-
-		</p>
-
-	 
+	</footer>
 	</body>
 </html>
-

@@ -1,4 +1,5 @@
 canvas {
 	border: solid; /* Ajoute une bordure au canvas */
+	background-color: green;
 }
 

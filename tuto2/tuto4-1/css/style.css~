@@ -1,0 +1,12 @@
+
+
+
+figure {
+	width:100px;
+	height:192px;
+	float:left;
+	font-style:italic; 
+	font-size:0.8em;
+}
+
+

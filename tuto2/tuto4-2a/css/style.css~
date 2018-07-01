@@ -1,0 +1,21 @@
+canvas {
+	border: solid; /* Ajoute une bordure au canvas */
+	margin-right: 20px;
+	position:absolute;
+}
+
+
+figure {
+	width:100px;
+	height:70px;
+	font-style:italic; 
+	font-size:0.8em;
+	text-align:center;
+}
+
+h2 {
+	position:relative;
+	margin-top: 200px;
+}
+
+

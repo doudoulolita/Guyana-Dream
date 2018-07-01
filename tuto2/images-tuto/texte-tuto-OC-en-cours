@@ -1,0 +1,24 @@
+L'objectif de ce chapitre est de remplir le canvas de couleur. Cela paraît simple mais cela permet d'apprendre les bases permettant de faire fonctionner ensemble javascript et HTML5.
+
+Voici le code de la page "jeu.js", que vous enregistrerez dans un dossier nommé "js".
+
+var canvas = document.querySelector('canvas'); //on récupère le canvas sur lequel on va dessiner dans une variable, grâce à la méthode querySelector
+
+var context = canvas.getContext('2d'); //on indique le contexte
+
+
+/* on remplit tout le canvas de couleur */
+
+context.fillStyle="#5b6634"; // choix de la couleur (verte)
+
+context.fillRect(0,0, 384, 192); // 0,0 sont les coordonnées x,y du coin supérieur haut du rectangle à remplir, les autres chiffre sont la largeur et la hauteur
+
+context.fill(); // on remplit !
+
+Vous devrez ajouter dans la page index.html, vers la fin, mais avant  </body>  , la ligne suivante pour relier votre fichier javascript à la page HTML:
+
+<script type="text/javascript" src="js/jeu.js" ></script><!-- lien vers le fichier en javascript -->
+
+Le résultat, très simple, devrait être le suivant (sans le titre et le paragraphe :
+
+

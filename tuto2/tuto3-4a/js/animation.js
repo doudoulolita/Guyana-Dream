@@ -1,7 +1,7 @@
 /*** fonction pour effacer le canvas et dessiner le personnage ***/
 function dessinePerso(x, y, pose, dir) {
-	ctx.clearRect(0, 0, largeurCanvas, hauteurCanvas);
-	ctx.drawImage(joueur, largeurPerso*pose, hauteurPerso*dir, largeurPerso, hauteurPerso,  x, y, largeurPerso, hauteurPerso);
+	context.clearRect(0, 0, largeurCanvas, hauteurCanvas);
+	context.drawImage(joueur, largeurPerso*pose, hauteurPerso*dir, largeurPerso, hauteurPerso,  x, y, largeurPerso, hauteurPerso);
 }
 
 /*** fonction gérant la direction du déplacement du personnage ***/

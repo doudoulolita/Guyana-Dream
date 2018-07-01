@@ -1,0 +1,30 @@
+/* Récupération du canvas pour pouvoir dessiner dessus */
+
+// Récupére les canvas à partir de leur id
+canvas1 = document.getElementById("tuiles");
+
+canvas2 = document.getElementById("persos");
+
+// Définit les dimensions du canvas
+largeurCanvas = canvas1.width;
+hauteurCanvas = canvas1.height;
+
+// Définit les context sur lesquels on dessinera
+context1 = canvas1.getContext('2d');
+
+context2 = canvas2.getContext('2d');
+
+/***** lorsque l'image est chargée, la fonction animePerso() est appelée *****/
+ 
+// La fonction qui initialise le tout
+function init() {
+
+	afficheImage(posXTuile, posYTuile); // appel de la fonction affichant l'image à un endroit du canvas, en fonction de la largeur future des tuiles du jeu.
+
+	animePerso(); // appel de la fonction d'animation du personnage
+
+	// Lorsqu'une touche est appuyée, lance la fonction qui déplace le personnage
+	document.onkeydown = persoBouge;
+}
+
+window.onload = init; // lance la fonction init lorsque la page est chargée

@@ -23,6 +23,3 @@ var vx = 2; // vitesse de déplacement du personnage
 /*** Création de l'image du joueur ***/
 var joueur = new Image(); // crée une nouvelle image
 joueur.src = spriteSheet; // donne le chemin de l'image servant de spritesheet
-
-
-

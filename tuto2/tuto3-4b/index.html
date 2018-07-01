@@ -23,34 +23,37 @@
 	<br style="clear:both;" />
             
 	<!-- lien vers les fichiers en javascript -->
-
-        <script type="text/javascript" charset="UTF-8" src="js/perso.js" ></script>  
-        <script type="text/javascript" charset="UTF-8" src="js/animation.js" ></script>
-        <script type="text/javascript" charset="UTF-8" src="js/clavier.js" ></script>
-	<script type="text/javascript" charset="UTF-8" src="js/collision-bords.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/main.js" ></script> 
 	<script type="text/javascript" charset="UTF-8" src="js/jeu.js" ></script> 
+        <script type="text/javascript" charset="UTF-8" src="js/perso.js" ></script>  
+        <script type="text/javascript" charset="UTF-8" src="js/clavier.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="js/animation.js" ></script>
 
 	<img src="joueur1.png" style="float:left; margin:20px;" />
-	<p>Animation d'un sprite de 32 * 32 px sur un canvas de 384 * 192 px.</p>
-	<p>Sépararation des fonctions : deplacementPerso() qui change l'emplacement du personnage et  de changePose() qui gère l'animation des membres.</p>
-	<p>Les déplacements avec les flèches du clavier sont gérés par la fonction persoBouge(e) dans le fichier clavier.js. La fonction canchePose est incluse dedans, afin que le personne cesse de bouger quand on lâche la touche.</p>
-	<p>Utilisation de requestAnimationFrame() avec un callback pour que la fonction animePerso se répéte régulièrement</p>
-	<p>On peut moduler la vitesse de déplacement vx et la vitesse de passage d'une pose à l'autre avec vPose (dans le fichier <a href="js/perso.js">perso.js</a>).</p>
-	<p>Gestion du de la collision sur les bords du canvas par la fonctions bloqueDeplacement(), appelée dans la fonction animePerso().</p>
+	<p>Déplacement et animation d'un sprite de 32 * 32 px sur un canvas de 192 * 192 px.</p>
+
+	<br style="clear:both;" />
+
+	<img src="clavier-fleches.png" style="float:left; margin:20px;" />
+
+	<p>Gestion du clavier pour déplacer le perso.</p>
 
 	<br style="clear:both;" />
 
 	<p>Fichiers javascript :
 	<ul style="margin-bottom:30px;">
-		<li><a href="js/perso.js">perso.js</a></li>
-		<li><a href="js/animation.js">animation.js</a></li>
-		<li><a href="js/clavier.js">clavier.js</a></li>
-		<li><a href="js/collision-bords.js">collision-bords.js</a></li>
+		<li><a href="js/main.js">main.js</a></li>
 		<li><a href="js/jeu.js">jeu.js</a></li>
+		<li><a href="js/perso.js">perso.js</a></li>
+		<li><a href="js/clavier.js">clavier.js</a></li>
+		<li><a href="js/animation.js">animation.js</a></li>
 	</ul>
 	</p>
 
-	<footer style="clear:both;">Réalisé d'après la vidéo <a href="https://www.youtube.com/watch?v=yna816VY8rg">Sprites et animation - Javascript </a> par <a href="https://www.youtube.com/channel/UChXy935RrhKDL3EtFcITM5w">Computer Scientists</a>, avec des transformations</footer>
+	<footer style="clear:both;">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+		<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
+	</footer>
        
     </body>
 </html>

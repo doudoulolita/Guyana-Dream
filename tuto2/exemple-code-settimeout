@@ -1,0 +1,21 @@
+/ pour exécuter une fonction sans paramètre
+
+setInterval(maFonction, 1000);
+
+
+// si il faut passer des paramètres à notre fonction du futur, il faut l'englober 
+
+// dans une fonction anonyme qui contient l'appel à notre fonction paramétré.
+
+setInterval(function () { 
+
+    maFonction(parametre1, parametre2); 
+
+}, 5000);
+
+
+// une méthode plus élégante qui malheureusement ne marche pas sous IE
+
+setTimeout(maFonction, 5000, parametre1, parametre2 /*, etc. */);
+
+

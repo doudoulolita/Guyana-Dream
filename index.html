@@ -30,59 +30,65 @@
 		<!-- début du jeu -->
 
  			<!-- partie du jeu à côté du canvas -->
-			<aside id="asidejeu">
-				<p id="consigne">Cliquez sur votre perso.</p>
+ 			<!-- image du personnage à côté du canvas -->
+			<aside>
 
-				<!-- Choix des joueurs -->
+				<figure>
+					<img src="sprites/choix-joueur1.png" />
+					<figcaption>
+						Joueur 1
+						<br />endurant
+					</figcaption>
+					<img src="sprites/choix-joueur2.png" />
+					<figcaption>
+						Joueur 2
+						<br />rapide
+					</figcaption>
+					<br /><br />
 
-				<div id="choixJoueur1"></div>
-				<div id="choixJoueur2"></div>
-	
-				<div id="pnj1"></div>
+					<img src="sprites/pnj1-droite.png" />
+					<figcaption>
+						Pnj 1
+						<br />Allez le voir !
+					</figcaption>
+					<br /><br />
 
-				<!-- infos jeu -->
-	
-				<p>Niveau <span id="niveau"></span></p>
-	
-				<p id="score">Score = 0</p>
+					<img src="sprites/ennemi1-droite.png" />
+					<figcaption>
+						Ennemi 1
+						<br />N'allez pas le voir !
+					</figcaption>
+				</figure>
 
-				<!-- inventaire où s'afficheront les objets -->
-	
-				<div id="inventaire">
-						<div id="objet1"><img src="tilesets/objet1.png" alt="objet 1" /><span id="affichenbobjet1"></span></div><br />
-						<div id="objet2"><img src="tilesets/objet2.png" alt="objet 2" /><span id="affichenbobjet2"></span></div><br />
-						<div id="objet3"><img src="tilesets/objet3.png" alt="objet 3" /><span id="affichenbobjet3"></span></div><br />
-						<div id="objet4"><img src="tilesets/objet4.png" alt="objet 4" /><span id="affichenbobjet4"></span></div><br />
-						<div id="objet5"><img src="tilesets/objet5.png" alt="objet 5" /><span id="affichenbobjet5"></span></div>
-				</div>
-				<p><strong>Inventaire</strong></p>
 			</aside>
 
+		<canvas id="tuiles" width="768" height="384">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement du jeu --> 
+		<canvas id="bulles" width="768" height="384"></canvas>
+		<canvas id="persos" width="768" height="384"></canvas>
+		<canvas id="pnjs" width="768" height="384"></canvas>
+		<canvas id="textes" width="768" height="384"></canvas>
 
 
-			<!-- Balises canvas sur plusieurs layers -->
-		
-				<canvas width="768" height="384">Votre navigateur ne supporte pas HTML5, veuillez le mettre à jour pour jouer.</canvas><!-- fond de carte -->
-				<canvas width="768" height="384"></canvas><!-- personnages -->
-
-				<canvas width="768" height="384"></canvas><!-- pnj animés -->
-
-				<canvas width="768" height="384"></canvas><!-- texte -->
-
-			<!-- scripts en javascript -->
-				<script type="text/javascript" charset="UTF-8" src="js/jeu.js"></script> 
-				<script type="text/javascript" charset="UTF-8" src="js/images.js"></script> 
-				<script type="text/javascript" charset="UTF-8" src="js/carte.js"></script> 
-				<script type="text/javascript" charset="UTF-8" src="js/persos.js"></script>
-				<script type="text/javascript" charset="UTF-8" src="js/animation.js" ></script>
-				<script type="text/javascript" charset="UTF-8" src="js/clavier.js" ></script>
-				<script type="text/javascript" charset="UTF-8" src="js/collision.js" ></script>
-				<script type="text/javascript" charset="UTF-8" src="js/changecarte.js"></script> 
-				<script type="text/javascript" charset="UTF-8" src="js/inventaire.js"></script>
-				<script type="text/javascript" charset="UTF-8" src="js/pnj2.js"></script>
-				<script type="text/javascript" charset="UTF-8" src="js/texte.js"></script> 
-				<script type="text/javascript" charset="UTF-8" src="js/main.js"></script> 
-				<script type="text/javascript" charset="UTF-8" src="js/excanvas.js"></script>
+	<br style="clear:both;" />
+            
+	<!-- lien vers les fichiers en javascript -->
+	<script type="text/javascript" charset="UTF-8" src="js/main.js" ></script> 
+	<script type="text/javascript" charset="UTF-8" src="js/jeu.js" ></script> 
+	<script type="text/javascript" charset="UTF-8" src="js/ecrans.js" ></script> 
+	<script type="text/javascript" charset="UTF-8" src="js/choix-perso.js" ></script> 
+	<script type="text/javascript" charset="UTF-8" src="js/carte.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="js/perso.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="js/clavier.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="js/deplacements.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="js/animation.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/collision-bords.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/collision-decor.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/collision-objet.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/collision-pnj.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/texte.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/temps.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/pnj.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/ennemi.js" ></script>
 
 
 			<!-- fin du jeu -->
@@ -90,51 +96,66 @@
 
 				<h2>Explications du jeu</h2>
 
-					<p>Tuiles de 32 * 32 px. Canvas superposés de 768 * 384 px (multiples de 16, de 24 et de 32).</p>
-					<p class="dejafait">Choisissez votre perso pour le faire apparaître. On peut changer de perso à tout moment, pas très logique, mais rigolo !
-					<br />Utilisez les flèches du pavé directionnel pour le déplacer.
-					<br />La souris doit rester dans le cadre du jeu, pour éviter le scrolling intempestif</p>
-					<br />En passant sur certains fruits ou baguettes de palmier jaunies, on les fait disparaitre et on fait apparaitre des images dans l'inventaire, et le score augmente !
-					<br />En allant vers la droite, la carte change et vous découvrirez de nouvelles choses à attraper.</p>
-					<br />Les aras qui volent au-dessus du décor sont nos PNJ. L'idéal serait qu'ils aient un trajet et une vitesse différente, mais ce n'est pas si simple à programmer.</p>
-		
-					<p>Testez! Réactualisez en cas de problèmes.<br />Il y a encore des soucis sous IE. On a ajouté <a href="http://code.google.com/p/explorercanvas/downloads/list" target="_blank">excanvas.js</a> mais ça ne suffit pas.</p>
-
-					<p>Il y a encore plein de choses à ajouter et la strcuture du code à améliorer. Aidez-nous sur <a href="https://github.com/doudoulolita/Guyana-Dream" target="_blank">github</a> ou  sur le <a href="https://zestedesavoir.com/forums/sujet/9176/mini-rpg-guyanadream/" target="_blank">forum Zeste de Savoir</a></p>
-
-				<h3>Fichiers utilisés</h3>
-
-				<figure  style="float:left; margin-right:30px;">
+				<figure style="float:left; margin-right: 20px;">
 					<img src="tilesets/tileset2.png" />
 					<figcaption>
 						Tileset
 					</figcaption>
 				</figure>
 
+				<p>Tuiles de 32 * 32 px. Canvas superposés de 768 * 384 px (multiples de 16, de 24 et de 32).</p>
+				<p class="dejafait">Choisissez votre perso pour le faire apparaître sur la carte. 
+				<br />Utilisez les flèches du pavé directionnel pour le déplacer.</p>
+				<br />Son énergie de départ est aléatoire. Il en perd au fil du temps et sa vitesse diminue.
+				<br />En passant sur certains fruits ou baguettes de palmier jaunies, on les fait disparaitre et on fait apparaitre des images dans l'inventaire, et le score augmente !
+				<br />En allant vers la droite, la carte change et vous découvrirez de nouvelles choses à attraper.</p>
+				<br />L'ara est un PNJ qui indique la quête. Quand vous la trouverez, votre perso regagnera de l'énergie.
+				<br />Le jaguar est l'ennemi qui fait perdre des points quand on le touche.</p>
+	
+				<p>Testez! Réactualisez en cas de problèmes.<br />Il y a encore des soucis sous IE. On a ajouté <a href="http://code.google.com/p/explorercanvas/downloads/list" target="_blank">excanvas.js</a> mais ça ne suffit pas.</p>
 
-				<p>Scripts: fichiers <a href="js/jeu.js">js/jeu.js</a>, 
-				<a href="js/images.js">js/images.js</a>, 
-				<a href="js/carte.js">js/carte.js</a>, 
-				<a href="js/persos.js">js/persos.js</a>, 
-				<a href="js/animation.js">js/animation.js</a>, 
-				<a href="js/clavier.js">js/clavier.js</a>, 
-				<a href="js/collision.js">js/collision.js</a>, 
-				<a href="js/changecarte.js">js/changecarte.js</a>,  
-				<a href="js/inventaire.js">js/inventaire.js</a>,  
-				<a href="js/pnj2.js">js/pnj.js</a>,  
-				<a href="js/texte.js">js/texte.js</a>, 
-				<a href="js/main.js">js/main.js</a>,  
-				<a href="js/excanvas.js">js/excanvas.js</a>
-</p>
+				<p>La struture du code est à améliorer. Aidez-nous sur <a href="https://github.com/doudoulolita/Guyana-Dream" target="_blank">github</a> ou  sur le <a href="https://zestedesavoir.com/forums/sujet/9176/mini-rpg-guyanadream/" target="_blank">forum Zeste de Savoir</a></p>
 
-				<figure>
-					<img src="sprites/joueur1.png" style="margin-right:30px; "><img src="sprites/pnj1.png"><br /><img src="sprites/joueur2.png" style="margin-right:30px;margin-top:20px;"><img src="sprites/pnj2.png">
-					<figcaption>
-						Spritesheets des personnages : capucin, atèle, ara
-					</figcaption>
-				</figure>
+				<h3>Fichiers utilisés</h3>
 
+					<figure style= float:left;>
+						<img src="sprites/joueur1.png"><br /><br/><img src="sprites/joueur2.png">
+						<figcaption>
+							Spritesheets des personnages joueurs :<br />capucin, atèle
+						</figcaption>
+					</figure>
 
+					<figure style= float:left;>
+						<img src="sprites/pnj1.png"><br /><img src="sprites/ennemi1.png">
+						<figcaption>
+							Spritesheets des personnages non joueurs :<br />ara, jaguar
+						</figcaption>
+					</figure>
+
+				<p>Fichiers javascript :
+				<ul style="margin-bottom:30px;">
+					<li><a href="js/main.js">main.js</a></li>
+					<li><a href="js/jeu.js">jeu.js</a></li>
+					<li><a href="js/ecrans.js">ecrans.js</a></li>
+					<li><a href="js/choix-perso.js">choix-perso.js</a></li>
+					<li><a href="js/carte.js">carte.js</a></li>
+					<li><a href="js/perso.js">perso.js</a></li>
+					<li><a href="js/clavier.js">clavier.js</a></li>
+					<li><a href="js/deplacements.js">deplacements.js</a></li>
+					<li><a href="js/animation.js">animation.js</a></li>
+					<li><a href="js/collision-bords.js">collision-bords.js</a></li>
+					<li><a href="js/collision-decor.js">collision-decor.js</a></li>
+					<li><a href="js/collision-objet.js">collision-objet.js</a></li>
+					<li><a href="js/collision-pnj.js">collision-pnj.js</a></li>
+					<li><a href="js/texte.js">texte.js</a></li>
+					<li><a href="js/temps.js">temps.js</a></li>
+					<li><a href="js/pnj.js">pnj.js</a></li>
+					<li><a href="js/ennemi.js">ennemi.js</a></li>
+
+				</ul>
+				</p>
+
+				<br style="clear:both;" />
 
 				<h3>Crédits</h3>
 

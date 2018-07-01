@@ -11,7 +11,7 @@
 
 	<h1>Mon RPG perso - animation du personnage</h1><!-- titre de niveau 1 -->
         
-		<canvas width="384" height="192">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement du jeu -->
+		<canvas width="192" height="192">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement du jeu -->
 
 	<figure>
 		<img src="choix-joueur1.png" />
@@ -23,25 +23,23 @@
 	<br style="clear:both;" />
             
 	<!-- lien vers les fichiers en javascript -->
-
-        <script type="text/javascript" charset="UTF-8" src="js/animation.js" ></script>
-        <script type="text/javascript" charset="UTF-8" src="js/perso.js" ></script>  
+	<script type="text/javascript" charset="UTF-8" src="js/main.js" ></script> 
 	<script type="text/javascript" charset="UTF-8" src="js/jeu.js" ></script> 
+        <script type="text/javascript" charset="UTF-8" src="js/perso.js" ></script>  
+        <script type="text/javascript" charset="UTF-8" src="js/animation.js" ></script>
+
 
 	<img src="joueur1.png" style="float:left; margin:20px;" />
-	<p>Animation d'un sprite de 32 * 32 px sur un canvas de 384 * 192 px.</p>
-	<p>Sépararation des fonctions : deplacementPerso() qui fait avancer ou reculer le personnage et  changePose() qui gère l'animation des membres. On peut commenter l'une ou l'autre dans la fonction animePerso() pour s'en rendre compte.</p>
-	<p>Utilisation de requestAnimationFrame() avec un callback pour que la fonction animePerso se répéte régulièrement</p>
-	<p>On peut moduler la vitesse de déplacement vx et la vitesse de passage d'une pose à l'autre avec vPose (dans le fichier <a href="js/perso.js">perso.js</a>).</p>
-	<p>Gestion du changement de direction sur les bords du canvas par les fonctions changeDirectionBords() et inverseDeplacement(), appelées dans la fonction deplacementPerso().</p>
+	<p>Déplacement et animation d'un sprite de 32 * 32 px sur un canvas de 192 * 192 px, de droite à gauche.</p>
 
 	<br style="clear:both;" />
 
 	<p>Fichiers javascript :
 	<ul style="margin-bottom:30px;">
-		<li><a href="js/animation.js">animation.js</a></li>
-		<li><a href="js/perso.js">perso.js</a></li>
+		<li><a href="js/main.js">main.js</a></li>
 		<li><a href="js/jeu.js">jeu.js</a></li>
+		<li><a href="js/perso.js">perso.js</a></li>
+		<li><a href="js/animation.js">animation.js</a></li>
 	</ul>
 	</p>
 

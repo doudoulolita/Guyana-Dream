@@ -1,20 +1,10 @@
-/** Récupération du canvas **/
-var canvas = document.querySelector('canvas'),
-    ctx = canvas.getContext('2d');
+/* Récupération du canvas pour pouvoir dessiner dessus */
 
-largeurCanvas = canvas.width; // récupère la largeur du canvas
-hauteurCanvas = canvas.height; // récupère la hauteur du canvas
+function recupCanvas() {
+	canvas = document.querySelector('canvas'); //on récupère le canvas sur lequel on va dessiner
+	context = canvas.getContext('2d'); //on indique le contexte
 
-/***** lorsque l'image est chargée, la fonction animePerso() est appelée *****/
-
- 
-// La fonction qui initialise le tout
-function init() {
-	animePerso(); 
-
-	// Lorsqu'une touche est appuyée, lance la fonction PersoBouge()
-	document.onkeydown = persoBouge;
-
+	// Définit les dimensions du canvas
+	largeurCanvas = canvas.width;
+	hauteurCanvas = canvas.height;
 }
-
-window.onload = init;
