@@ -41,8 +41,11 @@ function gereEnergie() {
 }
 
 
-function gagne() { // fonction si on gagne
+function gagne() { // fonction si on gagne (appelée par la fonction gereEnergie)
 	if (nbPoints == nbPointsMax && pointsEnergie >= 0) { // si on a le bon nombre de points et que l'énergie est positive
+
+		pointsEnergie += 0; // stoppe le décompte de l'énergie (ne marche pas)
+		tempsJeu += 0; // stoppe le décompte du temps (ne marche pas)
 
 		ecranFinJeu();
 
@@ -50,63 +53,51 @@ function gagne() { // fonction si on gagne
 
 		pnj.posX2= 0 ; pnj.posY2= pnj.departY; dirPnj=1; pnj.v=0; // on place le pnj un peu plus bas à gauche, regardant de côté
 
-		ennemi.posX2= 0 ; ennemi.posY2= ennemi.departY+tailleTuile; dirPnj=1; ennemi.v=0; // on place le pnj un peu plus bas à gauche, regardant de face
+		ennemi.posX2= 0 ; ennemi.posY2= ennemi.departY+tailleTuile; ennemi.dir=1; ennemi.v=0; // on place le pnj un peu plus bas à gauche, regardant de face
 
 		texteResultat=texteGagne; // on écrit qu'on a gagné
 
 		ajouteTexte(texteResultat, 50, tailleTuile*8 , tailleTuile*5);
 		
-		textePnjResultat = textePnjGagne; // change le texte du PNJ dans sa bulle
+		bulleTexte(pnj.texteGagne, pnj.posX2, pnj.posY2);
 
-		bulleTexte(textePnjResultat, pnj.posX2, pnj.posY2);
-
-		texteEnnemi = texteEnnemiFin; // change le texte de l'ennemi dans sa bulle
-
-		bulleTexte(texteEnnemi, ennemi.posX2, ennemi.posY2);
+		bulleTexte(ennemi.texteFin, ennemi.posX2, ennemi.posY2);
 		
-		pointsEnergie -= 0; // stoppe le décompte de l'énergie (ne marche pas)
-		tempsJeu -= 0; // stoppe le décompte du temps (ne marche pas)
-
 		gain = 1; // donne un point de gain pour qu'on sache qu'on a gagné avant de lancer la fonction chrono()
 	}
 
 }
 
-function perd() { // fonction si on perd
+function perd() { // fonction si on perd (appelée dans la fonction chrono)
 	if (nbPoints < nbPointsMax || pointsEnergie < 0) { // si on n'a pas le bon nombre de points ou que l'énergie est négative
 
-		ecranFinJeu();
+		pointsEnergie += 0; // stoppe le décompte de l'énergie (ne marche pas)
+		tempsJeu += 0; // stoppe le décompte du temps (ne marche pas)
+
+		ecranFinJeu(); // fonction dans le fichier ecrans.js 
 
 		joueur.posX= 0 ; joueur.posY= 0; dir=0; vx=0; // on place le joueur en haut à gauche, regardant de face
 
-		pnj.posX2= 0 ; pnj.posY2= pnj.departY; dirPnj=1; pnj.v=0; // on place le pnj un peu plus bas à gauche, regardant de côté
+		pnj.posX2= 0 ; pnj.posY2= pnj.departY; pnj.dir=1; pnj.v=0; // on place le pnj un peu plus bas à gauche, regardant de côté
 
-		ennemi.posX2= 0 ; ennemi.posY2= ennemi.departY+tailleTuile; dirPnj=1; ennemi.v=0; // on place le pnj un peu plus bas à gauche, regardant de face
+		ennemi.posX2= 0 ; ennemi.posY2= ennemi.departY+tailleTuile; ennemi.dir=1; ennemi.v=0; // on place le pnj un peu plus bas à gauche, regardant de face
 
 		texteResultat = textePerd; // alors on écrit qu'on a perdu
 
 		ajouteTexte(texteResultat, 50, tailleTuile*8 , tailleTuile*5);
 
-		textePnjResultat = textePnjPerd; // change le texte du PNJ dans la bulle de dialogue
+		bulleTexte(pnj.textePerd, pnj.posX2, pnj.posY2);
 
-		bulleTexte(textePnjResultat, pnj.posX2, pnj.posY2);
-
-		texteEnnemi = texteEnnemiFin; // change le texte de l'ennemi dans sa bulle
-
-		bulleTexte(texteEnnemi, ennemi.posX2, ennemi.posY2);
-
-		pointsEnergie -= 0; // stoppe le décompte de l'énergie (ne marche pas)
-		tempsJeu -= 0; // stoppe le décompte du temps (ne marche pas)
-
+		bulleTexte(ennemi.texteFin, ennemi.posX2, ennemi.posY2);
 	
 	} 
 }
 
 /***** fonction pour chronométrer le jeu *****/
 function chrono() {
-	setTimeout(function() { // cette fonction se lancera quand le temps décidé sera écoulé
+	setTimeout(function() { // cette fonction se lancera quand le temps décidé sera écoulé (appelée dans le fichier main.js)
 
-		ecranFinJeu();
+		ecranFinJeu(); // fonction dans le fichier ecrans.js 
 
 		pointsEnergie -= 0; // stoppe le décompte de l'énergie (ne marche pas)
 		tempsJeu -= 0; // stoppe le décompte du temps (ne marche pas)

@@ -44,6 +44,11 @@
 						Joueur 2
 						<br />rapide
 					</figcaption>
+					<img src="sprites/choix-joueur3.png" />
+					<figcaption>
+						Joueur 3
+						<br />très rapide
+					</figcaption>
 					<br /><br />
 
 					<img src="sprites/pnj1-droite.png" />
@@ -62,11 +67,13 @@
 
 			</aside>
 
-		<canvas id="tuiles" width="768" height="384">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement du jeu --> 
-		<canvas id="bulles" width="768" height="384"></canvas>
-		<canvas id="persos" width="768" height="384"></canvas>
-		<canvas id="pnjs" width="768" height="384"></canvas>
-		<canvas id="textes" width="768" height="384"></canvas>
+			<!-- Canvas sur lesquels on dessine le jeu -->
+
+			<canvas id="tuiles" width="768" height="384">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement de la carte du jeu --> 
+			<canvas id="bulles" width="768" height="384"></canvas><!-- canvas des bulles de texte --> 
+			<canvas id="persos" width="768" height="384"></canvas><!-- canvas des joueurs --> 
+			<canvas id="pnjs" width="768" height="384"></canvas><!-- canvas des PNJ --> 
+			<canvas id="textes" width="768" height="384"></canvas><!-- canvas des textes --> 
 
 
 	<br style="clear:both;" />
@@ -77,6 +84,7 @@
 	<script type="text/javascript" charset="UTF-8" src="js/ecrans.js" ></script> 
 	<script type="text/javascript" charset="UTF-8" src="js/choix-perso.js" ></script> 
 	<script type="text/javascript" charset="UTF-8" src="js/carte.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="js/joueurs.js" ></script>
         <script type="text/javascript" charset="UTF-8" src="js/perso.js" ></script>
         <script type="text/javascript" charset="UTF-8" src="js/clavier.js" ></script>
         <script type="text/javascript" charset="UTF-8" src="js/deplacements.js" ></script>
@@ -104,17 +112,19 @@
 				</figure>
 
 				<p>Tuiles de 32 * 32 px. Canvas superposés de 768 * 384 px (multiples de 16, de 24 et de 32).</p>
-				<p class="dejafait">Choisissez votre perso pour le faire apparaître sur la carte. 
+				<p class="dejafait">Choisissez votre perso parmi 3 possibilités pour le faire apparaître sur la carte. 
 				<br />Utilisez les flèches du pavé directionnel pour le déplacer.</p>
-				<br />Son énergie de départ est aléatoire. Il en perd au fil du temps et sa vitesse diminue.
+				<p>Son énergie de départ est aléatoire. Il en perd au fil du temps et sa vitesse diminue.
 				<br />En passant sur certains fruits ou baguettes de palmier jaunies, on les fait disparaitre et on fait apparaitre des images dans l'inventaire, et le score augmente !
 				<br />En allant vers la droite, la carte change et vous découvrirez de nouvelles choses à attraper.</p>
-				<br />L'ara est un PNJ qui indique la quête. Quand vous la trouverez, votre perso regagnera de l'énergie.
-				<br />Le jaguar est l'ennemi qui fait perdre des points quand on le touche.</p>
+				<p>L'ara est un PNJ qui indique la quête. Quand vous la trouverez, votre perso regagnera de l'énergie.
+				<br />Le jaguar est l'ennemi qui fait perdre des points quand on le touche.
+				<br />On peut recommencer le jeu en cliquant sur les PNJs sur l'écran de fin, mais les fruits attrapés ne seront plus là, c'est à améliorer.</p>
+				
 	
 				<p>Testez! Réactualisez en cas de problèmes.<br />Il y a encore des soucis sous IE. On a ajouté <a href="http://code.google.com/p/explorercanvas/downloads/list" target="_blank">excanvas.js</a> mais ça ne suffit pas.</p>
 
-				<p>La struture du code est à améliorer. Aidez-nous sur <a href="https://github.com/doudoulolita/Guyana-Dream" target="_blank">github</a> ou  sur le <a href="https://zestedesavoir.com/forums/sujet/9176/mini-rpg-guyanadream/" target="_blank">forum Zeste de Savoir</a></p>
+				<p>La struture du code est à améliorer. Aidez-nous sur <a href="https://github.com/doudoulolita/Guyana-Dream" target="_blank">github</a>, sur le <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5?page=1" target="_blank">forum d'Openclassroom</a> ou  sur le <a href="https://zestedesavoir.com/forums/sujet/9176/mini-rpg-guyanadream/" target="_blank">forum Zeste de Savoir</a></p>
 
 				<h3>Fichiers utilisés</h3>
 
@@ -139,6 +149,7 @@
 					<li><a href="js/ecrans.js">ecrans.js</a></li>
 					<li><a href="js/choix-perso.js">choix-perso.js</a></li>
 					<li><a href="js/carte.js">carte.js</a></li>
+					<li><a href="js/joueurs.js">joueurs.js</a></li>
 					<li><a href="js/perso.js">perso.js</a></li>
 					<li><a href="js/clavier.js">clavier.js</a></li>
 					<li><a href="js/deplacements.js">deplacements.js</a></li>
@@ -151,7 +162,6 @@
 					<li><a href="js/temps.js">temps.js</a></li>
 					<li><a href="js/pnj.js">pnj.js</a></li>
 					<li><a href="js/ennemi.js">ennemi.js</a></li>
-
 				</ul>
 				</p>
 
