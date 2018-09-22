@@ -1,16 +1,18 @@
 let objets = [[3,1] ,[8,2], [7,3], [21, 4]];
 
+let numObjet = 0; // numéro de l'objet dans le tableau objets
+
 let numTuileNeutre=1;
 
 let nbPoints = 0; // le nombre de points augmente quand on récupère des objets
+
+let occurence = 1;
 
 let nbPointsObjet =0; 
 
 let nbPointsMax=0;
 
-let occurence = 1;
-
-let numObjet = 21; // objet de la quête demandée par le Pnj
+let pointsEnergie = 0; 
 
 /* function pour la couleur du fond */
 function couleurTuile(couleur, posXTuile, posYTuile) {
@@ -28,12 +30,10 @@ function effaceObjet(i,j) {
 }
 
 function comptePoints() {
-	for (let num=0; num<carte1.length; num ++) {
-		for (let j=0; j<carte1[num].length; j++) {//carte1 représente toute la carte
-			for(let i=0; i<carte1[num][j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
-				for (k=0; k<objets.length; k++) {
-					if (carte1[num][j][i] == objets[k][0]) {nbPointsMax += objets[k][1];}
-				}
+	for (j=ligne; j<carte1.length; j++) {//carte1 représente toute la carte
+		for(let i=colonne; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
+			for (k=numObjet; k<objets.length; k++) {
+				if (carte1[j][i] == objets[k][0]) {nbPointsMax += objets[k][1]; pointsEnergie = nbPointsMax;}
 			}
 		}
 	}
@@ -41,9 +41,9 @@ function comptePoints() {
 
 function effaceTuiles() {
 
-	for (let j=0; j<carte1.length; j++) {//carte1 représente toute la carte
-		for(let i=0; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
-			for (k=0; k<objets.length; k++) {
+	for (j=ligne; j<carte1.length; j++) {//carte1 représente toute la carte
+		for(i=colonne; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
+			for (k=numObjet; k<objets.length; k++) {
 				if (carte1[j][i] == objets[k][0] && x > (tailleTuile*i)-largeurPerso && x < (tailleTuile*i)+tailleTuile && y > (tailleTuile*j)-hauteurPerso && y < (tailleTuile*j)+tailleTuile) {  //si la carte présente un n° de tuile compris dans le tableau d'objet et si ses coordonnées du joueur sont comprises dans les limites de cette tuile
 
 					effaceObjet(i,j); // appelle la fonction qui efface la tuile sur le canvas
@@ -58,8 +58,6 @@ function effaceTuiles() {
 
 					affichePointsObjet();
 
-
-
 					carte1[j][i] = numTuileNeutre; // change le numéro de la tuile sur la carte		
 				}
 			} 
@@ -68,21 +66,18 @@ function effaceTuiles() {
 }
 
 function dansInventaire() {
-					dessineTuiles(objets[k][0], largeurCanvas-(3*tailleTuile)+20, (k+2)*tailleTuile); // dessine l'objet sur le côté, dans la partie inventaire, en descendant d'une tuile à chaque occurence
+	dessineTuiles(objets[k][0], largeurCanvas-(3*tailleTuile)+20, (k+2)*tailleTuile); // dessine l'objet sur le côté, dans la partie inventaire, en descendant d'une tuile à chaque occurence
 
-					context3.clearRect(largeurCanvas-(2*tailleTuile)-10, (k+1.5)*tailleTuile, tailleTuile*2, tailleTuile); // efface le chiffre précédent
-					context3.clearRect(largeurCanvas-(2*tailleTuile)-10, 20, tailleTuile*2, tailleTuile); // efface le chiffre précédent
+	context3.clearRect(largeurCanvas-(2*tailleTuile)-10, (k+1.5)*tailleTuile, tailleTuile*2, tailleTuile); // efface le chiffre précédent
+	context3.clearRect(largeurCanvas-(2*tailleTuile)-10, 20, tailleTuile*2, tailleTuile); // efface le chiffre précédent
 
-					ajouteTexte(nbPoints+ " points", 12, largeurCanvas-(2*tailleTuile), tailleTuile + 10);// indique le total d'objets récupérés en utilisant la fonction de texte.
+	ajouteTexte(nbPoints+ " points", 12, largeurCanvas-(2*tailleTuile), tailleTuile + 10);// indique le total d'objets récupérés en utilisant la fonction de texte.
 }
 
 function affichePointsObjet() {
+	nbPointsObjet = objets[k][1];
 
-		nbPointsObjet = objets[k][1];
+	ajouteTexte(nbPointsObjet, 12, largeurCanvas-tailleTuile, (k+2.5)*tailleTuile);// indique le nombre de points pour chaque objet
 
-		ajouteTexte(nbPointsObjet, 12, largeurCanvas-tailleTuile, (k+2.5)*tailleTuile);// indique le nombre de points pour chaque objet
-
-		objets[k][1] += objets[k][1];
+	objets[k][1] += objets[k][1];
 }
-
-

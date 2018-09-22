@@ -17,7 +17,7 @@ context2 = canvas2.getContext('2d');
 
 context3 = canvas3.getContext('2d');
 
-var couleurfondCarte = "#5b6634"; // couleur de fond du jeu
+let couleurfondCarte = "#5b6634"; // couleur de fond du jeu
 
 
 /* function pour la couleur du fond */

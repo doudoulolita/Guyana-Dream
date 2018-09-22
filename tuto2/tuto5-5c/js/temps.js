@@ -14,7 +14,7 @@ function compteTemps() {
 	}, intervalleTemps);	
 }
 
-
+// gestion de l'énergie qui influe sur la vitesse du joueur
 function gereEnergie() {
 	ajouteTexte("Energie : " + pointsEnergie, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*10 + 20);
 	ajouteTexte("Vitesse : " + Math.round(vx*20), 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*10 + 40);
@@ -31,22 +31,11 @@ function gereEnergie() {
 	}, intervalleTemps);	
 }
 
-
-function gagne() {
-	if (nbPoints == 16 && pointsEnergie > 0) { // si ona le bon nombre de points et que l'énergie est positive
-		couleurFond(couleurfondCarte, largeurCanvas - (tailleTuile*3), hauteurCanvas); // on remplit le canvas de couleur sauf sur le côté
-		ajouteTexte("Fin du jeu", 50, tailleTuile*7 , tailleTuile*3); // on écrit que c'est la fin du jeu
-		ajouteTexte("Gagné !", 50, tailleTuile*7 , tailleTuile*5); // on écrit que'on a gagné	
-	}
-}
-
-/***** fonction pour chronométrer le jeu *****/
+/***** fonction affichant un écran de jeu une fois le temps de jeu écoulé *****/
 function chrono() {
 	setTimeout(function() {
 		couleurFond(couleurfondCarte, largeurCanvas - (tailleTuile*3), hauteurCanvas); // on remplit le canvas de couleur sauf sur le côté
-
 		ajouteTexte("Fin du jeu", 50, tailleTuile*7 , tailleTuile*3); // on indique que c'est la fin du jeu
-
 		x= 0 ; y= 0; dir=0; vx=0; // on place le joueur en haut à gauche, regardant de face
 
 		if (nbPoints < 16 || pointsEnergie <= 0) {ajouteTexte("Perdu !", 50, tailleTuile*7 , tailleTuile*5);} // si au bout du temps imparti, on n'a pas le nombre de points ou si l'énergie est négative, on écrit qu'on a perdu
@@ -54,4 +43,10 @@ function chrono() {
 	}, tempsJeu); // la fonction s'exécute au bout du temps indiqué.
 }
 
-
+function gagne() {
+	if (nbPoints == nbPointsMax && pointsEnergie > 0) { // si on a le bon nombre de points et que l'énergie est positive
+		couleurFond(couleurfondCarte, largeurCanvas - (tailleTuile*3), hauteurCanvas); // on remplit le canvas de couleur sauf sur le côté
+		ajouteTexte("Fin du jeu", 50, tailleTuile*7 , tailleTuile*3); // on écrit que c'est la fin du jeu
+		ajouteTexte("Gagné !", 50, tailleTuile*7 , tailleTuile*5); // on écrit que'on a gagné	
+	}
+}

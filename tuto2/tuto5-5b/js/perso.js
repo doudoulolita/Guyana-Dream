@@ -22,6 +22,3 @@ let vx = 2; // vitesse de déplacement du personnage
 let pose = 1; // la pose 0 (ou frame 0) n'est pas comptée car elle correspond à l'immobilité.
 let nbPoses = 5; // nombre de poses sur la spritesheet, en largeur
 let vPose =  0.3; //valeur permettant de passer à la pose suivante dans la spritesheet plus ou moins rapidement
-
-
-

@@ -2,12 +2,13 @@ let touche = "";
 
 let touchesDeplace = ["37","38","39","40"];
 
-function persoBouge(e) {
+let numtoucheDeplace = 0;
 
+function persoBouge(e) {
 
 	//déplacements du personnage en fonction des touches
 
-	for (i=0; i<touchesDeplace.length; i++) {
+	for (let i=numtoucheDeplace; i<touchesDeplace.length; i++) {
 
 		deplacement(e, touchesDeplace[i]); // appel de la fonction de déplacement horizontal lors de l'appui sur la flèche gauche
 	}

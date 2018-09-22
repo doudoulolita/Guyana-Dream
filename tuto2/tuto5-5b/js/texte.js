@@ -11,6 +11,3 @@ function ajouteTexte(texte, tailleTexte, x, y) {
 	context3.fillStyle = couleurTexte;
 	context3.fillText(texte,x,y);
 }
-
-
-

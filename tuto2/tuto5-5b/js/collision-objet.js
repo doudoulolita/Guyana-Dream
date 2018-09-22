@@ -12,6 +12,8 @@ let nbPointsObjet =0;
 
 let nbPointsMax=0;
 
+let pointsEnergie = 0; 
+
 /* function pour la couleur du fond */
 function couleurTuile(couleur, posXTuile, posYTuile) {
 	/* on remplit tout le canvas de couleur */
@@ -58,4 +60,13 @@ function effaceTuiles() { // fonction appelée dans le fichier deplacements.js
 	}
 }
 
-
+// fonction pour compter le nombre maximum de points qu'on peut avoir en récupérant tous les objets 
+function comptePoints() {
+	for (j=ligne; j<carte1.length; j++) {//carte1 représente toute la carte
+		for(i=colonne; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
+			for (k=numObjet; k<objets.length; k++) { // on parcourt le tableau des objets à attraper
+				if (carte1[j][i] == objets[k]) {nbPointsMax += 1; pointsEnergie = nbPointsMax*2;} // si le numéro de la tuile est le premier numéro du tableau, on augmente les points
+			}
+		}
+	}
+}

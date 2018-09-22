@@ -3,6 +3,8 @@ function init() {
 
 	couleurFond(couleurfondCarte, largeurCanvas, hauteurCanvas); // appel de la fonction qui colorie le fond
 
+	pointsEnergie = nbPointsMax + Math.floor(Math.random() * Math.floor(nbPointsMax/2));
+
 	dessineCarte(); // dessin de la carte
 
 	animePerso(); 
@@ -16,9 +18,9 @@ function init() {
 	// Lorsqu'une touche est appuyée, lance une fonction
 	document.onkeydown = persoBouge;
 
-	pointsEnergie = nbPointsMax + Math.floor(Math.random() * Math.floor(nbPointsMax/2));
-
 	compteTemps();
+
+	comptePoints();
 
 	gereEnergie();
 

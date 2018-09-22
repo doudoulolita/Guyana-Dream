@@ -16,7 +16,6 @@ hauteurCanvas = canvas1.height;
 
 let couleurfondCarte = "#5b6634"; // couleur de fond du jeu
 
-
 /* function pour la couleur du fond */
 function couleurFond(couleur, largeur, hauteur) {
 	/* on remplit tout le canvas de couleur */
