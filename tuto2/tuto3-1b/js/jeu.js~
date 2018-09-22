@@ -1,0 +1,11 @@
+function recupCanvas() {
+/** Récupération du canvas **/
+	var canvas = document.querySelector('canvas');
+	context = canvas.getContext('2d');
+
+	// Définit les dimensions du canvas
+	largeurCanvas = canvas.width;
+	hauteurCanvas = canvas.height;
+}
+
+ 

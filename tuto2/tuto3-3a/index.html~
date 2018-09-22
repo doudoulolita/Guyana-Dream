@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	<meta charset="utf-8">
+	<title>Mon RPG perso - spritesheet</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" /><!-- lien vers la feuille de style -->
+	</head>
+
+	<body>
+	 
+		<h1>Mon RPG perso - La spritesheet</h1>
+	 
+		<canvas width="192" height="192">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement du jeu -->
+
+	<br style="clear:both;" />
+            
+	<!-- lien vers les fichiers en javascript -->
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jeu.js"></script>
+	<script type="text/javascript" src="js/perso.js"></script>
+	<script type="text/javascript" src="js/clavier.js"></script>
+	<script type="text/javascript" src="js/animation.js"></script>
+
+	<img src="joueur1.png" style="float:left; margin:20px;" />
+
+	<p>Affichage d'un sprite de 32 * 32 px sur un canvas de 192 * 192 px.</p>
+
+	<br style="clear:both;" />
+
+	<img src="clavier-fleches.png" style="float:left; margin:20px;" />
+	<p>Gestion du clavier :<br /> Affichage de différentes directions de la spritesheet en haut du canvas	<br />
+	<strong>Appuyez sur les flèches du clavier</strong> pour faire apparaître les différentes poses suivant la direction.</p>
+
+	<br style="clear:both;" />
+
+	<p>Fichiers javascript:
+	<ul>
+		<li><a href="js/main.js">js/main.js</li>
+		<li><a href="js/jeu.js">js/jeu.js</li>
+		<li><a href="js/perso.js">js/image.js</li>
+		<li><a href="js/clavier.js">js/clavier.js</li>
+		<li><a href="js/animation.js">js/animation.js</li>
+	</ul>
+	</p>
+
+	<footer style="clear:both;">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+		<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
+	</footer>
+	 
+	</body>
+</html>
+

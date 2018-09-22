@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Mon RPG perso - ajout PNJ</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" /><!-- lien vers la feuille de style -->
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+    </head>
+
+    <body>
+
+	<h1>Mon RPG perso - Ajouter un PNJ</h1><!-- titre de niveau 1 -->
+
+ 			<!-- image du personnage à côté du canvas -->
+
+				<figure>
+					<img src="sprites/choix-joueur1.png" />
+					<figcaption>
+						Joueur 1
+					</figcaption>
+				</figure>
+
+
+
+		<canvas id="tuiles" width="768" height="384">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement du jeu --> 
+		<canvas id="persos" width="768" height="384"></canvas>
+		<canvas id="pnjs" width="768" height="384"></canvas>
+		<canvas id="textes" width="768" height="384"></canvas>
+
+	<br style="clear:both;" />
+            
+	<!-- lien vers les fichiers en javascript -->
+	<script type="text/javascript" charset="UTF-8" src="js/main.js" ></script> 
+	<script type="text/javascript" charset="UTF-8" src="js/jeu.js" ></script> 
+	<script type="text/javascript" charset="UTF-8" src="js/carte.js" ></script>
+
+        <script type="text/javascript" charset="UTF-8" src="js/perso.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="js/clavier.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="js/deplacements.js" ></script>
+        <script type="text/javascript" charset="UTF-8" src="js/animation.js" ></script>
+
+	<script type="text/javascript" charset="UTF-8" src="js/collision-bords.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/collision-decor.js" ></script>
+
+	<script type="text/javascript" charset="UTF-8" src="js/texte.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/collision-objet.js" ></script>
+
+	<script type="text/javascript" charset="UTF-8" src="js/temps.js" ></script>
+	<script type="text/javascript" charset="UTF-8" src="js/change-carte.js" ></script>
+
+	<script type="text/javascript" charset="UTF-8" src="js/pnj.js" ></script>
+
+	<br style="clear:both;" />
+
+		<h2>Explications du jeu</h2>
+
+
+	<img src="sprites/joueur1.png" style="float:left; margin:20px;" />
+	<p>Affichage de la couleur verte et d'une carte dont les numéros sont placés dans un tableau, sur un canvas de 768 * 384 px.</p>
+	<p>Déplacement et animation d'un sprite de 32 * 32 px.</p>
+	<p>Gestion du clavier pour déplacer le perso.</p>
+	<p>Gestion de la collision  du personnage avec des tuiles du tileset, qui le bloquent.</p>
+	<p>Quand le perso passe dessus, d'autres tuiles "objets" sont effacées du canvas et placées dans l'inventaire, et leurs points sont cumulés.</p>
+	<p>Le temps est décompté; l'énergie baisse et la vitesse diminue. Elle remonte quand le perso attrape un objet.</p>
+	<p>Quand le temps imparti est atteint, un écran affiche si on a gagné ou perdu, selon l'énergie qui reste.</p>
+	<p>En allant vers la droite, la carte change.</p>
+	<p>Un pnj se déplace sur une courte distance.</p>
+	<br style="clear:both;" />
+
+	<img src="tilesets/tileset2.png" style="float:left; margin:20px;" />
+
+
+	<p>Les images du décor sont placées sur un canvas différent. Les 2 canvas sont récupérés grâce à leur id.</p>
+	
+	<br style="clear:both;" />
+
+	<p>Fichiers javascript :
+	<ul style="margin-bottom:30px;">
+		<li><a href="js/main.js">main.js</a></li>
+		<li><a href="js/jeu.js">jeu.js</a></li>
+		<li><a href="js/carte.js">carte.js</a></li>
+
+		<li><a href="js/perso.js">perso.js</a></li>
+		<li><a href="js/clavier.js">clavier.js</a></li>
+		<li><a href="js/deplacements.js">deplacements.js</a></li>
+		<li><a href="js/animation.js">animation.js</a></li>
+		<li><a href="js/collision-bords.js">collision-bords.js</a></li>
+		<li><a href="js/collision-decor.js">collision-decor.js</a></li>
+
+		<li><a href="js/texte.js">texte.js</a></li>
+		<li><a href="js/collision-objet.js">collision-objet.js</a></li>
+
+		<li><a href="js/temps.js">temps.js</a></li>
+		<li><a href="js/change-carte.js">change-carte.js</a></li>
+
+		<li><a href="js/pnj.js">pnj.js</a></li>
+
+
+	</ul>
+	</p>
+
+	<footer style="clear:both;">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+		<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
+	</footer>
+       
+    </body>
+</html>
