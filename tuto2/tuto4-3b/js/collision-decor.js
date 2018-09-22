@@ -1,5 +1,3 @@
-var touche = "";
-
 function bloque(posXTuile, posYTuile) {
 
 	// vérification de la position du personnage par rapport à la tuile interdite, changement de coordonnées suivant la direction pour qu'il ne reste pas bloqué

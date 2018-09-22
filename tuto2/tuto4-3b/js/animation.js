@@ -1,4 +1,3 @@
-
 /*** fonction pour effacer le canvas et dessiner le personnage ***/
 function dessinePerso(x, y, pose, dir) {
 	context2.clearRect(0, 0, largeurCanvas, hauteurCanvas);
@@ -18,6 +17,4 @@ function animePerso() {
 
 	//si on a pas retourné false plus haut, on a le droit de se situer ici avec le personnage. On renvoie donc true.
 	requestAnimationFrame(animePerso); // appel de la fonction qui permet de répéter l'animation (à l'aide d'un callback)
-
-
 }

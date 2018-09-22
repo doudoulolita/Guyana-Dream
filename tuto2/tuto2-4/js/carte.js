@@ -1,9 +1,10 @@
-var cheminTileset = "tileset-mini1.png"; // chemin de l'image servant de tileset
-var largeurTuile = 32; // largeur de la tuile
-var hauteurTuile = 32; // hauteur de la tuile
+let maTuile = new Image(); // crée une nouvelle image
 
-var maTuile = new Image(); // crée une nouvelle image
-maTuile.src = cheminTileset;// donne le chemin de l'image dont la varaible est décalrée plus haut.
+let cheminTileset = "tileset-mini1.png"; // chemin de l'image servant de tileset
+maTuile.src = cheminTileset;// donne le chemin de l'image dont la variable est déclarée plus haut.
+
+let largeurTuile = 32; // largeur de la tuile
+let hauteurTuile = 32; // hauteur de la tuile
 
 
 function afficheTuile(xImage, yImage, posX, posY) {

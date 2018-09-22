@@ -1,4 +1,4 @@
-var collision = 0; // avant toute collision avec le pnj
+let collision = 0; // avant toute collision avec le pnj
 
 function rencontre(pnj, textePnj) { // fonction gérant la collision avec le pnj
 

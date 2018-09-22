@@ -1,6 +1,6 @@
 /* Pour chaque carte, on donne les numéros des tuiles qui bloquent le joueur '(arbres, par ex) */
 
-var tuilesInterdites = [
+let tuilesInterdites = [
 				[ 4, 11, 12, 15, 16], 
 				[ 4, 19, 20, 23, 24]
 			]; 
@@ -30,8 +30,8 @@ function bloque(posXTuile, posYTuile) {
 }
 
 function bloqueTuiles() { // on va parcourir les cartes pour vérifier qi on touche une tuile interdite
-	for (var j=0; j<cartes[numCarte-1].length; j++) {//cartes[numCarte-1] représente toute la carte
-		for(var i=0; i<cartes[numCarte-1][j].length; i++) {//cartes[numCarte-1][j] représente maintenant une ligne de la carte	
+	for (let j=0; j<cartes[numCarte-1].length; j++) {//cartes[numCarte-1] représente toute la carte
+		for(let i=0; i<cartes[numCarte-1][j].length; i++) {//cartes[numCarte-1][j] représente maintenant une ligne de la carte	
 			for (k=0; k<tuilesInterdites[numCarte-1].length; k++) { // parcourt le tableau des tuiles interdites
 				if (cartes[numCarte-1][j][i]== tuilesInterdites[numCarte-1][k]) {bloque(tailleTuile*i, tailleTuile*j); } // si le numéro de la tuile est dans le tableau, on appelle la fonction de blocage
 			} 

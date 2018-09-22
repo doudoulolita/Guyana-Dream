@@ -1,24 +1,17 @@
 // coordonnées où positionner la tuile sur la quelle on n'a pas le droit de passer.
-var numTuile1 = 4;
-var posXTuile = tailleTuile*2;
-var posYTuile = tailleTuile*2;
+let numTuile1 = 4;
+let posXTuile = tailleTuile*2;
+let posYTuile = tailleTuile*2;
 
-var numTuile2= 7;
-var posXTuile2 = tailleTuile*4;
-var posYTuile2 = tailleTuile*4;
-var monImage = new Image(); // crée une nouvelle image
-monImage.src = cheminTileset;// donne le chemin de l'image dont la variable est déclarée plus haut.
+let numTuile2= 7;
+let posXTuile2 = tailleTuile*4;
+let posYTuile2 = tailleTuile*4;
 
 function afficheTuileInterdite(num, posX, posY) {
 	calculTileset(num); // appel de la fonction qui calcule les lignes et colonnes sur le tileset en fonction du numéro de tuile
 
 	context1.drawImage(tileset, (colonneTileset-1)*tailleTuile, (ligneTileset-1)*tailleTuile, tailleTuile, tailleTuile, posX, posY, tailleTuile, tailleTuile); //on dessine la tuile à l'endroit voulu dans les paramètres
-
 }
-
-
-
-var touche = "";
 
 function bloque(posXTuile, posYTuile) {
 
@@ -41,7 +34,3 @@ function bloque(posXTuile, posYTuile) {
 		}
 	}
 }
-
-
-
-

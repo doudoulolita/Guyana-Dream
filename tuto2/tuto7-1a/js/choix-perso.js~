@@ -53,14 +53,3 @@ function clicJoueur(context) { // détermine si le clic de la souris est sur une
 		}
 	}
 }
-
-function clicRejouer() {
-	if(xSourisCanvas>0 && xSourisCanvas<tailleTuile*carte1[0].length && ySourisCanvas>0 && ySourisCanvas<tailleTuile*carte1.length) { // vérifie à quel endroit on a cliqué par rapport à l'image de choix du joueur
-		context[0].clearRect(0, 0, largeurCanvas, hauteurCanvas); // efface le premier canvas
-		context[1].clearRect(0, 0, cartes[0].length *tailleTuile, cartes.length*tailleTuile); // efface les bulles de dialogues
-		context[2].clearRect(0, 0, cartes[0].length *tailleTuile, cartes.length*tailleTuile); // efface le perso joueur
-		context[3].clearRect(0, 0, cartes[0].length *tailleTuile, cartes.length*tailleTuile); // efface les PNJs
-		context[4].clearRect(0, 0, cartes[0].length *tailleTuile, cartes.length*tailleTuile); // efface le canvas des textes	
-		ecranAccueil();
-	}
-}

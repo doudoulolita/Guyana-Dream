@@ -1,12 +1,12 @@
-var tempsJeu = 80000; // temps au bout du quel on lancera la fonction chrono()
+let tempsJeu = 80000; // temps au bout du quel on lancera la fonction chrono()
 
-var intervalleTemps = 2000; // intervalle de temps pour appeler la fonction qui affiche la vitesse et l'énergie et celle qui affiche le temps
+let intervalleTemps = 2000; // intervalle de temps pour appeler la fonction qui affiche la vitesse et l'énergie et celle qui affiche le temps
 
-var nbPointsMax = 0; // initialise le nombre de points qu'on pourra obtenir au maximum
+let nbPointsMax = 0; // initialise le nombre de points qu'on pourra obtenir au maximum
 
-var pointsEnergie = nbPointsMax; // initialise les points d'énergie
+let pointsEnergie = nbPointsMax; // initialise les points d'énergie
 
-var gain=0; // initialise le gain (si on gagne, on aura 1)
+let gain=0; // initialise le gain (si on gagne, on aura 1)
 
 function compteTemps() { 
 	ajouteTexte("Temps : " + (tempsJeu/intervalleTemps)*2, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*10); // affiche le temps qui reste

@@ -1,11 +1,11 @@
-var titreJeu = "Guyana-Dream";
+let titreJeu = "Guyana-Dream";
 
-var titreInventaire = "Inventaire";
+let titreInventaire = "Inventaire";
 
-var dialoguePnj = "Trouve les fleurs !";
+let dialoguePnj = "Trouve les fleurs !";
 
-var fonte = "px Arial";
-var couleurTexte = "#cb923b";
+let fonte = "px Arial";
+let couleurTexte = "#cb923b";
 
 
 /* Ajout de texte */

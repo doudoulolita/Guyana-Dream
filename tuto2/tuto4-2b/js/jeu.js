@@ -1,11 +1,9 @@
-var couleurfondCarte = "#5b6634"; // couleur de fond du jeu
-
 function recup2Canvas() {
 	// Récupére les canvas à partir de leur id
-	canvas1 = document.getElementById('tuiles');
+	let canvas1 = document.getElementById('tuiles');
 	context1 = canvas1.getContext('2d');
 
-	canvas2 = document.getElementById('persos');
+	let canvas2 = document.getElementById('persos');
 	context2 = canvas2.getContext('2d');
 
 
@@ -13,6 +11,8 @@ function recup2Canvas() {
 	largeurCanvas = canvas1.width;
 	hauteurCanvas = canvas1.height;
 }
+
+let couleurfondCarte = "#5b6634"; // couleur de fond du jeu
 
 /* function pour la couleur du fond */
 function couleurFond(context, couleur) {

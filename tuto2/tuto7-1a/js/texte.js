@@ -1,24 +1,24 @@
-var titreJeu = "Guyana-Dream";
+let titreJeu = "Guyana-Dream";
 
-var hauteurTitre1=50;
+let hauteurTitre1=50;
 
-var hauteurTitre=14;
+let hauteurTitre=14;
 
-var texteChoixPerso = 'Cliquez vite sur un perso';
+let texteChoixPerso = 'Cliquez vite sur un perso';
 
-var titreInventaire = "Inventaire";
+let titreInventaire = "Inventaire";
 
 
-var texteFin = "Fin du jeu";
+let texteFin = "Fin du jeu";
 
-var texteResultat = "";
+let texteResultat = "";
 
-var texteGagne = "Gagné !";
+let texteGagne = "Gagné !";
 
-var textePerd = "Perdu !";
+let textePerd = "Perdu !";
 
-var fonte = "px Arial";
-var couleurTexte = "#cb923b";
+let fonte = "px Arial";
+let couleurTexte = "#cb923b";
 
 
 /* Ajout de texte */

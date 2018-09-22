@@ -35,7 +35,6 @@ function animePnj(pnjs, context, dir) {
 	changePose(pnjs, pnjs.nbPoses, pnjs.vPose);// appel de la fonction qui passe d'une pose à l'autre
 
 	rencontre(pnjs, pnjs.texte); // appel de la fonction du fichier collision-pnj.js
-
 }
 
 /***** fonction pour animer les différents PNJs (appelée dans la fonction animeTout du fichier main.js) *****/

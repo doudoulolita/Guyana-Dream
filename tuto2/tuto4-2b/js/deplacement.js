@@ -1,4 +1,4 @@
-var arriveeX = imageX;
+let arriveeX = imageX;
 
 /*** fonction gérant le déplacement du personnage ***/
 function deplacementPnj() {

@@ -1,8 +1,8 @@
 /***** Initialisation des variables globales du personnage non joueur *****/
-var spriteSheetEnnemi="sprites/ennemi1.png"; //chemin de l'image servant de spritesheet
+let spriteSheetEnnemi="sprites/ennemi1.png"; //chemin de l'image servant de spritesheet
 
 /*** Création de l'image du ennemi ***/
-var ennemi = new Image(); // crée une nouvelle image
+let ennemi = new Image(); // crée une nouvelle image
 ennemi.src = spriteSheetEnnemi; // donne le chemin de l'image servant de spritesheet
 
 /* largeur et hauteur du ennemi */

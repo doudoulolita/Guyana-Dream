@@ -1,8 +1,8 @@
 /***** Initialisation des variables globales du personnage non joueur *****/
-var spriteSheetPnj="sprites/pnj1.png"; //chemin de l'image servant de spritesheet
+let spriteSheetPnj="sprites/pnj1.png"; //chemin de l'image servant de spritesheet
 
 /*** Création de l'image du pnj ***/
-var pnj = new Image(); // crée une nouvelle image
+let pnj = new Image(); // crée une nouvelle image
 pnj.src = spriteSheetPnj; // donne le chemin de l'image servant de spritesheet
 
 /* largeur et hauteur du pnj */
@@ -27,6 +27,6 @@ pnj.pose = 1, // la pose 0 (ou frame 0) n'est pas comptée car elle correspond �
 pnj.nbPoses = 5, // nombre de poses sur la spritesheet, en largeur
 pnj.vPose =  0.15; //valeur permettant de passer à la pose suivante dans la spritesheet plus ou moins rapidement
 
-var dirPnj = 1;
+let dirPnj = 1;
 
 pnj.collision = 0;

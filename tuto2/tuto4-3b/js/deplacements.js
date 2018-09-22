@@ -29,7 +29,7 @@ function deplacement(e, touche) {
 
 		if(touche==38 || touche==40) { y = y + vitesse; dir = direct; } // changement de la coordonnée y et personnage de face ou de dos selon la touche
 	} 
-
+	// fonctions définies dans le fichier collision-decor.js
 	bloque(posXTuile, posYTuile);
 	bloque(posXTuile2, posYTuile2);
 }

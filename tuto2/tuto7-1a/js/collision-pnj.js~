@@ -1,6 +1,6 @@
 var collision = 0; // avant toute collision avec le pnj
 
-function rondDegrade(x, y) {
+function rondDegrade(x, y) { // fonction dessinant un rond dégradé (sera appelée dans la fonction rencontre)
 
   // Créer un dégradé
   var radgrad = context[1].createRadialGradient(x-20, y, 10, x-20+7, y+5, 30);
@@ -13,7 +13,7 @@ function rondDegrade(x, y) {
   context[1].fillRect(x-20-joueur.largeur, y-joueur.largeur, 150, 150);
 }
 
-/***** fonction pour chronométrer le jeu *****/
+/***** fonction pour effacer le rond au bout d'un moment (sera appelée dans la fonction rencontre) *****/
 function supprimeRond() {
 	setTimeout(function() { // cette fonction se lancera quand le temps décidé sera écoulé
 
@@ -23,7 +23,7 @@ function supprimeRond() {
 	}, 2000); // la fonction s'exécute au bout du temps indiqué.
 }
 
-function rencontre(pnj, textePnj) { // fonction gérant la collision avec le pnj
+function rencontre(pnj, textePnj) { // fonction gérant la collision avec le pnj (appelée dans le fichier animation.js)
 
 	// vérification de la position du personnage par rapport à la tuile interdite, changement de coordonnées suivant la direction pour qu'il ne reste pas bloqué
 

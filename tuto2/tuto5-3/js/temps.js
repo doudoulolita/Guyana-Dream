@@ -1,6 +1,5 @@
-var tempsJeu = 30000;
-var intervalleTemps = 2000;
-
+let tempsJeu = 30000; // temps du jeu en ms, il sera affiché en secondes
+let intervalleTemps = 2000; // intervalle de temps pour appeler la fonction qui affiche le temps écoulé
 
 function compteTemps() {
 		ajouteTexte("Temps : " + (tempsJeu/intervalleTemps)*2, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*9);
@@ -10,7 +9,7 @@ function compteTemps() {
 
 		tempsJeu -= intervalleTemps;
 
-		ajouteTexte("Temps : " + (tempsJeu/intervalleTemps)*2, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*9);
+		ajouteTexte("Temps : " + (tempsJeu/intervalleTemps)*2, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*9); // le temps n'est affiché que toutes les 2 secondes, en secondes
 
 	}, intervalleTemps);	
 }

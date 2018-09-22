@@ -2,7 +2,9 @@
 function init() {
 
 	recupCanvas(); // récupération du canvas
+
 	animePerso();
+
 	document.onkeydown = persoBouge; // animation du personnage
 }
 

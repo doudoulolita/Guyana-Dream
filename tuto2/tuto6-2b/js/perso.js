@@ -1,17 +1,17 @@
 /***** Initialisation des variables globales du personnage *****/
 
-var spriteSheet="sprites/joueur1.png"; //chemin de l'image servant de spritesheet
+let spriteSheet="sprites/joueur1.png"; //chemin de l'image servant de spritesheet
 
 /* position initiale du perso */
-var departJoueurX = 0, // position de départ au milieu de l'écran en largeur
+let departJoueurX = 0, // position de départ au milieu de l'écran en largeur
     departJoueurY = tailleTuile -(tailleTuile/2); // position de départ au milieu de l'écran en hauteur
 
-var dir=1; // la direction 1 correspond à la deuxième ligne de la spritesheet, donc le profil droit
+let dir=1; // la direction 1 correspond à la deuxième ligne de la spritesheet, donc le profil droit
 
-var vx = 2; // vitesse de déplacement du personnage
+let vx = 2; // vitesse de déplacement du personnage
 
 /*** Création de l'image du joueur ***/
-var joueur = new Image(); // crée une nouvelle image
+let joueur = new Image(); // crée une nouvelle image
 joueur.src = spriteSheet; // donne le chemin de l'image servant de spritesheet
 
 /* largeur et hauteur du perso */

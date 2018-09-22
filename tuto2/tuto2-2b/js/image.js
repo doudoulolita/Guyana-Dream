@@ -1,17 +1,18 @@
-var cheminImage = "cachette-fougeres-jaunes.png"; // chemin de l'image servant de tileset
-var largImg = 32; // largeur de la tuile
-var hautImg = 32; // hauteur de la tuile
+let monImage = new Image(); // crée une nouvelle image
 
-var monImage = new Image(); // crée une nouvelle image
+let cheminImage = "cachette-fougeres-jaunes.png"; // chemin de l'image servant de tileset
 monImage.src = cheminImage;// donne le chemin de l'image dont la variable est déclarée plus haut.
 
-var cheminImage2 = "choix-joueur2.png"; // chemin de l'image servant de tileset
-var largImg2 = 32; // largeur de la tuile
-var hautImg2 = 48; // hauteur de la tuile
+let largImg = 32; // largeur de la tuile
+let hautImg = 32; // hauteur de la tuile
 
-var monImage2 = new Image(); // crée une nouvelle image
+let monImage2 = new Image(); // crée une nouvelle image
+
+let cheminImage2 = "choix-joueur2.png"; // chemin de l'image servant de tileset
 monImage2.src = cheminImage2;// donne le chemin de l'image dont la variable est déclarée plus haut.
 
+let largImg2 = 32; // largeur de la tuile
+let hautImg2 = 48; // hauteur de la tuile
 
 function afficheImage(image, posX, posY, largeur, hauteur) {
 	context.drawImage(image, 0, 0, largeur, hauteur, posX, posY, largeur, hauteur);//on dessine l'image à l'endroit voulu

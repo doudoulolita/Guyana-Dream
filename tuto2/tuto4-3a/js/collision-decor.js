@@ -1,7 +1,7 @@
 function bloque(touche) {
 	if(touche==37 || touche==39) {
 
-		if (x + largeurPerso > posXTuile && x - largeurImage < posXTuile && y + hauteurPerso > posYTuile && y - hauteurImage < posYTuile) {
+		if (x + largeurPerso > imageX && x - largeurImage < imageX && y + hauteurPerso > imageY && y - hauteurImage < imageY) {
 			x = x + sens; // on ajoute sens à x pour qu'il se décale horizontalement et sorte de la tuile interdite
 		}
 
@@ -11,13 +11,12 @@ function bloque(touche) {
 	}
 
 	if(touche==38 || touche==40) {
-		if (x + largeurPerso > posXTuile && x - largeurImage < posXTuile && y + hauteurPerso > posYTuile && y - hauteurImage < posYTuile) {
+		if (x + largeurPerso > imageX && x - largeurImage < imageX && y + hauteurPerso > imageY && y - hauteurImage < imageY) {
 			y = y + sens; // on ajoute sens à y pour qu'il se décale verticalement et sorte de la tuile interdite
 		}
 
 		else { 
 			y = y + vitesse; dir = direct;
 		} // changement de la coordonnée y et personnage de face ou de dos selon la touche
-
 	}
 }

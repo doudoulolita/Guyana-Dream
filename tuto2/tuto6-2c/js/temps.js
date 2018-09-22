@@ -1,10 +1,9 @@
-var tempsJeu = 80000;
-var intervalleTemps = 2000;
+let tempsJeu = 80000;
+let intervalleTemps = 2000;
 
-var nbPointsMax = 0;
-var pointsEnergie = nbPointsMax;
+let pointsEnergie = nbPointsMax;
 
-var gain=0;
+let gain=0;
 
 function compteTemps() {
 	ajouteTexte("Temps : " + (tempsJeu/intervalleTemps)*2, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*9);

@@ -32,7 +32,7 @@ function deplacement(joueur, e, touche) {
 }
 
 
-var arriveeX = 4*tailleTuile;
+let arriveeX = 4*tailleTuile;
 
 /*** fonction gérant le déplacement du personnage ***/
 function deplacementPnj(pnj) {

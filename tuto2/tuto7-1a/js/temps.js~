@@ -1,8 +1,6 @@
-var tempsJeu = 10000; // temps au bout du quel on lancera la fonction chrono()
+var tempsJeu = 80000; // temps au bout du quel on lancera la fonction chrono()
 
 var intervalleTemps = 2000; // intervalle de temps pour appeler la fonction qui affiche la vitesse et l'énergie et celle qui affiche le temps
-
-var nbPointsMax = 0; // initialise le nombre de points qu'on pourra obtenir au maximum
 
 var pointsEnergie = nbPointsMax; // initialise les points d'énergie
 

@@ -1,4 +1,3 @@
-
 /*** fonction pour effacer le canvas et dessiner le personnage ***/
 function dessinePerso(x, y, pose, dir) {
 	context2.clearRect(0, 0, largeurCanvas, hauteurCanvas);

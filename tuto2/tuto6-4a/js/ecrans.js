@@ -1,4 +1,4 @@
-var tempsEcran= 3000;
+let tempsEcran= 3000;
 
 function ecranAccueil() {
 

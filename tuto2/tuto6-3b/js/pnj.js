@@ -1,14 +1,14 @@
 /***** Initialisation des variables globales du personnage non joueur *****/
-var spriteSheetPnj="sprites/pnj1.png"; //chemin de l'image servant de spritesheet
+let spriteSheetPnj="sprites/pnj1.png"; //chemin de l'image servant de spritesheet
 
 /* position initiale du pnj */
-var departX= 0;
-var departY= 5* tailleTuile;
+let departX= 0;
+let departY= 5* tailleTuile;
 
-var dirPnj=1; // la direction 1 correspond à la deuxième ligne de la spritesheet, donc le profil droit
+let dirPnj=1; // la direction 1 correspond à la deuxième ligne de la spritesheet, donc le profil droit
 
 /*** Création de l'image du pnj ***/
-var pnj = new Image(); // crée une nouvelle image
+let pnj = new Image(); // crée une nouvelle image
 pnj.src = spriteSheetPnj; // donne le chemin de l'image servant de spritesheet
 
 /* largeur et hauteur du pnj */

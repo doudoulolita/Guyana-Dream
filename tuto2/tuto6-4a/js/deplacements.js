@@ -32,7 +32,7 @@ function deplacement(joueur, e, touche) { // fonction gérant le déplacement du
 }
 
 
-var arriveeX = 4*tailleTuile; // le pnj va aller du bord du canvas jusqu'à cette position puis repartir en sens inverse
+let arriveeX = 4*tailleTuile; // le pnj va aller du bord du canvas jusqu'à cette position puis repartir en sens inverse
 
 /*** fonction gérant le déplacement du personnage ***/
 function deplacementPnj(pnj) {

@@ -1,4 +1,4 @@
-var tempsEcran= 3000;
+let tempsEcran= 3000;
 
 /**** Le jeu se décline en 3 écrans : 
 

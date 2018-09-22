@@ -1,9 +1,9 @@
-var collision = 0; // avant toute collision avec le pnj
+let collision = 0; // avant toute collision avec le pnj
 
 function rondDegrade(x, y) { // fonction dessinant un rond dégradé (sera appelée dans la fonction rencontre)
 
   // Créer un dégradé
-  var radgrad = context[1].createRadialGradient(x-20, y, 10, x-20+7, y+5, 30);
+  let radgrad = context[1].createRadialGradient(x-20, y, 10, x-20+7, y+5, 30);
   radgrad.addColorStop(0, '#F4F201');
   radgrad.addColorStop(0.8, '#E4C700');
   radgrad.addColorStop(1, 'rgba(228, 199, 0, 0)');

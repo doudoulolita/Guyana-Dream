@@ -1,9 +1,7 @@
-var texte1 = "Guyana-Dream";
+let texte1 = "Guyana-Dream";
 
-
-var fonte = "px Arial";
-var couleurTexte = "#cb923b";
-
+let fonte = "px Arial";
+let couleurTexte = "#cb923b";
 
 /* Ajout de texte */
 function ajouteTexte(texte, tailleTexte, x, y) {
@@ -11,6 +9,3 @@ function ajouteTexte(texte, tailleTexte, x, y) {
 	context3.fillStyle = couleurTexte;
 	context3.fillText(texte,x,y);
 }
-
-
-

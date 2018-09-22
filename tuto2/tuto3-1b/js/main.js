@@ -2,6 +2,7 @@
 function init() {
 
 	recupCanvas(); // récupération du canvas des tuiles
+
 	animePerso(); // animation du personnage
 }
 

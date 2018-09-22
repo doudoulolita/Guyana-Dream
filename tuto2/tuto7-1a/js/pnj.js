@@ -1,8 +1,8 @@
 /***** Initialisation des variables globales du personnage non joueur *****/
-var spriteSheetPnj="sprites/pnj1.png"; //chemin de l'image servant de spritesheet
+let spriteSheetPnj="sprites/pnj1.png"; //chemin de l'image servant de spritesheet
 
 /*** Création de l'image du pnj ***/
-var pnj = new Image(); // crée une nouvelle image
+let pnj = new Image(); // crée une nouvelle image
 pnj.src = spriteSheetPnj; // donne le chemin de l'image servant de spritesheet
 
 pnj.name = "ara";

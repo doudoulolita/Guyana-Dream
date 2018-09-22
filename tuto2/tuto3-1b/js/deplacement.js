@@ -18,7 +18,6 @@ function rebondPerso() {
 
 	if (y > hauteurCanvas) {
 		vy=-vy;
-
 	}
 	if (x < 0) {
 		vx=-vx;
@@ -26,7 +25,6 @@ function rebondPerso() {
 
 	if (y < 0) {
 		vy=-vy;
-
 	}
 }
 
@@ -38,7 +36,6 @@ function animePerso() {
 	obliquePerso();
 
 	rebondPerso(); // appel de la fonction de déplacement du personnage
-
 
 	requestAnimationFrame(animePerso); // appel de la fonction qui permet de répéter l'animation (à l'aide d'un callback)
 }

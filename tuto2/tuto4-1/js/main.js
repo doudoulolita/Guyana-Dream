@@ -7,9 +7,7 @@ function init() {
 	animePerso();
 
 	// Lorsqu'une touche est appuyée, lance une fonction
-
 	document.onkeydown = persoBouge;
-
 }
 
 /***** lorsque l'image est chargée, la fonction animePerso() est appelée *****/

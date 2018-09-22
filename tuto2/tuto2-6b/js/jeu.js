@@ -1,10 +1,10 @@
-var couleurfondCarte = "#5b6634"; // couleur de fond du jeu
+let couleurfondCarte = "#5b6634"; // couleur de fond du jeu
 
 /* Récupération du canvas pour pouvoir dessiner dessus */
 
 function recupCanvas() {
 /** Récupération du canvas **/
-	var canvas = document.querySelector('canvas');
+	let canvas = document.querySelector('canvas');
 	context = canvas.getContext('2d');
 
 	// Définit les dimensions du canvas
@@ -12,7 +12,7 @@ function recupCanvas() {
 	hauteurCanvas = canvas.height;
 }
 
-/* function pour la couleur du fond */
+/* fonction pour la couleur du fond */
 function couleurFond(couleur) {
 	/* on remplit tout le canvas de couleur */
 	context.fillStyle= couleur; // choix de la couleur sous forme de varaible, décalrée plus haut

@@ -6,16 +6,17 @@ function deplacement(e, touche) {
 			vitesse = -vx; // vitesse négative pour aller à gauche
 			direct = 2; // 3ème ligne de la spritesheet
 			break;
-		case "39": // touche droite
-			sens = -1;
-			vitesse = vx; // vitesse positive pour aller à droite
-			direct = 1; // 2ème ligne de la spritesheet
-			break;
 		case "38": // touche haut
 			sens = 1;
 			vitesse = -vx;
 			direct = 3; // 4ème ligne de la spritesheet
 			break;
+		case "39": // touche droite
+			sens = -1;
+			vitesse = vx; // vitesse positive pour aller à droite
+			direct = 1; // 2ème ligne de la spritesheet
+			break;
+
 		case "40": // touche bas
 			sens = -1;
 			vitesse = vx;
@@ -29,6 +30,6 @@ function deplacement(e, touche) {
 		if(touche==38 || touche==40) { y = y + vitesse; dir = direct; } // changement de la coordonnée y et personnage de face ou de dos selon la touche
 	} 
 
-	bloqueTuiles();
-	effaceTuiles();
+	bloqueTuiles(); // fonction définie dans le fichier collision-decor.js
+	effaceTuiles(); // fonction définie dans le fichier collision-objet.js
 }

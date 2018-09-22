@@ -1,6 +1,4 @@
-var touche = "";
-
-var tuilesInterdites = [
+let tuilesInterdites = [
 				[ 4, 11, 12, 15, 16], 
 				[ 4, 19, 20, 23, 24]
 			];
@@ -30,8 +28,8 @@ function bloque(posXTuile, posYTuile) {
 }
 
 function bloqueTuiles() {
-	for (var j=0; j<cartes[numCarte-1].length; j++) {//map représente toute la carte
-		for(var i=0; i<cartes[numCarte-1][j].length; i++) {//map[j] représente maintenant une ligne de la carte	
+	for (let j=0; j<cartes[numCarte-1].length; j++) {//map représente toute la carte
+		for(let i=0; i<cartes[numCarte-1][j].length; i++) {//map[j] représente maintenant une ligne de la carte	
 			for (k=0; k<tuilesInterdites[numCarte-1].length; k++) {
 				if (cartes[numCarte-1][j][i]== tuilesInterdites[numCarte-1][k]) {bloque(tailleTuile*i, tailleTuile*j); }
 			} 

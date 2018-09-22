@@ -1,5 +1,5 @@
-var tempsJeu = 70000;
-var intervalleTemps = 2000;
+let tempsJeu = 70000;
+let intervalleTemps = 2000;
 
 function compteTemps() {
 		ajouteTexte("Temps : " + (tempsJeu/intervalleTemps)*2, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*9);

@@ -4,6 +4,20 @@ function dessinePerso(x, y, pose, dir) {
 	context.drawImage(joueur, largeurPerso*pose, hauteurPerso*dir, largeurPerso, hauteurPerso,  x, y, largeurPerso, hauteurPerso);
 }
 
+/*** fonction gérant le changement de pas (pose ou frame) dans la spritesheet) ***/
+function changePose() {
+	pose += vPose; // permet de passer au pas (pose) suivant plus ou moins rapidement
+	if (pose >= nbPoses) pose -= (nbPoses-1); // si on dépasse le nombre maximum de pas (poses) sur une ligne, on revient au début.
+}
+
+/***** fonction pour animer le personnage *****/
+function animePerso() {
+	dessinePerso(x, y, Math.floor(pose), dir); // appel de la fonction qui dessine le personnage, en transformant le chiffre de la pose en entier
+	deplacementPerso(); // appel de la fonction de déplacement du personnage
+	changePose(); // appel de la fonction d'animation du personnage    
+	requestAnimationFrame(animePerso); // appel de la fonction qui permet de répéter l'animation (à l'aide d'un callback)
+}
+
 /*** fonction gérant la direction du déplacement du personnage ***/
 function deplacementPerso() {
 	x += vx; // le perso avance horizontalement selon la vitesse indiquée
@@ -30,18 +44,3 @@ function inverseDeplacement() {
 	}
 }
 
-
-/*** fonction gérant le changement de pas (pose ou frame) dans la spritesheet) ***/
-function changePose() {
-	pose += vPose; // permet de passer au pas (pose) suivant plus ou moins rapidement
-	if (pose >= nbPoses) pose -= (nbPoses-1); // si on dépasse le nombre maximum de pas (poses) sur une ligne, on revient au début.
-}
-
-
-/***** fonction pour animer le personnage *****/
-function animePerso() {
-	dessinePerso(x, y, Math.floor(pose), dir); // appel de la fonction qui dessine le personnage, en transformant le chiffre de la pose en entier
-	deplacementPerso(); // appel de la fonction de déplacement du personnage
-	changePose(); // appel de la fonction d'animation du personnage    
-	requestAnimationFrame(animePerso); // appel de la fonction qui permet de répéter l'animation (à l'aide d'un callback)
-}

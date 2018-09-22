@@ -1,9 +1,5 @@
 function persoBouge(e) {
 
-	e.preventDefault(); // evite le scrolling lorsque l'on appuie sur les flèches haut et bas : Le comportement par défaut a été inhibé
-
-	changePose(); // appel de la fonction d'animation du personnage   
-  	
   	// Vérifier quelle touche est pressée
  	if(e.keyCode == "37") { x -= vx; dir = 2;} // droite
 
@@ -12,6 +8,10 @@ function persoBouge(e) {
   	if(e.keyCode == "39"){ x += vx; dir = 1;} // gauche	
   	
   	if(e.keyCode == "40") { y += vx; dir = 0;} // bas 
+
+	changePose(); // appel de la fonction d'animation du personnage  
+
+	e.preventDefault(); // evite le scrolling lorsque l'on appuie sur les flèches haut et bas : Le comportement par défaut a été inhibé
 }
 
 

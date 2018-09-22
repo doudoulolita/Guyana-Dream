@@ -76,6 +76,4 @@ function ecranFinJeu() { // fonction affichant un écran donnant les scores (app
 
 	couleurFond(couleurfondCarte, 0, 0, largeurCanvas - (tailleTuile*3), hauteurCanvas); // on remplit le canvas de couleur sauf sur le côté
 	ajouteTexte(texteFin, 50, tailleTuile*8 , tailleTuile*3); // on écrit que c'est la fin du jeu
-
-	canvas[4].addEventListener("click", clicRejouer, false);	// vérifie si on clique sur un des singes (fonction dans choix-perso.js)
 }

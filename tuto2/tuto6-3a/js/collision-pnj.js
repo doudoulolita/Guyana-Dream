@@ -1,4 +1,4 @@
-var collision = 0;
+let collision = 0;
 
 function rencontre(pnj) {
 

@@ -1,7 +1,5 @@
-var tempsJeu = 30000;
-var intervalleTemps = 2000;
-
-var pointsEnergie = 8;
+let tempsJeu = 30000;
+let intervalleTemps = 2000;
 
 function compteTemps() {
 		ajouteTexte("Temps : " + (tempsJeu/intervalleTemps)*2, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*9);
@@ -16,6 +14,9 @@ function compteTemps() {
 	}, intervalleTemps);	
 }
 
+// gestion de l'énergie qui influe sur la vitesse du joueur
+
+let pointsEnergie = 8;
 
 function gereEnergie() {
 		ajouteTexte("Energie : " + pointsEnergie, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*10 + 20);

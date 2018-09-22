@@ -1,10 +1,10 @@
-var cheminImage = "cachette-fougeres-jaunes.png"; // chemin de l'image servant de tileset
-var largeurImage = 32; // largeur de la tuile
-var hauteurImage = 32; // hauteur de la tuile
+let monImage = new Image(); // crée une nouvelle image
 
-var monImage = new Image(); // crée une nouvelle image
+let cheminImage = "cachette-fougeres-jaunes.png"; // chemin de l'image servant de tileset
 monImage.src = cheminImage;// donne le chemin de l'image dont la variable est déclarée plus haut.
 
+let largeurImage = 32; // largeur de la tuile
+let hauteurImage = 32; // hauteur de la tuile
 
 function afficheImage(posX, posY) {
 	context.drawImage(monImage, 0, 0, largeurImage, hauteurImage, posX, posY, largeurImage, hauteurImage);//on dessine l'image à l'endroit voulu

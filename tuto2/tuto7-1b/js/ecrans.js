@@ -1,4 +1,4 @@
-var tempsEcran= 3000;
+let tempsEcran= 3000; // temps au bout duquel l'écran de jeu s'affiche
 
 /**** Le jeu se décline en 3 écrans : 
 
@@ -12,7 +12,7 @@ function ecranAccueil() { // fonction pour afficher les images permettant de cho
 	nbPointsMax = 0;
 	pointsEnergie = nbPointsMax; // initialise les points d'énergie
 	gain=0; // initialise le gain (si on gagne, on aura 1)
-	tempsJeu = 10000; // décompte du temps
+	tempsJeu = 80000; // décompte du temps
 	nbPoints = 0; // le nombre de points augmentera quand on récupèrera des objets
 	nbPointsObjet =0; // nombre de points pour un objet (quand il y a plusieurs fois le même sur la carte)
 	vx = joueur.vx; // vitesse de déplacement du personnage
@@ -40,7 +40,7 @@ function ecranJeu() {
 			nbPointsMax = 0;
 			pointsEnergie = nbPointsMax; // initialise les points d'énergie
 			gain=0; // initialise le gain (si on gagne, on aura 1)
-			tempsJeu = 10000; // décompte du temps
+			tempsJeu = 80000; // décompte du temps
 			nbPoints = 0; // le nombre de points augmentera quand on récupèrera des objets
 			nbPointsObjet =0; // nombre de points pour un objet (quand il y a plusieurs fois le même sur la carte)
 			vx = joueur.vx; // vitesse de déplacement du personnage

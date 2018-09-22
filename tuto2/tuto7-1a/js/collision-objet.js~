@@ -76,7 +76,7 @@ function dansInventaire() {
 	ajouteTexte(nbPoints+ " points", 12, largeurCanvas-(2*tailleTuile), tailleTuile + 10);// indique le total d'objets récupérés en utilisant la fonction de texte.
 }
 
-// fonction affichant le nombre de points pour chaque objet de l'inventaire
+// fonction affichant le nombre de points pour chaque objet de l'inventaire (appelée dans la fonction deplaceTuiles)
 function affichePointsObjet() {
 
 		nbPointsObjet = objets[k][1]; // les points pour un objet sont donnés par le deuxième chiffre
@@ -86,7 +86,7 @@ function affichePointsObjet() {
 		objets[k][1] += objets[k][1]; // augmente le nombre de points dans le tableau
 }
 
-// fonction affichant une bulle de dialogue avec un texte quand le perso passe sur l'objet de la quête et ajoutant des points et de la vitesse
+/* fonction affichant une bulle de dialogue avec un texte quand le perso passe sur l'objet de la quête et ajoutant des points et de la vitesse (appelée dans la fonction deplaceTuiles) */
 function bulleQuete(i, j) {
 
 	if (cartes[numCarte-1][j][i] == objetQuete && pnj.collision!=0) {  //si la carte correspond à la quête du Pnj

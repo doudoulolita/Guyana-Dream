@@ -1,10 +1,8 @@
-var touchesDeplace = ["37","38","39","40"];
+let touche = "";
+
+let touchesDeplace = ["37","38","39","40"];
 
 function persoBouge(e) {
-
-	e.preventDefault(); // evite le scrolling par défaut lorsque l'on appuie sur les flèches haut et bas
-
-	changePose(); // appel de la fonction d'animation du personnage  
 
 	//déplacements du personnage en fonction des touches
 
@@ -15,6 +13,10 @@ function persoBouge(e) {
 	deplacement(e, touchesDeplace[2]);  // appel de la fonction de déplacement  vertical lors de l'appui sur la flèche haut
 
 	deplacement(e, touchesDeplace[3]); // appel de la fonction de déplacement  vertical lors de l'appui sur la flèche bas
+
+	e.preventDefault(); // evite le scrolling par défaut lorsque l'on appuie sur les flèches haut et bas
+
+	changePose(); // appel de la fonction d'animation du personnage  
 }
 
 

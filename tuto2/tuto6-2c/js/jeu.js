@@ -1,10 +1,10 @@
 /* Récupération du canvas pour pouvoir dessiner dessus */
 
-var canvas = "";//canvas[0] contient le premier canvas et canvas[6] le cinquiÃ¨me
-var context = []; // initialise les contextes
+let canvas = "";//canvas[0] contient le premier canvas et canvas[6] le cinquiÃ¨me
+let context = []; // initialise les contextes
 
-var largeurCanvas = 0;
-var hauteurCanvas = 0;
+let largeurCanvas = 0;
+let hauteurCanvas = 0;
 
 /* récupération des canvas et des contexts */
 
@@ -22,7 +22,7 @@ function recupCanvas() {
 	}
 }
 
-var couleurfondCarte = "#5b6634"; // couleur de fond du jeu
+let couleurfondCarte = "#5b6634"; // couleur de fond du jeu
 
 
 /* function pour la couleur du fond */

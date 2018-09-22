@@ -1,6 +1,6 @@
 function recupCanvas() {
 /** Récupération du canvas **/
-	var canvas = document.querySelector('canvas');
+	let canvas = document.querySelector('canvas');
 	context = canvas.getContext('2d');
 
 	// Définit les dimensions du canvas

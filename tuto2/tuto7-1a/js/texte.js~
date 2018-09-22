@@ -45,3 +45,4 @@ function bulleTexte(texte, x, y) { // fonction dessinant un cartouche ("bulle" s
 	ajouteTexte(texte, 14, x, y-tailleTuile); // on écrit le texte
 }
 
+/* les textes des PNJs sont dans leur fichier respectif */

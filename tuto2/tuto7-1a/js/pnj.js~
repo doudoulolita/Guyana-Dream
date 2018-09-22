@@ -29,7 +29,7 @@ pnj.pose = 1, // la pose 0 (ou frame 0) n'est pas comptée car elle correspond �
 pnj.nbPoses = 5, // nombre de poses sur la spritesheet, en largeur
 pnj.vPose =  0.15; //valeur permettant de passer à la pose suivante dans la spritesheet plus ou moins rapidement
 
-pnjDir = 3;
+pnjDir = 1;
 
 pnj.collision = 0;
 

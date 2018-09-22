@@ -1,16 +1,16 @@
-var objets = [[3,1] ,[8,2], [7,3], [21, 4]];
+let objets = [[3,1] ,[8,2], [7,3], [21, 4]];
 
-var numTuileNeutre=1;
+let numTuileNeutre=1;
 
-var nbPoints = 0; // le nombre de points augmente quand on récupère des objets
+let nbPoints = 0; // le nombre de points augmente quand on récupère des objets
 
-var nbPointsObjet =0; 
+let nbPointsObjet =0; 
 
-var nbPointsMax=0;
+let nbPointsMax=0;
 
-var occurence = 1;
+let occurence = 1;
 
-var numObjet = 21; // objet de la quête demandée par le Pnj
+let numObjet = 21; // objet de la quête demandée par le Pnj
 
 /* function pour la couleur du fond */
 function couleurTuile(couleur, posXTuile, posYTuile) {
@@ -28,9 +28,9 @@ function effaceObjet(i,j) {
 }
 
 function comptePoints() {
-	for (var num=0; num<carte1.length; num ++) {
-		for (var j=0; j<carte1[num].length; j++) {//carte1 représente toute la carte
-			for(var i=0; i<carte1[num][j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
+	for (let num=0; num<carte1.length; num ++) {
+		for (let j=0; j<carte1[num].length; j++) {//carte1 représente toute la carte
+			for(let i=0; i<carte1[num][j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
 				for (k=0; k<objets.length; k++) {
 					if (carte1[num][j][i] == objets[k][0]) {nbPointsMax += objets[k][1];}
 				}
@@ -41,8 +41,8 @@ function comptePoints() {
 
 function effaceTuiles() {
 
-	for (var j=0; j<carte1.length; j++) {//carte1 représente toute la carte
-		for(var i=0; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
+	for (let j=0; j<carte1.length; j++) {//carte1 représente toute la carte
+		for(let i=0; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
 			for (k=0; k<objets.length; k++) {
 				if (carte1[j][i] == objets[k][0] && x > (tailleTuile*i)-largeurPerso && x < (tailleTuile*i)+tailleTuile && y > (tailleTuile*j)-hauteurPerso && y < (tailleTuile*j)+tailleTuile) {  //si la carte présente un n° de tuile compris dans le tableau d'objet et si ses coordonnées du joueur sont comprises dans les limites de cette tuile
 

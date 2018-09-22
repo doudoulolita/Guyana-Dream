@@ -12,7 +12,7 @@ function deplacementPerso() {
 /*** fonction remettant à gauche le personnage quand il touche le bord droit du canvas ***/
 function recommenceMouvement() {
 	if (x > largeurCanvas) {
-		x=0;
+		x = 0;
 	}
 }
 

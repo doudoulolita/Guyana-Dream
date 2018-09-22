@@ -1,6 +1,6 @@
-var touche = "";
+let tuilesInterdites = [4,7]; // toutes les tuiles où on n'a pas le droit d'être sont répertoriées dans ce tableau
 
-var tuilesInterdites = [4,7];
+let numTuileInterdite = 0; // numéro de la tuile interdite en fonction de sa place dans le tableau tuilesInterdites
 
 function bloque(posXTuile, posYTuile) {
 
@@ -26,10 +26,11 @@ function bloque(posXTuile, posYTuile) {
 }
 
 function bloqueTuiles() {
-	for (var j=0; j<carte.length; j++) {//map représente toute la carte
-		for(var i=0; i<carte[j].length; i++) {//map[j] représente maintenant une ligne de la carte	
-			for (k=0; k<tuilesInterdites.length; k++) {
-				if (carte[j][i]== tuilesInterdites[k]) { bloque(tailleTuile*i, tailleTuile*j); }
+	for (j=ligne; j<carte.length; j++) {//On parcourt chaque ligne de la carte
+		for(i=colonne; i<carte[j].length; i++) {//on parcourt chaque numéro de la ligne (soit les colonnes de la carte)	
+			for (k=numTuileInterdite; k<tuilesInterdites.length; k++) { // on parcourt le tableau des tuiles interdites
+				if (carte[j][i]== tuilesInterdites[k]) { bloque(tailleTuile*i, tailleTuile*j); // si le numéro de la tuile est dans le tableau, on appelle la fonction de blocage
+				}
 			} 
 		}
 	}
