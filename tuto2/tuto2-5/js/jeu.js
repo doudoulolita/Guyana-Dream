@@ -1,12 +1,12 @@
 /* Récupération du canvas pour pouvoir dessiner dessus */
 
 function recupCanvas() {
-	let canvas = document.querySelector('canvas'); //on récupère le canvas sur lequel on va dessiner
-	context = canvas.getContext('2d'); //on indique le contexte
+	let canvas1 = document.querySelector('canvas'); //on récupère le canvas sur lequel on va dessiner
+	context1 = canvas1.getContext('2d'); //on indique le contexte
 
 	// Définit les dimensions du canvas
-	largeurCanvas = canvas.width;
-	hauteurCanvas = canvas.height;
+	largeurCanvas = canvas1.width;
+	hauteurCanvas = canvas1.height;
 }
 
 // La fonction qui initialise le tout

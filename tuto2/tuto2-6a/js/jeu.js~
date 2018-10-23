@@ -1,33 +1,21 @@
 /* Récupération du canvas pour pouvoir dessiner dessus */
 
 function recupCanvas() {
-	// Récupére le canvas
-	canvas = document.querySelector('canvas'); //on récupère le canvas sur lequel on va dessiner
-	context = canvas.getContext('2d'); //on indique le contexte
+/** Récupération du canvas **/
+	let canvas1 = document.querySelector('canvas');
+	context1 = canvas1.getContext('2d');
 
 	// Définit les dimensions du canvas
-	largeurCanvas = canvas.width;
-	hauteurCanvas = canvas.height;
-}
-
-/* Récupération du canvas pour pouvoir dessiner dessus */
-
-function recupCanvas() {
-	canvas = document.querySelector('canvas'); //on récupère le canvas sur lequel on va dessiner
-	context = canvas.getContext('2d'); //on indique le contexte
-
-	// Définit les dimensions du canvas
-	largeurCanvas = canvas.width;
-	hauteurCanvas = canvas.height;
+	largeurCanvas = canvas1.width;
+	hauteurCanvas = canvas1.height;
 }
 
 // La fonction qui initialise le tout
-
 function init() {
-    recupCanvas(); // récupération du canvas des tuiles
-    dessineCarte(); // dessin de la ligne de la carte
+
+	recupCanvas(); // récupération du canvas des tuiles
+	dessineCarte(); // dessin de la carte
 }
 
-/***** lorsque la fenêtre est chargée, la fonction init() est appelée *****/
-
+/***** lorsque l'image est chargée, la fonction animePerso() est appelée *****/
 window.onload = function() { init() };

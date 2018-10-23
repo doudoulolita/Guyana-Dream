@@ -30,21 +30,21 @@ function animePerso(joueur, context) {
 function animePnjs() {
 	context[3].clearRect(0, 0, largeurCanvas, hauteurCanvas); // efface le canvas
 
-	dessinePerso(pnj, context[3], pnj.posX2, pnj.posY2, pnj.largeur, pnj.hauteur, Math.floor(pnj.pose), dirPnj); // appel de la fonction qui dessine le PNJ, en transformant le chiffre de la pose en entier
+	dessinePerso(pnj, context[3], pnj.posX2, pnj.posY2, pnj.largeur, pnj.hauteur, Math.floor(pnj.pose), pnjDir); // appel de la fonction qui dessine le PNJ, en transformant le chiffre de la pose en entier
 
 	deplacementPnj(pnj); // appel de la fonction de déplacement du PNJ 
 
 	changePose(pnj, pnj.nbPoses, pnj.vPose);// appel de la fonction qui passe d'une pose à l'autre
 
-	changeDirectionPnj(pnj, pnj.departX, pnj.arriveeX); // appel de la fonction fdu fichier deplacement.js
+	changeDirectionPnj(pnj); // appel de la fonction fdu fichier deplacement.js
 
-	dessinePerso(ennemi, context[3], ennemi.posX2, ennemi.posY2, ennemi.largeur, ennemi.hauteur, Math.floor(ennemi.pose), dirPnj); // appel de la fonction qui dessine le PNJ, en transformant le chiffre de la pose en entier
+	dessinePerso(ennemi, context[3], ennemi.posX2, ennemi.posY2, ennemi.largeur, ennemi.hauteur, Math.floor(ennemi.pose), ennemiDir); // appel de la fonction qui dessine le PNJ, en transformant le chiffre de la pose en entier
 
 	deplacementPnj(ennemi); // appel de la fonction de déplacement du PNJ 
 
 	changePose(ennemi, ennemi.nbPoses, ennemi.vPose);// appel de la fonction qui passe d'une pose à l'autre
 
-	changeDirectionPnj(ennemi, ennemi.departX, ennemi.arriveeX); // appel de la fonction fdu fichier deplacement.js
+	changeDirectionPnj(ennemi); // appel de la fonction fdu fichier deplacement.js
 
 	rencontre(pnj,textePnj); // appel de la fonction du fichier collision-pnj.js
 

@@ -27,5 +27,6 @@ ennemi.pose = 1, // la pose 0 (ou frame 0) n'est pas comptée car elle correspon
 ennemi.nbPoses = 4, // nombre de poses sur la spritesheet, en largeur
 ennemi.vPose =  0.15; //valeur permettant de passer à la pose suivante dans la spritesheet plus ou moins rapidement
 
+let ennemiDir = 1;
 
 ennemi.collision = 0;

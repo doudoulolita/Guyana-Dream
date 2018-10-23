@@ -26,9 +26,7 @@ function animePnj(pnjs, context, dir) {
 
 	dessinePerso(pnjs, context, pnjs.posX2, pnjs.posY2, pnjs.largeur, pnjs.hauteur, Math.floor(pnjs.pose), dir); // appel de la fonction qui dessine le PNJ, en transformant le chiffre de la pose en entier
 
-	changeDirectionPnj(); // appel de la fonction du fichier deplacement.js
-
-	changeSensPnj(pnjs);
+	changeDirectionPnj(pnjs); // appel de la fonction du fichier deplacement.js
 
 	deplacementPnj(pnjs); // appel de la fonction de déplacement du PNJ 
 

@@ -9,7 +9,7 @@ function dessineJoueurs(context) {
 	emplacementTexte= tailleTuile*cartes[0][0].length/2;
 	ajouteTexte(texteChoixPerso, hauteurTitre, emplacementTexte, 20); // texte en haut du canvas avec l'instruction
 	for (i=joueurs.length-1; i>=0; i--) { // parcourt le tableau des joueurs
-		dessineJoueur(joueurs[i], context, tailleTuile*(cartes[0][0].length/2+i), tailleTuile*7.5, joueurs[i].largeur, joueurs[i].hauteur, Math.floor(joueurs[i].pose), dirJoueur);
+		dessineJoueur(joueurs[i], context, tailleTuile*(cartes[0][0].length/2+i), tailleTuile*7.5, joueurs[i].largeur, joueurs[i].hauteur, Math.floor(joueurs[i].pose), dir);
 	}
 
 }

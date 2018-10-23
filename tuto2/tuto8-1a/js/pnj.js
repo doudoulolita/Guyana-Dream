@@ -19,7 +19,7 @@ pnj.departY= 5* tailleTuile;
 pnj.posX2 = pnj.departX; 
 pnj.posY2 = pnj.departY;
 
-let pnjDir = 1; // initialisation de la direction du personnage
+pnjDir = 1;
 
 /* vitesse du pnj */
 pnj.v = 0.5;

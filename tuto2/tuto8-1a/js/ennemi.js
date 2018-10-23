@@ -15,6 +15,9 @@ ennemi.hauteur = 64;
 ennemi.departX= 9*tailleTuile;
 ennemi.departY= 7* tailleTuile;
 
+
+ennemi.arriveeX=20* tailleTuile;
+
 /* on redonne la position de l'ennemi maintenant que l'image est créée */
 ennemi.posX2 = ennemi.departX; 
 ennemi.posY2 = ennemi.departY;
@@ -29,10 +32,10 @@ ennemi.pose = 1, // la pose 0 (ou frame 0) n'est pas comptée car elle correspon
 ennemi.nbPoses = 4, // nombre de poses sur la spritesheet, en largeur
 ennemi.vPose =  0.15; //valeur permettant de passer à la pose suivante dans la spritesheet plus ou moins rapidement
 
-ennemi.arriveeX=20* tailleTuile;
+
+ennemiDir = 1;
 
 ennemi.collision = 0;
 
 ennemi.texte = "Tu ne passes pas !";
 ennemi.texteFin = "Reviens me voir !";
-

@@ -28,9 +28,9 @@ function effaceObjet(i,j) {
 }
 
 function comptePoints() {
-	for (let num=0; num<cartes.length; num ++) {
-		for (let j=0; j<cartes[num].length; j++) {//carte1 représente toute la carte
-			for(let i=0; i<cartes[num][j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
+	for (num=0; num<cartes.length; num ++) {
+		for (j=0; j<cartes[num].length; j++) {//carte1 représente toute la carte
+			for(i=0; i<cartes[num][j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
 				for (k=0; k<objets.length; k++) {
 					if (cartes[num][j][i] == objets[k][0]) {nbPointsMax += objets[k][1];}
 				}
@@ -41,8 +41,8 @@ function comptePoints() {
 
 function effaceTuiles() {
 
-	for (let j=0; j<cartes[numCarte-1].length; j++) {//carte1 représente toute la carte
-		for(let i=0; i<cartes[numCarte-1][j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
+	for (j=0; j<cartes[numCarte-1].length; j++) {//carte1 représente toute la carte
+		for(i=0; i<cartes[numCarte-1][j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
 			for (k=0; k<objets.length; k++) {
 				if (cartes[numCarte-1][j][i] == objets[k][0] && joueur.posX > (tailleTuile*i)-joueur.largeur && joueur.posX < (tailleTuile*i)+tailleTuile && joueur.posY > (tailleTuile*j)-joueur.hauteur && joueur.posY < (tailleTuile*j)+tailleTuile) {  //si la carte présente un n° de tuile compris dans le tableau d'objet et si ses coordonnées du joueur sont comprises dans les limites de cette tuile
 

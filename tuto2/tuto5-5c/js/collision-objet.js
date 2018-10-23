@@ -1,7 +1,5 @@
 let objets = [[3,1] ,[8,2], [7,3], [21, 4]];
 
-let numObjet = 0; // numéro de l'objet dans le tableau objets
-
 let numTuileNeutre=1;
 
 let nbPoints = 0; // le nombre de points augmente quand on récupère des objets
@@ -30,9 +28,9 @@ function effaceObjet(i,j) {
 }
 
 function comptePoints() {
-	for (j=ligne; j<carte1.length; j++) {//carte1 représente toute la carte
-		for(let i=colonne; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
-			for (k=numObjet; k<objets.length; k++) {
+	for (j=0; j<carte1.length; j++) {//carte1 représente toute la carte
+		for(let i=0; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
+			for (k=0; k<objets.length; k++) {
 				if (carte1[j][i] == objets[k][0]) {nbPointsMax += objets[k][1]; pointsEnergie = nbPointsMax;}
 			}
 		}
@@ -41,9 +39,9 @@ function comptePoints() {
 
 function effaceTuiles() {
 
-	for (j=ligne; j<carte1.length; j++) {//carte1 représente toute la carte
-		for(i=colonne; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
-			for (k=numObjet; k<objets.length; k++) {
+	for (j=0; j<carte1.length; j++) {//carte1 représente toute la carte
+		for(i=0; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
+			for (k=0; k<objets.length; k++) {
 				if (carte1[j][i] == objets[k][0] && x > (tailleTuile*i)-largeurPerso && x < (tailleTuile*i)+tailleTuile && y > (tailleTuile*j)-hauteurPerso && y < (tailleTuile*j)+tailleTuile) {  //si la carte présente un n° de tuile compris dans le tableau d'objet et si ses coordonnées du joueur sont comprises dans les limites de cette tuile
 
 					effaceObjet(i,j); // appelle la fonction qui efface la tuile sur le canvas

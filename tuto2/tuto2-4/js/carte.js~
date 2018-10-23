@@ -1,6 +1,6 @@
-let cheminTileset = "tileset-mini1.png"; // chemin de l'image servant de tileset
-
 let maTuile = new Image(); // crée une nouvelle image
+
+let cheminTileset = "tileset-mini1.png"; // chemin de l'image servant de tileset
 maTuile.src = cheminTileset;// donne le chemin de l'image dont la variable est déclarée plus haut.
 
 let largeurTuile = 32; // largeur de la tuile

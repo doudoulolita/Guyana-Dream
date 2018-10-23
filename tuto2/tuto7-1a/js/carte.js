@@ -44,8 +44,8 @@ function dessineTuiles(num, posX, posY) {//en paramètre de la fonction : numér
 
 /* fonction parcourant le tableau de la carte pour dessiner les tuiles (appelée dans la fonction changeCarte et dans le fichier ecran.js) */
 function dessineCarte() {
-	for (let j=0; j<cartes[numCarte-1].length; j++) {//cartes[numCarte-1] représente toute la carte
-		for(let i=0; i<cartes[numCarte-1][j].length; i++) {//cartes[numCarte-1][j] représente maintenant une ligne de la carte	
+	for (j=0; j<cartes[numCarte-1].length; j++) {//cartes[numCarte-1] représente toute la carte
+		for(i=0; i<cartes[numCarte-1][j].length; i++) {//cartes[numCarte-1][j] représente maintenant une ligne de la carte	
 			dessineTuiles(cartes[numCarte-1][j][i], tailleTuile*i, tailleTuile*j)// cartes[numCarte-1][j][i] représente le numéro de la tuile de la j ème ligne et de la i ème colonne qu'on positionne en ajoutant une largeur de tuile à chaque fois en abcisse et une largeur de tuile à chaque fois en ordonnée
 		}
 	}

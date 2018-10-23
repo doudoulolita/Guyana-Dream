@@ -1,26 +1,44 @@
-/*** Création de l'image du joueur 1 ***/
+/*** Création des images des joueurs ***/
 
-let joueur1 = new Image(); // crée une nouvelle image
-let joueur2 = new Image(); // crée une nouvelle image
-let joueur3 = new Image(); // crée une nouvelle image
+let joueur = new Image(); // crée une nouvelle image
 
-let joueurs = [joueur1, joueur2, joueur3]; // tableau repertoriant les joueurs
-
-joueur1.spritesheet="sprites/joueur1.png"; //chemin de l'image servant de spritesheet
-joueur1.src = joueur1.spritesheet; // donne le chemin de l'image servant de spritesheet
+joueur.spritesheet="sprites/joueur1.png"; //chemin de l'image servant de spritesheet
+joueur.src = joueur.spritesheet; // donne le chemin de l'image servant de spritesheet
 
 // nom du joueur 1
-joueur1.name = 'joueur1';
+joueur.name = 'joueur1';
 
 /* largeur et hauteur du perso */
-joueur1.largeur = 32;
-joueur1.hauteur = 32;
+joueur.largeur = 32;
+joueur.hauteur = 32;
 
-joueur1.vx =2; //vitesse initiale du joueur 1
-joueur1.endurance = 0.97; // il perd de la vitesse suivant son endurance. Si elle est élévée, il perd moins de vitesse
+joueur.vx =2; //vitesse initiale du joueur 1
+joueur.endurance = 0.97; // il perd de la vitesse suivant son endurance. Si elle est élévée, il perd moins de vitesse
 
 // initialisation de la pose
-joueur1.pose = 0;
+joueur.pose = 0;
+
+/***** Initialisation des variables globales du personnage *****/
+
+/* position initiale du perso */
+let departJoueurX = 0; // position de départ au milieu de l'écran en largeur
+let departJoueurY = tailleTuile -(tailleTuile/2); // position de départ au milieu de l'écran en hauteur
+
+/* position de départ du joueur */
+joueur.posX = departJoueurX;
+joueur.posY = departJoueurY;
+
+/* initialisation, nombre et vitesse de changement de poses de la spritesheet */
+joueur.nbPoses = 5; // nombre de poses sur la spritesheet, en largeur
+joueur.vPose =  0.3; //valeur permettant de passer à la pose suivante dans la spritesheet plus ou moins rapidement
+
+let dir = 0;
+
+endurance = joueur.endurance; // endurance du personnage. Plus elle est haute, moins la vitesse diminue au fil du temps
+
+/* les différents joueurs possibles */
+
+let joueur2 = new Image(); // crée une nouvelle image
 
 /*** Création de l'image du joueur 2 ***/
 
@@ -42,24 +60,27 @@ joueur2.pose = 0;
 
 /*** Création de l'image du joueur 3 ***/
 
+let joueur3 = new Image(); // crée une nouvelle image
+
 joueur3.spritesheet="sprites/joueur3.png"; //chemin de l'image servant de spritesheet
 joueur3.src = joueur3.spritesheet; // donne le chemin de l'image servant de spritesheet
 
-// nom du joueur 2
+// nom du joueur 3
 joueur3.name = 'joueur3';
 
 /* largeur et hauteur du perso */
 joueur3.largeur = 32;
 joueur3.hauteur = 40;
 
-joueur3.vx =4; //vitesse initiale du joueur 2
+joueur3.vx =4; //vitesse initiale du joueur 3
 joueur3.endurance = 0.90; // il perd de la vitesse suivant son endurance. Si elle est élévée, il perd moins de vitesse
 
 // initialisation de la pose
 joueur3.pose = 0;
 
-// initialisation de la direction
-let dirJoueur = 0;
+/** Tableau des joueurs **/
+
+let joueurs = [joueur, joueur2, joueur3]; // tableau repertoriant les joueurs
 
 largeurJoueurMax = joueurs[1].largeur; // on indique quel joueur a la largeur la plus grande (ici n'importe lequel)
 hauteurJoueurMax = joueurs[1].hauteur; // on indique quel joueur a la hauteur la plus grande (ici joueur2)

@@ -19,9 +19,6 @@ let carte = [
 let nbColonnesTileset = tileset.width/tailleTuile;//nombre de tuiles sur la largeur du tileset 
 let nbLignesTilesets = tileset.height/tailleTuile;//nombre de tuiles sur la hauteur du tileset
 
-let ligne = 0;
-let colonne = 0;
-
 function calculTileset(num) {
 	ligneTileset = Math.ceil(num/nbColonnesTileset);//indique sur quelle ligne du tileset se trouve la tuile à dessiner car Math.ceil donne l'entier le plus proche supérieur ou égal au chiffre donné par la division
 
@@ -38,8 +35,8 @@ function dessineTuiles(num, posX, posY) {//en paramètre de la fonction : numér
 }
 
 function dessineCarte() {
-	for (let j=ligne; j<carte.length; j++) {//On parcourt chaque ligne de la carte
-		for(let i=colonne; i<carte[j].length; i++) {//on parcourt chaque numéro de la ligne (soit les colonnes de la carte)
+	for (j=0; j<carte.length; j++) {//On parcourt chaque ligne de la carte
+		for(i=0; i<carte[j].length; i++) {//on parcourt chaque numéro de la ligne (soit les colonnes de la carte)
 			dessineTuiles(carte[j][i], tailleTuile*i, tailleTuile*j)// carte[j][i] représente le numéro de la tuile de la j ème ligne et de la i ème colonne qu'on positionne en ajoutant une largeur de tuile à chaque fois en abcisse et une largeur de tuile à chaque fois en ordonnée
 		}
 	}

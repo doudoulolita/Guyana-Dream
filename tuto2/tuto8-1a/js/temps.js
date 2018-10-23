@@ -52,7 +52,7 @@ function gagne() { // fonction si on gagne (appelée par la fonction verifieScor
 
 		ecranFinJeu();
 
-		joueur.posX= 0 ; joueur.posY= 0; dir=0; vx=0; // on place le joueur en haut à gauche, regardant de face
+		joueur.posX= 0 ; joueur.posY= 0; dir=0; joueur.vx=0; // on place le joueur en haut à gauche, regardant de face
 
 		pnj.posX2= 0 ; pnj.posY2= pnj.departY; dirPnj=1; pnj.v=0; // on place le pnj un peu plus bas à gauche, regardant de côté
 
@@ -74,7 +74,7 @@ function gagne() { // fonction si on gagne (appelée par la fonction verifieScor
 function perd() { // fonction si on perd (appelée par verifieScore en cours de jeu ou par chrono en fin de jeu)
 		ecranFinJeu(); // fonction dans le fichier ecrans.js 
 
-		joueur.posX= 0 ; joueur.posY= 0; dir=0; vx=0; // on place le joueur en haut à gauche, regardant de face
+		joueur.posX= 0 ; joueur.posY= 0; dir=0; joueur.vx=0; // on place le joueur en haut à gauche, regardant de face
 
 		pnj.posX2= 0 ; pnj.posY2= pnj.departY; pnj.dir=1; pnj.v=0; // on place le pnj un peu plus bas à gauche, regardant de côté
 
@@ -98,7 +98,7 @@ function chrono() { // fonction appelée dans la fonction ecranJeu du fichier ec
 		pointsEnergie -= 0; // stoppe le décompte de l'énergie (ne marche pas)
 		tempsJeu -= 0; // stoppe le décompte du temps (ne marche pas)
 
-		joueur.posX= 0 ; joueur.posY= 0; dir=0; vx=0; // on place le joueur en haut à gauche, regardant de face
+		joueur.posX= 0 ; joueur.posY= 0; dir=0; joueur.vx=0; // on place le joueur en haut à gauche, regardant de face
 
 		pnj.posX2= 0 ; pnj.posY2= pnj.departY; dirPnj=1; pnj.v=0; // on place le pnj un peu plus bas à gauche, regardant de côté
 

@@ -3,22 +3,22 @@ function deplacement(joueur, e, touche) { // fonction gérant le déplacement du
 	switch(touche) { // on va passer en revue les différentes possibilités de touche
 		case "37": // Dans le cas de la touche gauche
 			sens = 1; // donne le sens du personnage
-			vitesse = -vx; // vitesse négative pour aller à gauche
+			vitesse = -joueur.vx; // vitesse négative pour aller à gauche
 			direct = 2; // 3ème ligne de la spritesheet
 			break;
 		case "39": // touche droite
 			sens = -1;
-			vitesse = vx; // vitesse positive pour aller à droite
+			vitesse = joueur.vx; // vitesse positive pour aller à droite
 			direct = 1; // 2ème ligne de la spritesheet
 			break;
 		case "38": // touche haut
 			sens = 1;
-			vitesse = -vx; // vitesse négative pour aller en haut
+			vitesse = -joueur.vx; // vitesse négative pour aller en haut
 			direct = 3; // 4ème ligne de la spritesheet
 			break;
 		case "40": // touche bas
 			sens = -1;
-			vitesse = vx; // vitesse positive pour aller en bas
+			vitesse = joueur.vx; // vitesse positive pour aller en bas
 			direct = 0; // 1ère ligne de la spritesheet
 			break;
 	}
@@ -31,24 +31,23 @@ function deplacement(joueur, e, touche) { // fonction gérant le déplacement du
 
 }
 
-
-let arriveeX = 4*tailleTuile; // le pnj va aller du bord du canvas jusqu'à cette position puis repartir en sens inverse
-
 /*** fonction gérant le déplacement du personnage ***/
 function deplacementPnj(pnj) {
 	pnj.posX2 += pnj.v; // le perso avance horizontalement selon la vitesse indiquée
 }
 
 /*** fonction où le personnage parcourt la distance depuis le point de départ et revient en arrière au niveau du point d'arrivée ***/
-function changeDirectionPnj(pnj, depart, arrivee) {
-	if (pnj.posX2 < depart) { // si le perso est à gauche du point de départ
+function changeDirectionPnj(pnj) {
+	if (pnj.posX2 < pnj.departX) { // si le perso est à gauche du point de départ
 		pnj.v = Math.abs(pnj.v); // rend la vitesse positive
-		dirPnj=1; // le perso regarde vers la gauche
+		pnjDir=1; // le perso regarde vers la gauche
+		if(pnj==ennemi) {ennemiDir=1;}
 	}
 
-	if (pnj.posX2 > arrivee - pnj.largeur) { // si le perso dépasse le point d'arrivée
+	if (pnj.posX2 > pnj.arriveeX - pnj.largeur) { // si le perso dépasse le point d'arrivée
 		pnj.v=-Math.abs(pnj.v); // rend la vitesse négative
-		dirPnj=2; // le perso regarde vers la droite
+		pnjDir=2; // le perso regarde vers la droite
+		if(pnj==ennemi) {ennemiDir=2;}
 	}
 }
 

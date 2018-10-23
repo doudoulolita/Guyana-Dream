@@ -19,7 +19,7 @@ pnj.departY= 5* tailleTuile;
 pnj.posX2 = pnj.departX; 
 pnj.posY2 = pnj.departY;
 
-let pnjDir = 1; // initialisation de la direction du personnage
+pnjDir = 1;
 
 /* vitesse du pnj */
 pnj.v = 0.5;
@@ -38,8 +38,106 @@ pnj.texteQueteOk = "Tu as trouvé les fleurs !";
 pnj.texteGagne = "Bravo ! Super classe !";
 pnj.textePerd = "Dommage... Rejoue !";
 
+
+/*** fonction gérant le déplacement du pnj ***/
+function deplacementPnj(pnj) {
+	pnj.posX2 += pnj.v; // le perso avance horizontalement selon la vitesse indiquée
+}
+
+/*** fonction où le pnj parcourt la distance depuis le point de départ et revient en arrière au niveau du point d'arrivée ***/
+function changeDirectionPnj(pnj) {
+	if (pnj.posX2 < pnj.departX) { // si le perso est à gauche du point de départ
+		pnj.v = Math.abs(pnj.v); // rend la vitesse positive
+		pnjDir=1; // le perso regarde vers la gauche
+		if(pnj==ennemi) {ennemiDir=1;}
+	}
+
+	if (pnj.posX2 > pnj.arriveeX - pnj.largeur) { // si le perso dépasse le point d'arrivée
+		pnj.v=-Math.abs(pnj.v); // rend la vitesse négative
+		pnjDir=2; // le perso regarde vers la droite
+		if(pnj==ennemi) {ennemiDir=2;}
+	}
+}
+
+/***** fonction pour animer un PNJ (appelée par la fonction animePnjs) *****/
+function animePnj(pnjs, context, dir) {
+
+	dessinePerso(pnjs, context, pnjs.posX2, pnjs.posY2, pnjs.largeur, pnjs.hauteur, Math.floor(pnjs.pose), dir); // appel de la fonction qui dessine le PNJ, en transformant le chiffre de la pose en entier
+
+	changeDirectionPnj(pnjs); // appel de la fonction du fichier deplacement.js
+
+	deplacementPnj(pnjs); // appel de la fonction de déplacement du PNJ 
+
+	changePose(pnjs, pnjs.nbPoses, pnjs.vPose);// appel de la fonction qui passe d'une pose à l'autre
+
+	rencontre(pnjs, pnjs.texte); // appel de la fonction du fichier collision-pnj.js
+
+}
+
+/***** fonction pour animer les différents PNJs (appelée dans la fonction animeTout du fichier deplacements.js) *****/
+function animePnjs(context) {
+
+	animePnj(pnj, context, pnjDir);
+
+	animePnj(ennemi, context, ennemiDir);
+}
+
+/** collision avec un pnj **/
 let collision = 0; // avant toute collision avec le pnj
 
+
+function rencontre(pnj, textePnj) { // fonction gérant la collision avec un pnj 
+
+	if (joueur.posX + joueur.largeur > pnj.posX2 && joueur.posX - tailleTuile < pnj.posX2 && joueur.posY + joueur.hauteur > pnj.posY2 && joueur.posY - tailleTuile < pnj.posY2) {
+		console.log(pnj.name);
+
+		switch(dir) { // on va évaluer la direction du personnage joueur
+			case 1: 
+				joueur.posX -= 1; // on enlève 1 à la position posX du joueur pour qu'il se décale horizontalement par rapport au pnj
+				// pnj.v=0; // on arrête le déplacement du pnj en mettant sa vitesse à 0
+				// dirPnj=0; // on le fait regarder de face
+				break;
+			case 2:
+				joueur.posX += 1; // on ajoute 1 à la position posX du joueur pour qu'il se décale horizontalement par rapport au pnj
+				// pnj.v=0; //on arrête le déplacement du pnj en mettant sa vitesse à 0
+				 // dirPnj=0; // on le fait regarder de face
+				break;
+
+	 		case 0: 
+				joueur.posY -= 1; // on enlève 1 à la position posY du joueur pour qu'il se décale verticalement par rapport au pnj
+				// pnj.v=0; //on arrête le déplacement du pnj en mettant sa vitesse à 0
+				 // dirPnj=0; // on le fait regarder de face
+				break;
+			case 3:
+				joueur.posY += 1; // on ajoute 1 à la position posY du joueur pour qu'il se décale verticalementement par rapport au pnj
+				// pnj.v=0; //on arrête le déplacement du pnj en mettant sa vitesse à 0
+				 // dirPnj=0; // on le fait regarder de face
+				break;
+		}
+
+		if (pnj.collision == 0) {
+			bulleTexte(pnj.texte, pnj.posX2, pnj.posY2); // affiche une "bulle" de dialogue
+			if (pnj==ennemi) {
+				pointsEnergie -= 3; // les points d'énergie diminuent quand on touche l'ennemi
+			}
+		}
+
+		if (pnj==ennemi && pnj.collision == 0) { 
+
+			rondDegrade(joueur.posX, joueur.posY); // crée un rond dégradé
+
+			context[2].globalAlpha = 0.7; // diminue l'opacité du perso
+			supprimeRond() ; // supprime le rond au bout d'un certain temps.
+		} 
+
+		pnj.collision += 1; // permettra de savoir ensuite qu'on a touché le pnj
+
+		console.log(pnj.collision+" - pnj !");
+
+	}
+}
+
+/** Gestion de la collision avec l'ennemi **/
 
 /*** Création de l'image du ennemi ***/
 let ennemi = new Image(); // crée une nouvelle image
@@ -58,6 +156,9 @@ ennemi.hauteur = 64;
 ennemi.departX= 9*tailleTuile;
 ennemi.departY= 7* tailleTuile;
 
+
+ennemi.arriveeX=20* tailleTuile;
+
 /* on redonne la position de l'ennemi maintenant que l'image est créée */
 ennemi.posX2 = ennemi.departX; 
 ennemi.posY2 = ennemi.departY;
@@ -72,7 +173,8 @@ ennemi.pose = 1, // la pose 0 (ou frame 0) n'est pas comptée car elle correspon
 ennemi.nbPoses = 4, // nombre de poses sur la spritesheet, en largeur
 ennemi.vPose =  0.15; //valeur permettant de passer à la pose suivante dans la spritesheet plus ou moins rapidement
 
-ennemi.arriveeX=20* tailleTuile;
+
+ennemiDir = 1;
 
 ennemi.collision = 0;
 
@@ -89,71 +191,15 @@ function rondDegrade(x, y) { // fonction dessinant un rond dégradé (sera appel
 	  
 	// dessiner des formes
 	context[1].fillStyle = radgrad;
-	context[1].fillRect(x-20-joueur1.largeur, y-joueur1.largeur, 150, 150);
+	context[1].fillRect(x-20-joueur.largeur, y-joueur.largeur, 150, 150);
 }
 
 /***** fonction pour effacer le rond au bout d'un moment (sera appelée dans la fonction rencontre) *****/
 function supprimeRond() {
 	setTimeout(function() { // cette fonction se lancera quand le temps décidé sera écoulé
 
-  		context[1].clearRect(0,0, carte1[0].length*tailleTuile, carte1.length*tailleTuile);
-  		context[4].clearRect(0,0, carte1[0].length*tailleTuile, carte1.length*tailleTuile);
+  		context[1].clearRect(0,0, 768, 384);
+  		context[4].clearRect(0,0, 768, 384);
 
 	}, 2000); // la fonction s'exécute au bout du temps indiqué.
-}
-
-function rencontre(pnj, textePnj) { // fonction gérant la collision avec le pnj (appelée dans le fichier animation.js)
-
-	// vérification de la position du personnage par rapport à la tuile interdite, changement de coordonnées suivant la direction pour qu'il ne reste pas bloqué
-
-	if (joueur1.posX + joueur1.largeur > pnj.posX2 && joueur1.posX - tailleTuile < pnj.posX2 && joueur1.posY + joueur1.hauteur > pnj.posY2 && joueur1.posY - tailleTuile < pnj.posY2) {
-		console.log(pnj.name);
-
-			if (pnj.collision == 0) {
-				bulleTexte(pnj.texte, pnj.posX2, pnj.posY2); // affiche une "bulle" de dialogue
-				if (pnj==ennemi) {
-					pointsEnergie -= 3; // les points d'énergie diminuent quand on touche l'ennemi
-				}
-
-			}
-
-			if (pnj==ennemi && pnj.collision == 0) { 
-
-				rondDegrade(joueur1.posX, joueur1.posY); // crée un rond dégradé
-
-				context[2].globalAlpha = 0.7; // diminue l'opacité du perso
-				supprimeRond() ; // supprime le rond au bout d'un certain temps.
-			} 
-
-
-			pnj.collision += 1; // permettra de savoir ensuite qu'on a touché le pnj
-
-			console.log(pnj.collision+" - pnj !");
-
-		switch(dir) { // on va évaluer la direction du personnage joueur
-			case 1: 
-				joueur1.posX -= 1; // on enlève 1 à la position posX du joueur pour qu'il se décale horizontalement par rapport au pnj
-				// pnj.v=0; // on arrête le déplacement du pnj en mettant sa vitesse à 0
-				// dirPnj=0; // on le fait regarder de face
-				break;
-			case 2:
-				joueur1.posX += 1; // on ajoute 1 à la position posX du joueur pour qu'il se décale horizontalement par rapport au pnj
-				// pnj.v=0; //on arrête le déplacement du pnj en mettant sa vitesse à 0
-				 // dirPnj=0; // on le fait regarder de face
-				break;
-
-	 		case 0: 
-				joueur1.posY -= 1; // on enlève 1 à la position posY du joueur pour qu'il se décale verticalement par rapport au pnj
-				// pnj.v=0; //on arrête le déplacement du pnj en mettant sa vitesse à 0
-				 // dirPnj=0; // on le fait regarder de face
-				break;
-			case 3:
-				joueur1.posY += 1; // on ajoute 1 à la position posY du joueur pour qu'il se décale verticalementement par rapport au pnj
-				// pnj.v=0; //on arrête le déplacement du pnj en mettant sa vitesse à 0
-				 // dirPnj=0; // on le fait regarder de face
-				break;
-		}
-
-
-	}
 }

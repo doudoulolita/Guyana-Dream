@@ -1,7 +1,5 @@
 let tuilesInterdites = [4 , 11, 12, 15, 16]; // toutes les tuiles où on n'a pas le droit d'être sont répertoriées dans ce tableau
 
-let numTuileInterdite = 0; // numéro de la tuile interdite en fonction de sa place dans le tableau tuilesInterdites
-
 function bloque(posXTuile, posYTuile) {
 	// vérification de la position du personnage par rapport à la tuile interdite, changement de coordonnées suivant la direction pour qu'il ne reste pas bloqué
 
@@ -25,9 +23,9 @@ function bloque(posXTuile, posYTuile) {
 }
 
 function bloqueTuiles() { // fonction appelée dans le fichier deplacements.js
-	for (j=ligne; j<carte1.length; j++) {//On parcourt chaque ligne de la carte
-		for(i=colonne; i<carte1[j].length; i++) {//on parcourt chaque numéro de la ligne (soit les colonnes de la carte)
-			for (k=numTuileInterdite; k<tuilesInterdites.length; k++) {// on parcourt le tableau des tuiles interdites
+	for (j=0; j<carte1.length; j++) {//On parcourt chaque ligne de la carte
+		for(i=0; i<carte1[j].length; i++) {//on parcourt chaque numéro de la ligne (soit les colonnes de la carte)
+			for (k=0; k<tuilesInterdites.length; k++) {// on parcourt le tableau des tuiles interdites
 				if (carte1[j][i]== tuilesInterdites[k]) { bloque(tailleTuile*i, tailleTuile*j); }
 			} 
 		}

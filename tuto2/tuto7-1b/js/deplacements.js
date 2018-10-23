@@ -31,50 +31,24 @@ function deplacement(joueur, e, touche) { // fonction gérant le déplacement du
 
 }
 
-/*** fonction gérant le déplacement horizontal du PNJ (appelée dans le fichier animation.js) ***/
+/*** fonction gérant le déplacement du personnage ***/
 function deplacementPnj(pnj) {
 	pnj.posX2 += pnj.v; // le perso avance horizontalement selon la vitesse indiquée
-
 }
 
-/*** fonction où le personnage parcourt la distance depuis le point de départ et revient en arrière au niveau du point d'arrivée (appelée dans le fichier animation.js) ***/
-function changeSensPnj(pnjs) {
-	if (pnjs.posX2 < pnjs.departX) { // si le perso est à gauche du point de départ
-		pnjs.v = Math.abs(pnjs.v); // rend la vitesse positive
-
+/*** fonction où le personnage parcourt la distance depuis le point de départ et revient en arrière au niveau du point d'arrivée ***/
+function changeDirectionPnj(pnj) {
+	if (pnj.posX2 < pnj.departX) { // si le perso est à gauche du point de départ
+		pnj.v = Math.abs(pnj.v); // rend la vitesse positive
+		pnjDir=1; // le perso regarde vers la gauche
+		if(pnj==ennemi) {ennemiDir=1;}
 	}
 
-	if (pnjs.posX2 > pnjs.arriveeX - pnjs.largeur) { // si le perso dépasse le point d'arrivée
-		pnjs.v=-Math.abs(pnjs.v); // rend la vitesse négative
-
-	}
-}
-
-
-/*** fonction où le personnage se retourne quand il parvient au point d'arrivée ou au point de départ (appelée dans le fichier animation.js) ***/
-function changeDirectionPnj() {
-
-	if (ennemi.posX2 < ennemi.departX) {
-
-		ennemiDir=1; // le perso regarde vers la droite
-	}
-
-	if (pnj.posX2 < pnj.departX) {
-
-		pnjDir=1; // le perso regarde vers la droite
-	}
-
-
-	if (ennemi.posX2 > ennemi.arriveeX - ennemi.largeur) {
-
-		ennemiDir=2; // le perso regarde vers la droite
-	}
-
-	if (pnj.posX2 > pnj.arriveeX - pnj.largeur) {
-
+	if (pnj.posX2 > pnj.arriveeX - pnj.largeur) { // si le perso dépasse le point d'arrivée
+		pnj.v=-Math.abs(pnj.v); // rend la vitesse négative
 		pnjDir=2; // le perso regarde vers la droite
+		if(pnj==ennemi) {ennemiDir=2;}
 	}
-
-
 }
+
 

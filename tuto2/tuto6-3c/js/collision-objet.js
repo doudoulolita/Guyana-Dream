@@ -1,4 +1,4 @@
-let objets = [[3,1], [8,2], [7,3], [21, 4]]; // les numéros des tuiles qu'on peut récupérer dans l'inventaire et le nombre de points qu'elles donnent : [numéro, points] selon leur position dans le tableau
+let objets = [[3,1], [8,2], [7,3], [21, 4]]; // les numéros des tuiles qu'on peut récupérer dans l'inventaire et le nombre de points qu'elles donnent : [numéro, points]
 
 let numTuileNeutre=1; // une tuile sur laquelle il n'y a rien
 
@@ -27,9 +27,9 @@ function effaceObjet(i,j) {
 
 // fonction pour compter le nombre maximum de points qu'on peut avoir en récupérant tous les objets
 function comptePoints() {
-	for (let num=0; num<cartes.length; num ++) { // on parcourt le tableau des cartes
-		for (let j=0; j<cartes[num].length; j++) {//cartes[num] représente toute la carte
-			for(let i=0; i<cartes[num][j].length; i++) {//cartes[num][j] représente maintenant une ligne de la carte	
+	for (num=0; num<cartes.length; num ++) { // on parcourt le tableau des cartes
+		for (j=0; j<cartes[num].length; j++) {//cartes[num] représente toute la carte
+			for(i=0; i<cartes[num][j].length; i++) {//cartes[num][j] représente maintenant une ligne de la carte	
 				for (k=0; k<objets.length; k++) { // on parcourt le tableau des objets à attraper
 					if (cartes[num][j][i] == objets[k][0]) {nbPointsMax += objets[k][1];} // si le numéro de la tuile est le premier numéro du tableau, on augmente les points
 				}
@@ -40,8 +40,8 @@ function comptePoints() {
 
 // fonction effaçant l'objet quand le perso passe dessus et le plaçant dans l'inventaire avec ses points
 function deplaceTuiles() {
-	for (let j=0; j<cartes[numCarte-1].length; j++) {//cartes[numCarte-1] représente toute la carte
-		for(let i=0; i<cartes[numCarte-1][j].length; i++) {//cartes[numCarte-1][j] représente maintenant une ligne de la carte	
+	for (j=0; j<cartes[numCarte-1].length; j++) {//cartes[numCarte-1] représente toute la carte
+		for(i=0; i<cartes[numCarte-1][j].length; i++) {//cartes[numCarte-1][j] représente maintenant une ligne de la carte	
 			for (k=0; k<objets.length; k++) {
 				if (cartes[numCarte-1][j][i] == objets[k][0] && joueur.posX > (tailleTuile*i)-joueur.largeur && joueur.posX < (tailleTuile*i)+tailleTuile && joueur.posY > (tailleTuile*j)-joueur.hauteur && joueur.posY < (tailleTuile*j)+tailleTuile) {  //si la carte présente un n° de tuile compris dans le tableau d'objet et si ses coordonnées du joueur sont comprises dans les limites de cette tuile
 

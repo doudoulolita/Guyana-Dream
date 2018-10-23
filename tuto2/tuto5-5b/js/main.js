@@ -15,7 +15,6 @@ function init() {
 	ajouteTexte(titreInventaire, 14, largeurCanvas-(3*tailleTuile)+20,20);
 
 	ajouteTexte(nbPoints+ " points", 12, largeurCanvas-(2*tailleTuile), tailleTuile + 10);// indique le total d'objets récupérés en utilisant la fonction de texte.
-
 	compteTemps();
 
 	comptePoints();

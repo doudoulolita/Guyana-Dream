@@ -41,10 +41,6 @@ function dessineCarte() {
 	for (let j=ligne; j<carte.length; j++) {//On parcourt chaque ligne de la carte
 		for(let i=colonne; i<carte[j].length; i++) {//on parcourt chaque numéro de la ligne (soit les colonnes de la carte)
 			dessineTuiles(carte[j][i], tailleTuile*i, tailleTuile*j)// carte[j][i] représente le numéro de la tuile de la j ème ligne et de la i ème colonne qu'on positionne en ajoutant une largeur de tuile à chaque fois en abcisse et une largeur de tuile à chaque fois en ordonnée
-			for (k=numTuileInterdite; k<tuilesInterdites.length; k++) { // parcourt le tableau des tuiles interdites
-				if (carte[j][i]== tuilesInterdites[k]) { bloque(tailleTuile*i, tailleTuile*j); // si le numéro de la tuile est dans le tableau, on appelle la fonction de blocage
-				}
-			} 
 		}
 	}
 }

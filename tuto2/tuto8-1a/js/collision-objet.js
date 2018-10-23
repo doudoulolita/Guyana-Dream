@@ -1,7 +1,5 @@
 let objets = [[3,1], [8,2], [7,3], [21, 4]]; // les numéros des tuiles qu'on peut récupérer dans l'inventaire et le nombre de points qu'elles donnent : [numéro, points] selon leur position dans le tableau
 
-let numObjet = 0; // numéro de l'objet dans le tableau objets
-
 let numTuileNeutre=1; // une tuile sur laquelle il n'y a rien
 
 let nbPoints = 0; // le nombre de points augmentera quand on récupèrera des objets
@@ -30,9 +28,9 @@ function effaceObjet(i,j) {
 // fonction pour compter le nombre maximum de points qu'on peut avoir en récupérant tous les objets (appelée dans la fonction ecranJeu du fichier ecran.js)
 function comptePoints() {
 	for (num=0; num<cartes.length; num ++) { // on parcourt le tableau des cartes
-		for (j=ligne; j<cartes[num].length; j++) {//cartes[num] représente toute la carte
-			for(i=colonne; i<cartes[num][j].length; i++) {//cartes[num][j] représente maintenant une ligne de la carte	
-				for (k=numObjet; k<objets.length; k++) { // on parcourt le tableau des objets à attraper
+		for (j=0; j<cartes[num].length; j++) {//cartes[num] représente toute la carte
+			for(i=0; i<cartes[num][j].length; i++) {//cartes[num][j] représente maintenant une ligne de la carte	
+				for (k=0; k<objets.length; k++) { // on parcourt le tableau des objets à attraper
 					if (cartes[num][j][i] == objets[k][0]) {nbPointsMax += objets[k][1];} // si le numéro de la tuile est le premier numéro du tableau, on augmente les points
 				}
 			}
@@ -52,9 +50,9 @@ function dansInventaire() {
 
 // fonction effaçant l'objet quand le perso passe dessus et le plaçant dans l'inventaire avec ses points (appelée dans la fonction animePerso du fichier animation.js)
 function deplaceTuiles() {
-	for (j=ligne; j<cartes[numCarte-1].length; j++) {//cartes[numCarte-1] représente toute la carte
-		for(i=colonne; i<cartes[numCarte-1][j].length; i++) {//cartes[numCarte-1][j] représente maintenant une ligne de la carte	
-			for (k=numObjet; k<objets.length; k++) {
+	for (j=0; j<cartes[numCarte-1].length; j++) {//cartes[numCarte-1] représente toute la carte
+		for(i=0; i<cartes[numCarte-1][j].length; i++) {//cartes[numCarte-1][j] représente maintenant une ligne de la carte	
+			for (k=0; k<objets.length; k++) {
 				if (cartes[numCarte-1][j][i] == objets[k][0] && joueur.posX > (tailleTuile*i)-joueur.largeur && joueur.posX < (tailleTuile*i)+tailleTuile && joueur.posY > (tailleTuile*j)-joueur.hauteur && joueur.posY < (tailleTuile*j)+tailleTuile) {  //si la carte présente un n° de tuile compris dans le tableau d'objet et si ses coordonnées du joueur sont comprises dans les limites de cette tuile
 
 					effaceObjet(i,j); // appelle la fonction qui efface la tuile sur le canvas
@@ -100,7 +98,7 @@ function bulleQuete(i, j) {
 
 		bulleTexte(pnj.texteQueteOk, pnj.posX2, pnj.posY2); // bulle de dialogue avec un texte
 		
-		vx *= 1.05;	 // la vitesse augmente un peu quand on récupère cet objet
+		joueur.vx *= 1.05;	 // la vitesse augmente un peu quand on récupère cet objet
 	}
 }
 

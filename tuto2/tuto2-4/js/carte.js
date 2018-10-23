@@ -18,6 +18,3 @@ afficheTuile(0, 0, largeurTuile*4, hauteurTuile*2);
 afficheTuile(2*largeurTuile, 0, largeurTuile*1, hauteurTuile*4);
 
 afficheTuile(3*largeurTuile, 0, largeurTuile*3, hauteurTuile*5);
-
-
-

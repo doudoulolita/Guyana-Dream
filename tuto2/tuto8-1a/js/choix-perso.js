@@ -35,7 +35,7 @@ function clicCanvas(e){
 
 
 function clicJoueur(context) { // détermine si le clic de la souris est sur une des images de choix de joueur (appelée dans la fonction clicCanvas)
-	for (let i=numjoueur; i<joueurs.length; i++) { // parcourt le tableau des joueurs, en tenant compte de leur numéro (emplacement) dans le tableau
+	for (let i=0; i<joueurs.length; i++) { // parcourt le tableau des joueurs, en tenant compte de leur numéro (emplacement) dans le tableau
 		if(xSourisCanvas>tailleTuile*(cartes[0][0].length/2+i) && xSourisCanvas<tailleTuile*(cartes[0][0].length/2+i)+largeurJoueurMax && ySourisCanvas>tailleTuile*6.5 && ySourisCanvas<tailleTuile*7.5+hauteurJoueurMax) { // vérifie à quel endroit on a cliqué par rapport à l'image de choix du joueur
 			console.log(joueurs[i].name); // affiche le nom du joueur choisi dans la console web du navigateur
 			joueur.spritesheet=joueurs[i].spritesheet;

@@ -1,9 +1,11 @@
 let cheminTileset = ""; // chemin de l'image servant de tileset
-let tailleTuile = 32; // largeur de la tuile
+
 
 let tileset = new Image(); // crée une nouvelle image
 cheminTileset = "tilesets/tileset2.png"; // chemin de l'image servant de tileset
-tileset.src = cheminTileset;// donne le chemin de l'image dont la varaible est décalrée plus haut.
+tileset.src = cheminTileset;// donne le chemin de l'image dont la variable est déclarée plus haut.
+
+let tailleTuile = 32; // largeur de la tuile
 
 /* Tableau comprenant un autre tableau pour chaque ligne de la carte et donnant le numéro des tuiles à placer sur la carte */
 let carte1 = [

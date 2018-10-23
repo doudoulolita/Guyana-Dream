@@ -25,7 +25,7 @@ function bloque(posXTuile, posYTuile) {
 	}
 }
 
-function bloqueTuiles() {
+function bloqueTuiles() { // fonction appelée dans le fichier deplacements.js
 	for (j=ligne; j<carte1.length; j++) {//On parcourt chaque ligne de la carte
 		for(i=colonne; i<carte1[j].length; i++) {//on parcourt chaque numéro de la ligne (soit les colonnes de la carte)
 			for (k=numTuileInterdite; k<tuilesInterdites.length; k++) {// on parcourt le tableau des tuiles interdites

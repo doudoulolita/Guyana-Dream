@@ -1,7 +1,5 @@
 let objets = [3 ,8, 7]; // tableau des numéros de tuiles correspondant à des objets à attraper
 
-let numObjet = 0; // numéro de l'objet dans le tableau objets
-
 let numTuileNeutre=1; // La tuile neutre est le numéro 1 sur le tileset, elle remplacera l'objet quand le joueur passera dessus
 
 let nbPoints=0; // initialisation du nombre d'objets
@@ -30,9 +28,9 @@ function effaceObjet(i,j) {
 }
 
 function effaceTuiles() { // fonction appelée dans le fichier deplacements.js
-	for (j=ligne; j<carte1.length; j++) {//On parcourt chaque ligne de la carte
-		for(i=colonne; i<carte1[j].length; i++) {//on parcourt chaque numéro de la ligne (soit les colonnes de la carte)
-			for (k=numObjet; k<objets.length; k++) { // on parcourt le tableau des objets
+	for (j=0; j<carte1.length; j++) {//On parcourt chaque ligne de la carte
+		for(i=0; i<carte1[j].length; i++) {//on parcourt chaque numéro de la ligne (soit les colonnes de la carte)
+			for (k=0; k<objets.length; k++) { // on parcourt le tableau des objets
 				if (carte1[j][i] == objets[k] && x > (tailleTuile*i)-largeurPerso && x < (tailleTuile*i)+tailleTuile && y > (tailleTuile*j)-hauteurPerso && y < (tailleTuile*j)+tailleTuile) {  //si la carte présente un n° de tuile compris dans le tableau d'objet et si ses coordonnées du joueur sont comprises dans les limites de cette tuile
 
 					effaceObjet(i,j); // appelle la fonction qui efface la tuile sur le canvas
@@ -62,9 +60,9 @@ function effaceTuiles() { // fonction appelée dans le fichier deplacements.js
 
 // fonction pour compter le nombre maximum de points qu'on peut avoir en récupérant tous les objets 
 function comptePoints() {
-	for (j=ligne; j<carte1.length; j++) {//carte1 représente toute la carte
-		for(i=colonne; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
-			for (k=numObjet; k<objets.length; k++) { // on parcourt le tableau des objets à attraper
+	for (j=0; j<carte1.length; j++) {//carte1 représente toute la carte
+		for(i=0; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
+			for (k=0; k<objets.length; k++) { // on parcourt le tableau des objets à attraper
 				if (carte1[j][i] == objets[k]) {nbPointsMax += 1; pointsEnergie = nbPointsMax*2;} // si le numéro de la tuile est le premier numéro du tableau, on augmente les points
 			}
 		}

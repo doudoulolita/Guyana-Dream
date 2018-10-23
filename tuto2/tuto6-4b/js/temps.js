@@ -23,15 +23,15 @@ function compteTemps() {
 function gereEnergie() {
 	pointsEnergie = nbPointsMax + Math.floor(Math.random() * Math.floor(nbPointsMax/2)); // calcule l'énergie en fonction du nombre d'objets et ajoute un nombre aléatoire au résultat
 	ajouteTexte("Energie : " + pointsEnergie, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*10 + 20); // affiche l'énergie
-	ajouteTexte("Vitesse : " + Math.round(vx*20), 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*10 + 40); // affiche la vitesse
+	ajouteTexte("Vitesse : " + Math.round(joueur.vx*20), 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*10 + 40); // affiche la vitesse
 
 	setInterval(function() { // cette fonction est appelée régulièrement
 		context[4].clearRect(largeurCanvas-(2*tailleTuile)-20, tailleTuile*10, tailleTuile*2.5, tailleTuile*2); // efface le texte déjà affiché
 		ajouteTexte("Energie : " + pointsEnergie, 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*10 + 20); // affiche la nouvelle énergie
 
 		pointsEnergie -= 1; // on perd un point d'énergie au fil du temps
-		vx *= endurance; // on perd de la vitesse quand on perd de l'énergie	
-		ajouteTexte("Vitesse : " + Math.round(vx*20), 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*10 + 40); // affiche la nouvelle vitesse
+		joueur.vx *= endurance; // on perd de la vitesse quand on perd de l'énergie	
+		ajouteTexte("Vitesse : " + Math.round(joueur.vx*20), 12, largeurCanvas-(2*tailleTuile)-20 , tailleTuile*10 + 40); // affiche la nouvelle vitesse
 
 		gagne(); // appel la fonction qui vérifie si on gagne et affiche le bon message
 
@@ -44,7 +44,7 @@ function gagne() { // fonction si on gagne
 
 		ecranFinJeu();
 
-		joueur.posX= 0 ; joueur.posY= 0; dir=0; vx=0; // on place le joueur en haut à gauche, regardant de face
+		joueur.posX= 0 ; joueur.posY= 0; dir=0; joueur.vx=0; // on place le joueur en haut à gauche, regardant de face
 
 		pnj.posX2= 0 ; pnj.posY2= pnj.departY; dirPnj=1; pnj.v=0; // on place le pnj un peu plus bas à gauche, regardant de côté
 
@@ -75,7 +75,7 @@ function perd() { // fonction si on perd
 
 		ecranFinJeu();
 
-		joueur.posX= 0 ; joueur.posY= 0; dir=0; vx=0; // on place le joueur en haut à gauche, regardant de face
+		joueur.posX= 0 ; joueur.posY= 0; dir=0; joueur.vx=0; // on place le joueur en haut à gauche, regardant de face
 
 		pnj.posX2= 0 ; pnj.posY2= pnj.departY; dirPnj=1; pnj.v=0; // on place le pnj un peu plus bas à gauche, regardant de côté
 
@@ -109,7 +109,7 @@ function chrono() {
 		pointsEnergie -= 0; // stoppe le décompte de l'énergie (ne marche pas)
 		tempsJeu -= 0; // stoppe le décompte du temps (ne marche pas)
 
-		joueur.posX= 0 ; joueur.posY= 0; dir=0; vx=0; // on place le joueur en haut à gauche, regardant de face
+		joueur.posX= 0 ; joueur.posY= 0; dir=0; joueur.vx=0; // on place le joueur en haut à gauche, regardant de face
 
 		pnj.posX2= 0 ; pnj.posY2= pnj.departY; dirPnj=1; pnj.v=0; // on place le pnj un peu plus bas à gauche, regardant de côté
 

@@ -43,8 +43,8 @@ function dessineTuiles(num, posX, posY) {//en paramètre de la fonction : numér
 }
 
 function dessineCarte() {
-	for (let j=0; j<cartes[numCarte-1].length; j++) {//map représente toute la carte
-		for(let i=0; i<cartes[numCarte-1][j].length; i++) {//map[j] représente maintenant une ligne de la carte	
+	for (j=0; j<cartes[numCarte-1].length; j++) {//map représente toute la carte
+		for(i=0; i<cartes[numCarte-1][j].length; i++) {//map[j] représente maintenant une ligne de la carte	
 			dessineTuiles(cartes[numCarte-1][j][i], tailleTuile*i, tailleTuile*j)// carte[j][i] représente le numéro de la tuile de la j ème ligne et de la i ème colonne qu'on positionne en ajoutant une largeur de tuile à chaque fois en abcisse et une largeur de tuile à chaque fois en ordonnée
 		}
 	}

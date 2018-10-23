@@ -3,22 +3,22 @@ function deplacement(joueur, e, touche) { // fonction gérant le déplacement du
 	switch(touche) { // on va passer en revue les différentes possibilités de touche
 		case "37": // Dans le cas de la touche gauche
 			sens = 1; // donne le sens du personnage
-			vitesse = -vx; // vitesse négative pour aller à gauche
+			vitesse = -joueur.vx; // vitesse négative pour aller à gauche
 			direct = 2; // 3ème ligne de la spritesheet
 			break;
 		case "39": // touche droite
 			sens = -1;
-			vitesse = vx; // vitesse positive pour aller à droite
+			vitesse = joueur.vx; // vitesse positive pour aller à droite
 			direct = 1; // 2ème ligne de la spritesheet
 			break;
 		case "38": // touche haut
 			sens = 1;
-			vitesse = -vx; // vitesse négative pour aller en haut
+			vitesse = -joueur.vx; // vitesse négative pour aller en haut
 			direct = 3; // 4ème ligne de la spritesheet
 			break;
 		case "40": // touche bas
 			sens = -1;
-			vitesse = vx; // vitesse positive pour aller en bas
+			vitesse = joueur.vx; // vitesse positive pour aller en bas
 			direct = 0; // 1ère ligne de la spritesheet
 			break;
 	}

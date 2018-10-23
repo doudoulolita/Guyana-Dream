@@ -1,4 +1,5 @@
-/** Le texte **/
+/** Le texte 1 **/
+
 // on définit le texte à écrire
 let texte1 = "Réalise ta quête du code";
 
@@ -12,6 +13,8 @@ let couleurTexte = "#5b6634"; // couleur en code hexadécimal
 let placementTexteX = 10;
 let placementTexteY = 20;
 
+/** Le texte 2 **/
+
 // on définit le texte 2 et on choisit ses caractéristiques
 let texte2 = "Mon RPG perso";
 let tailleTexte2 = 16; // taille de police
@@ -20,21 +23,25 @@ let tailleTexte2 = 16; // taille de police
 let placementTexteX2 = 64;
 let placementTexteY2 = hauteurCanvas-tailleTexte2;
 
+
 /** le cadre **/
+
 // caractéristiques du cadre
 let couleurCadre = couleurTexte; // couleur du cadre
 let margeCadreX = 5; // marge horizontale
 let margeCadreY = 5; // marge verticale
 
 
-/*** fonction d'ajout de texte ***/
+/** Les fonctions **/
+
+// fonction d'ajout de texte
 function ajouteTexte(texte, tailleTexte, x, y) {
-	context.font = tailleTexte+"px "+fonte ;
+	context.font = tailleTexte+"px "+fonte;
 	context.fillStyle = couleurTexte;
 	context.fillText(texte,x,y);
 }
 
-/*** fonction dessinant le cadre autour du texte ***/
+// fonction dessinant le cadre autour du texte
 function cadreTexte(texte, tailleTexte, x, y) {
 	// Ces calculs devraient permettre de placer le cadre autour du texte 2 avec les marges définies
 	let placementCadreX = x-margeCadreX; // on tient compte de la marge pour placer le bord gauche du cadre
@@ -55,6 +62,3 @@ cadreTexte(texte1, tailleTexte, placementTexteX , placementTexteY);
 
 ajouteTexte(texte2, tailleTexte2, placementTexteX2 , placementTexteY2);
 cadreTexte(texte2, tailleTexte2, placementTexteX2 , placementTexteY2);
-
-
-
