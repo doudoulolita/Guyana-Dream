@@ -1,0 +1,39 @@
+/* récupération des canvas et des contexts */
+
+function recupCanvas() {
+	// récupére tous les canvas sur lesquels on va dessiner (appelée dans le fichier main.js)
+	canvas = document.querySelector('canvas');//canvas[0] contient le premier canvas et canvas[4] le cinquième
+
+	// Largeur et hauteur du canvas 1 (les canvas commencent à  0)
+	largeurCanvas = canvas.width;
+	hauteurCanvas = canvas.height;
+
+	// récupération des contexts qui permettent de dessiner sur les canvas
+
+	context = canvas.getContext('2d');//context contient le context du premier canvas et context[4] celui du cinquième
+
+}
+
+/***** fonction pour lancer les animations de joueur et des pnjs *****/
+
+let myReq; // variable pour la fonction requestAnimationFrame qui permet l'animation
+
+
+function animeTout() {
+	context.clearRect(0, 0, largeurCanvas, hauteurCanvas); // efface le canvas du joueur
+
+	animePerso(joueur, context);
+
+	 myReq = requestAnimationFrame(animeTout);//on rappelle la fonction qui sera exécutée plusieurs ( une trentaine ) de fois par seconde
+}
+
+
+/***** fonction pour afficher le jeu *****/
+function ecranJeu() {
+
+	myReq = requestAnimationFrame(animeTout); // lance l'animation du joueur
+
+	// Lorsqu'une touche est appuyée, lance la fonction qui fait bouger le personnage
+	document.onkeydown = persoBouge; // si on appuie sur une touche, appel de la fonction du fichier clavier.js
+
+}

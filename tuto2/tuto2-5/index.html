@@ -1,46 +1,55 @@
 <!DOCTYPE html>
-<html lang="fr">
-	<head>
-	<meta charset="utf-8">
-	<title>Mon RPG perso - dessin de la carte sur le canvas</title>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Mon RPG perso - Afficher ligne carte</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" /><!-- lien vers la feuille de style -->
-	</head>
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+    </head>
 
-	<body>
-	 
-		<h1>Mon RPG perso - dessin de la carte sur le canvas</h1>
-	 
-		<canvas width="192" height="192">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement du jeu -->
+    <body>
 
-		<br style="clear:both;" />
+	<h1>Mon RPG perso - Afficher une ligne de la carte</h1><!-- titre de niveau 1 -->
+
+ 			<!-- image du personnage à côté du canvas -->
+
+
+				<figure>
+
+
+				</figure>
+
+		<!-- Canvas sur lequel on dessine le jeu -->
+
+		<canvas width="192" height="192">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement de la carte du jeu --> 
+
+	<br style="clear:both;" />
             
 	<!-- lien vers les fichiers en javascript -->
-		<script type="text/javascript" src="js/jeu.js"></script>
-		<script type="text/javascript" src="js/carte.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/main.js" ></script> 
+	<script type="text/javascript" charset="UTF-8" src="js/jeu.js" ></script>
 
+	<script type="text/javascript" charset="UTF-8" src="js/carte.js" ></script>
 
-		<p>Affichage d'une carte d'une ligne sur un canvas de 192 * 192 px.</p>
-		<p>Les tuiles proviennent d'un tileset de 2 lignes de 4 tuiles.</p>
-		<p>Réactualisez la page si l'image ne se charge pas immédiatement</p>
+	<br style="clear:both;" />
 
-		<figure>
-			<img src="tileset-mini.png" style="border:dotted 1px grey" />
-			<figcaption>
-			Tileset : 2 ligne * 4 tuiles
-			</figcaption>	
-		</figure>
+	<h2>Explications du jeu</h2>
 
-		<p><strong>Tableau de la map :</strong>		
-	<pre>		
-	var carte = [ 1,  1,  1,  3,  1,  7];
-	</pre>	
+	<p>Récupération du canvas de 192 * 192px </p>
+	<p>Remplissage avec la couleur verte</p>
+	<p>Affichage d'une ligne d'une carte dont les numéros sont placés dans un tableau.</p>
 
-		</p>
+	<br style="clear:both;" />
+
+	<img src="tileset-mini.png" style="float:left; margin:20px;" />
+	
+	<br style="clear:both;" />
 
 	<p>Fichiers javascript :
 	<ul style="margin-bottom:30px;">
-
+		<li><a href="js/main.js">main.js</a></li>
 		<li><a href="js/jeu.js">jeu.js</a></li>
+
 		<li><a href="js/carte.js">carte.js</a></li>
 	</ul>
 	</p>
@@ -48,8 +57,7 @@
 	<footer style="clear:both;">
 		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
 		<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
-	</footer>	
- 
-	</body>
+	</footer>
+       
+    </body>
 </html>
-

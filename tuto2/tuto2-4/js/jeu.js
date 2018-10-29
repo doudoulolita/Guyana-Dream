@@ -1,15 +1,28 @@
-/* Récupération du canvas pour pouvoir dessiner dessus */
+/* récupération du canvas et du context */
 
-function recupCanvas() {
-	let canvas = document.querySelector('canvas'); //on récupère le canvas sur lequel on va dessiner
-	context = canvas.getContext('2d'); //on indique le contexte
+function recupCanvas() { //  fonction appelée dans le fichier main.js
+	// récupére le canvas sur lequel on va dessiner à partir de sa balise 
+	canvas = document.querySelector('canvas');
 
-	// Définit les dimensions du canvas
+	// Largeur et hauteur du canvas
 	largeurCanvas = canvas.width;
 	hauteurCanvas = canvas.height;
+
+	// récupération du context qui permet de dessiner sur le canvas
+	context = canvas.getContext('2d');
 }
 
-recupCanvas();
+/***** fonction pour afficher le jeu *****/
+function ecranJeu() {
 
+	couleurFond(couleurfondCarte, 0, 0, largeurCanvas, hauteurCanvas); // appel de la fonction qui colorie le fond dans jeu.js
 
+	dessineTuiles(1, 0, 0); // appel de la fonction de dessin de la carte (carte.js) sur le canvas
 
+	dessineTuiles(3, 0, tailleTuile*3); // appel de la fonction de dessin de la carte (carte.js) sur le canvas
+
+	dessineTuiles(3, tailleTuile*5, 0); // appel de la fonction de dessin de la carte (carte.js) sur le canvas
+
+	dessineTuiles(4, tailleTuile*3, tailleTuile*4); // appel de la fonction de dessin de la carte (carte.js) sur le canvas
+
+}

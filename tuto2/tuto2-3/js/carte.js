@@ -1,0 +1,11 @@
+var couleurfondCarte = "#5b6634"; // couleur de fond du jeu
+
+/* fonction pour la couleur du fond (appelée dans le fichier ecran.js) */
+function couleurFond(couleur, x, y, largeur, hauteur) { 
+	/* on remplit tout le canvas de couleur */
+	context.fillStyle= couleur; // choix de la couleur sous forme de varaible, décalrée plus haut
+	context.fillRect(x, y, largeur, hauteur); // 0,0 sont les coordonnées x,y du coin supérieur haut du rectangle à remplir, les autres chiffre sont la canvas et la hauteur
+	context.fill(); // on remplit !
+}
+
+let tailleTuile = 32; // largeur de la tuile

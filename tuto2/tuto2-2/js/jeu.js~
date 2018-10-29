@@ -1,0 +1,41 @@
+/* récupération du canvas et du context */
+
+function recupCanvas() {
+	// récupére tous les canvas sur lesquels on va dessiner (appelée dans le fichier main.js)
+	canvas = document.querySelector('canvas');// récupère le canvas par sa balise
+
+	// Largeur et hauteur du canvas
+	largeurCanvas = canvas.width;
+	hauteurCanvas = canvas.height;
+
+
+	context = canvas.getContext('2d');//context[0] contient le context du premier canvas et context[4] celui du cinquième
+
+}
+
+var couleurfondCarte = "#5b6634"; // couleur de fond du jeu
+
+/* fonction pour la couleur du fond (appelée dans le fichier ecran.js) */
+function couleurFond(couleur, x, y, largeur, hauteur) { 
+	/* on remplit tout le canvas de couleur */
+	context.fillStyle= couleur; // choix de la couleur sous forme de varaible, décalrée plus haut
+	context.fillRect(x, y, largeur, hauteur); // 0,0 sont les coordonnées x,y du coin supérieur haut du rectangle à remplir, les autres chiffre sont la canvas et la hauteur
+	context.fill(); // on remplit !
+}
+
+/** Création de la carte **/
+
+let tailleTuile = 32; // largeur de la tuile
+
+let tuile = new Image(); // crée une nouvelle image
+tuile.src = "cachette-fougeres-jaunes.png"; // chemin de l'image de décor
+
+let joueur = new Image(); // crée une nouvelle image
+joueur.src = "choix-joueur2.png"; // chemin de l'image du joueur
+
+/* Dessin d'une tuile (appelée dans la fonction dessineTuiles) */
+function dessineImage(image, posX, posY) {
+	context.drawImage(image, 0, 0, image.width, image.height, posX, posY, image.width, image.height);//on dessine la tuile à l'endroit voulu
+}
+
+

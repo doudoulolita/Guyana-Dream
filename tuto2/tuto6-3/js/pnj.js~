@@ -1,0 +1,127 @@
+/*** Création de l'image du pnj ***/
+let pnj = new Image(); // crée une nouvelle image
+
+/***** Initialisation des variables globales du personnage non joueur *****/
+let spriteSheetPnj="sprites/pnj1.png"; //chemin de l'image servant de spritesheet
+pnj.src = spriteSheetPnj; // donne le chemin de l'image servant de spritesheet
+
+pnj.name = "ara";
+
+/* largeur et hauteur du pnj */
+pnj.largeur = 48;
+pnj.hauteur = 32;
+
+/* position initiale du pnj */
+pnj.departX= 0;
+pnj.departY= 5* tailleTuile;
+
+/* on redonne la position du pnj maintenant que l'image est créée */
+pnj.posX2 = pnj.departX; 
+pnj.posY2 = pnj.departY;
+
+pnjDir = 1;
+
+/* vitesse du pnj */
+pnj.v = 0.5;
+
+/* initialisation, nombre et vitesse de changement de poses de la spritesheet */
+pnj.pose = 1; // la pose 0 (ou frame 0) n'est pas comptée car elle correspond à l'immobilité.
+pnj.nbPoses = 5; // nombre de poses sur la spritesheet, en largeur
+pnj.vPose =  0.15; //valeur permettant de passer à la pose suivante dans la spritesheet plus ou moins rapidement
+
+pnj.arriveeX= 4* tailleTuile;
+
+pnj.collision = 0;
+
+pnj.texte = "Trouve les fleurs !";
+pnj.texteQueteOk = "Tu as trouvé les fleurs !";
+pnj.texteGagne = "Bravo ! Super classe !";
+pnj.textePerd = "Dommage... Rejoue !";
+
+
+/*** fonction gérant le déplacement du pnj ***/
+function deplacementPnj(pnj) {
+	pnj.posX2 += pnj.v; // le perso avance horizontalement selon la vitesse indiquée
+}
+
+/*** fonction où le pnj parcourt la distance depuis le point de départ et revient en arrière au niveau du point d'arrivée ***/
+function changeDirectionPnj(pnj) {
+	if (pnj.posX2 < pnj.departX) { // si le perso est à gauche du point de départ
+		pnj.v = Math.abs(pnj.v); // rend la vitesse positive
+		pnjDir=1; // le perso regarde vers la gauche
+		if(pnj==ennemi) {ennemiDir=1;}
+	}
+
+	if (pnj.posX2 > pnj.arriveeX - pnj.largeur) { // si le perso dépasse le point d'arrivée
+		pnj.v=-Math.abs(pnj.v); // rend la vitesse négative
+		pnjDir=2; // le perso regarde vers la droite
+		if(pnj==ennemi) {ennemiDir=2;}
+	}
+}
+
+/***** fonction pour animer un PNJ (appelée par la fonction animePnjs) *****/
+function animePnj(pnjs, context, dir) {
+
+	dessinePerso(pnjs, context, pnjs.posX2, pnjs.posY2, pnjs.largeur, pnjs.hauteur, Math.floor(pnjs.pose), dir); // appel de la fonction qui dessine le PNJ, en transformant le chiffre de la pose en entier
+
+	changeDirectionPnj(pnjs); // appel de la fonction du fichier deplacement.js
+
+	deplacementPnj(pnjs); // appel de la fonction de déplacement du PNJ 
+
+	changePose(pnjs, pnjs.nbPoses, pnjs.vPose);// appel de la fonction qui passe d'une pose à l'autre
+
+	rencontre(pnjs, pnjs.texte); // appel de la fonction du fichier collision-pnj.js
+
+}
+
+/***** fonction pour animer les différents PNJs (appelée dans la fonction animeTout du fichier deplacements.js) *****/
+function animePnjs(context) {
+
+	animePnj(pnj, context, pnjDir);
+}
+
+/** collision avec un pnj **/
+let collision = 0; // avant toute collision avec le pnj
+
+
+function rencontre(pnj, textePnj) { // fonction gérant la collision avec un pnj 
+
+	if (joueur.posX + joueur.largeur > pnj.posX2 && joueur.posX - tailleTuile < pnj.posX2 && joueur.posY + joueur.hauteur > pnj.posY2 && joueur.posY - tailleTuile < pnj.posY2) {
+		console.log(pnj.name);
+
+		switch(dir) { // on va évaluer la direction du personnage joueur
+			case 1: 
+				joueur.posX -= 1; // on enlève 1 à la position posX du joueur pour qu'il se décale horizontalement par rapport au pnj
+				// pnj.v=0; // on arrête le déplacement du pnj en mettant sa vitesse à 0
+				// dirPnj=0; // on le fait regarder de face
+				break;
+			case 2:
+				joueur.posX += 1; // on ajoute 1 à la position posX du joueur pour qu'il se décale horizontalement par rapport au pnj
+				// pnj.v=0; //on arrête le déplacement du pnj en mettant sa vitesse à 0
+				 // dirPnj=0; // on le fait regarder de face
+				break;
+
+	 		case 0: 
+				joueur.posY -= 1; // on enlève 1 à la position posY du joueur pour qu'il se décale verticalement par rapport au pnj
+				// pnj.v=0; //on arrête le déplacement du pnj en mettant sa vitesse à 0
+				 // dirPnj=0; // on le fait regarder de face
+				break;
+			case 3:
+				joueur.posY += 1; // on ajoute 1 à la position posY du joueur pour qu'il se décale verticalementement par rapport au pnj
+				// pnj.v=0; //on arrête le déplacement du pnj en mettant sa vitesse à 0
+				 // dirPnj=0; // on le fait regarder de face
+				break;
+		}
+
+		if (pnj.collision == 0) {
+			bulleTexte(pnj.texte, pnj.posX2, pnj.posY2); // affiche une "bulle" de dialogue
+
+		}
+
+		pnj.collision += 1; // permettra de savoir ensuite qu'on a touché le pnj
+
+		console.log(pnj.collision+" - pnj !");
+
+	}
+}
+

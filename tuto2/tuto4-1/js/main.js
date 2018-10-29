@@ -1,14 +1,15 @@
+"use strict";
+
 // La fonction qui initialise le tout
 function init() {
 
-	recupCanvas(); // appel de la fonction pour récupérer le canvas
+	recupCanvas(); // appel de la fonction de récupération des canvas dans jeu.js
 
-	// Lorsqu'une touche est appuyée, lance la fonction PersoBouge()
-	animePerso();
-
-	// Lorsqu'une touche est appuyée, lance une fonction
-	document.onkeydown = persoBouge;
+	ecranJeu(); // appel de la fonction du fichier jeu.js
 }
 
-/***** lorsque l'image est chargée, la fonction animePerso() est appelée *****/
+/***** lorsque la fenêtre est chargée, la fonction init() est appelée *****/
 window.onload = function() { init() };
+
+
+

@@ -1,17 +1,20 @@
+let touche = "";
+
 function persoBouge(e) {
 
-	e.preventDefault(); // evite le scrolling lorsque l'on appuie sur les flèches haut et bas : Le comportement par défaut a été inhibé
- 	
-  	// Vérifier quelle touche est pressée
- 	if(e.keyCode == "37") { x -= vx; dir = 2;} // droite
+	e.preventDefault(); // evite le scrolling par défaut lorsque l'on appuie sur les flèches haut et bas
 
-  	if(e.keyCode == "38") { y -= vx; dir = 3;} // touche haut
+	//déplacements du personnage en fonction des touches
 
-  	if(e.keyCode == "39"){ x += vx; dir = 1;} // gauche	
-  	
-  	if(e.keyCode == "40") { y += vx; dir = 0;} // bas 
+	deplacement(e, "37"); // appel de la fonction de déplacement horizontal lors de l'appui sur la flèche gauche
 
-	changePose(); // appel de la fonction d'animation du personnage 
+	deplacement(e, "39"); // appel de la fonction de déplacement  horizontal lors de l'appui sur la flèche droite
+
+	deplacement(e, "38");  // appel de la fonction de déplacement  vertical lors de l'appui sur la flèche haut
+
+	deplacement(e, "40"); // appel de la fonction de déplacement  vertical lors de l'appui sur la flèche bas
+
+	changePose(); // appel de la fonction d'animation du personnage  
 }
 
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Mon RPG perso - Déplacer image</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" /><!-- lien vers la feuille de style -->
+	<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+    </head>
+
+    <body>
+
+	<h1>Mon RPG perso - Déplacer une image</h1><!-- titre de niveau 1 -->
+
+ 			<!-- image du personnage à côté du canvas -->
+
+
+				<figure>
+					<img src="pnj1-droite.png" />
+					<figcaption>
+						Image
+					</figcaption>
+
+				</figure>
+
+		<!-- Canvas sur lequel on dessine le jeu -->
+
+		<canvas width="192" height="192">Votre navigateur ne supporte pas HTML5!</canvas><!-- emplacement de la carte du jeu --> 
+
+	<br style="clear:both;" />
+            
+	<!-- lien vers les fichiers en javascript -->
+	<script type="text/javascript" charset="UTF-8" src="js/main.js" ></script> 
+	<script type="text/javascript" charset="UTF-8" src="js/jeu.js" ></script>
+
+        <script type="text/javascript" charset="UTF-8" src="js/persos.js" ></script>
+
+	<br style="clear:both;" />
+
+		<h2>Explications du jeu</h2>
+
+
+	<p>Déplacement et animation d'une image de 32 * 32 px.</p>
+	<p>Gestion du clavier pour déplacer l'image.</p>
+
+	<br style="clear:both;" />
+
+	<p>Fichiers javascript :
+	<ul style="margin-bottom:30px;">
+		<li><a href="js/main.js">main.js</a></li>
+		<li><a href="js/jeu.js">jeu.js</a></li>
+
+		<li><a href="js/persos.js">persos.js</a></li>
+	</ul>
+	</p>
+
+	<footer style="clear:both;">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+		<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
+	</footer>
+       
+    </body>
+</html>

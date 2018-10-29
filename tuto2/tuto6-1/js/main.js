@@ -1,36 +1,17 @@
+"use strict";
+
 // La fonction qui initialise le tout
 function init() {
 
-	couleurFond(couleurfondCarte, largeurCanvas, hauteurCanvas); // appel de la fonction qui colorie le fond
-	
-	cartes = [carte1, carte2];
+	cartes = [carte1]; // tableaux des cartes dans le fichier carte.js. Au début du jeu, c'est la carte 1
 
-	numCarte = 1;
+	recupCanvas(); // appel de la fonction de récupération des canvas dans jeu.js
 
-	comptePoints();
-
-	pointsEnergie = nbPointsMax + Math.floor(Math.random() * Math.floor(nbPointsMax/2));
-
-	dessineCarte(); // dessin de la carte
-
-
-	animePerso(joueur);
-
-	ajouteTexte(titreJeu, 20, 10 , hauteurCanvas-10);
-
-	ajouteTexte(titreInventaire, 14, largeurCanvas-(3*tailleTuile)+20,20);
-
-	ajouteTexte(nbPoints+ " points", 12, largeurCanvas-(2*tailleTuile), tailleTuile + 10);// indique le total d'objets récupérés en utilisant la fonction de texte.
-
-	// Lorsqu'une touche est appuyée, lance une fonction
-	document.onkeydown = persoBouge;
-
-	compteTemps();
-
-	gereEnergie();
-
-	chrono(); // on lance la fonction
+	ecranJeu(); // appel de la fonction du fichier jeu.js
 }
 
-/***** lorsque l'image est chargée, la fonction animePerso() est appelée *****/
+/***** lorsque la fenêtre est chargée, la fonction init() est appelée *****/
 window.onload = function() { init() };
+
+
+

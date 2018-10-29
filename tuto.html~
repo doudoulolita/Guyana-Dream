@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<link rel="stylesheet" type="text/css" href="css/style.css" />  
+		<meta charset="utf-8" />
+		<title>jeu Guyana Dream - tuto</title>
+	</head>
+	<body>
+
+		<header>
+			<h1>Guyana Dream</h1>
+
+			<h2 style="margin-top:40px;">Le but du jeu</h2>
+
+			<nav class="mainnav">
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="graphismes.html">Graphismes</a></li>
+					<li><a href="regles.html">Règles</a></li>
+					<li><a href="tuto.html">Tuto</a></li>
+					<li><a href="liens.html">Liens</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section>
+				<article>
+
+					<h3>Le tutoriel</h3>
+
+					<img src="tilesets/tileset-mini.png"  style="float:left; margin-right:20px;">
+
+					<p>Le jeu Guyana-Dream était à l'origine destiné à illustrer un tutoriel mais tout ne s'est pas passé comme prévu.</p>
+
+					<p>Sebcap26 avait écrit le  tutoriel <a href="http://fr.openclassrooms.com/informatique/cours/creer-un-mini-rpg-en-javascript-avec-canvas" target="_blank">Créer un mini-rpg en javascript avec canvas</a>. Les <a href="https://github.com/Seb-C/sources-tuto-rpg-openclassrooms" target="_blank">sources</a> sont disponibles sur Github.</p>
+
+					<p><a href="http://fr.openclassrooms.com/membres/jam-jam68140-74695" target="_blank">Jamjam68140</a> a eu l'idée de lancer le topic <a href="http://fr.openclassrooms.com/forum/sujet/big-tuto-creer-un-rpg-avec-html5" target="_blank">[big-tuto] Créer un rpg avec html5</a> pour le pousuivre mais il n'a pas eu le temps de terminer.</p>
+
+					<p>Doudoulolita a repris un peu des deux codes pour faire son jeu, et essaie de le structurer et de le simplifier en vue de bien comprendre et de pouvoir peut-être faire le tuto elle-même. De l'aide serait cependant bienvenue !</p>
+
+				</article>
+
+				<article>
+
+					<h3>La feuille de route</h3>
+
+					<h4>Révision totale du tuto</h4>
+
+			<p>La feuille de route affichée ici se basera sur des tutoriels trouvés sur internet, en essayant de simplifier le code au maximum pour le rendre plus compréhensible.</p>
+
+		<h3>Plan du tutoriel</h3>
+
+<p>Ce plan est susceptible de changer d'ici le rédaction complète du tutoriel.</p>
+
+<p>Le tuto est actuellement partagé dans le <a href="https://openclassrooms.com/courses/4644551?status=waiting-for-publication" target="_blank">courselab d'Openclassroom</a>, mais est en cours de rédaction. Tous les commentaires sont les bienvenus</p>
+
+		<h4>Partie 1 - La conception d'un mini-RPG</h4>
+		<ol>
+			<li><a href="https://openclassrooms.com/courses/4644551/4644558?status=waiting-for-publication" target="_blank">Les éléments de base d’un RPG.</a></li>
+			<li><a href="https://openclassrooms.com/courses/4644551/4644681?status=waiting-for-publication" target="_blank">Simplifier et trouver les graphismes</a></li>
+			<li><a href="https://openclassrooms.com/courses/4644551/4644701?status=waiting-for-publication" target="_blank">HTML5 et la balise canvas</a></li>
+			<li><a href="https://openclassrooms.com/courses/4644551/4785561?status=waiting-for-publication" target="_blank">Donner du style à la CSS</a> : Voir <a href="http://usf.tuxfamily.org/guyana-dream/tuto2/tuto1-4/index.html" target="_blank">essai 1-4</a></li>
+		</ol>
+
+		<h4>Partie 2 - Créer une carte du jeu</h4>
+		<ol>
+			<li><a href="https://openclassrooms.com/courses/4644551/4767521?status=waiting-for-publication">Mettre de la couleur dans le canvas</a> :  Voir <a href="tuto2/tuto2-1/index.html" target="_blank">essai 2-1</a></li>
+			<li><a href="https://openclassrooms.com/courses/4644551/4707471?status=waiting-for-publication" target="_blank">Afficher des images sur le canvas</a>  :  Voir <a href="tuto2/tuto2-2/index.html" target="_blank">essai 2-2</a></li>
+			<li><a href="https://openclassrooms.com/courses/4644551/4767401?status=waiting-for-publication" target="_blank">Ajouter du texte</a> :  Voir <a href="tuto2/tuto2-3/index.html" target="_blank">essai 2-3</a></li>
+			<li><a href="https://openclassrooms.com/courses/4644551/4767606?status=waiting-for-publication" target="_blank">Présentation du tileset</a> :  Voir <a href="tuto2/tuto2-4/index.html" target="_blank">essai 2-4</a></li>
+			<li><a href="https://openclassrooms.com/courses/4644551/4785541?status=waiting-for-publication" target="_blank">Afficher une ligne de la carte</a> :  Voir <a href="tuto2/tuto2-5/index.html" target="_blank">essai 2-5</a></li>
+			<li><a href="https://openclassrooms.com/courses/4644551/4785551?status=waiting-for-publication" target="_blank">Afficher la carte sur le canvas</a> : Voir <a href="tuto2/tuto2-6/index.html" target="_blank">essai 2-6</a></li>
+		</ol>
+
+		<h4>Partie 3 - Animer un personnage</h4>
+		<ol>
+			<li><a href="https://openclassrooms.com/courses/4644551/4769466?status=waiting-for-publication" target="_blank">Déplacer ume image</a> : Voir <a href="tuto2/tuto3-1/index.html" target="_blank">essai 3-1</a></li>
+			<li><a href="https://openclassrooms.com/courses/4644551/4785436?status=waiting-for-publication" target="_blank">Déplacer avec le clavier</a> :  Voir <a href="tuto2/tuto3-2/index.html" target="_blank">essai 3-2</a></li>
+			<li>Animer le sprite : Voir <a href="tuto2/tuto3-4/index.html" target="_blank">essai 3-4</a></li>
+		</ol>
+
+		<h4>Partie 4 - Gérer les Collision</h4>
+		<ol>
+
+			<li>Collision sur les bords. Voir <a href="tuto2/tuto4-1/index.html" target="_blank">essai 4-1</a>.</li>
+
+			<li>Ajouter un canvas. Voir <a href="tuto2/tuto4-2/index.html" target="_blank">essai 4-2</a></li>
+
+			<li>Collision avec une image. Voir <a href="tuto2/tuto4-3/index.html" target="_blank">essai 4-3</a>.</li>
+			</ul>
+			<li>Collision sur la carte. Voir <a href="tuto2/tuto4-4/index.html" target="_blank">essai 4-4</a></li>
+		</ol>
+
+		<h4>Partie 5 - Donner un but au jeu</h4>
+		<ol>
+
+			<li>Mettre des objets dans l'inventaire</li>
+			<ul>
+				<li>Supression d'un objet à attraper en cas de passage du personnage sur sa tuile. Voir <a href="tuto2/tuto5-1/index.html" target="_blank">essai 5-1</a></li>
+				<li>Placement de cet objet dans un inventaire. Voir <a href="tuto2/tuto5-2/index.html" target="_blank">essai 5-2</a></li>
+
+			</ul>
+
+			<li>Chronométrer le jeu et diminuer l'énergie et la vitesse au fil du temps. Voir <a href="tuto2/tuto5-3/index.html" target="_blank">essai 5-3</a></li>
+
+			<li>Comptabilisation du nombre d'objets attrapés et affichage du nombre, et de l'énergie perdue et gagnée par le personnage. Voir <a href="tuto2/tuto5-4/index.html" target="_blank">essai 5-4</a></li>
+
+			<li>Mettre un écran de fin et indiquer si on a gagné ou perdu. Voir <a href="tuto2/tuto5-5/index.html" target="_blank">essai 5-5</a></li>
+
+		</ol>
+
+		<h4>Partie 6 - Encore plus de fun !</h4>
+		<ol>
+
+
+			<li>Changer de carte : Voir <a href="tuto2/tuto6-1/index.html" target="_blank">essai 6-1</a></li>
+			<li>Rencontre avec un PNJ (personnage non joueur) qui indique la quête. Voir <a href="tuto2/tuto6-2/index.html" target="_blank">essai 6-2</a></li>
+
+			<li>Choisir parmi 3 personnages sur l'écran d'accueil. Voir <a href="tuto2/tuto6-3/index.html" target="_blank">essai 6-3</a></li>
+			<li>Ajouter un ennemi.</li>
+			<ul>
+				<li>Texte lors de la collision. Voir <a href="tuto2/tuto6-4/index.html" target="_blank">essai 6-4</a></li>
+				<li>Rond dégradé quand on apuie sur la touche A. Voir <a href="tuto2/tuto6-5/index.html" target="_blank">essai 6-5</a></li>
+			</ul>
+			<li>Permettre de rejouer en cliquant sur les PNJs sur l'écran de fin. Voir <a href="tuto2/tuto6-6/index.html" target="_blank">essai 6-6</a></li>
+
+		</ol>
+
+					<p>Certains décors et persos ont été modélisés avec <a href="http://www.blender.org/" target="_blank">Blender 2.74</a> (rendu toon via Freestyle) par <a href="http://opengameart.org/users/doudoulolita" target="_blank">Doudoulolita</a>:</p>
+					<ul>
+						<li class="dejafait"><a href="graphismes.html#paletuvier">palétuvier</a> (arbres à longues racines visibles)</li>
+						<li class="dejafait"><a href="graphismes.html#tucum">tucum</a>  (palmier)</li>
+						<li class="dejafait"><a href="graphismes.html#cacaoyer">cacaoyer-rivière </a> - fleurs non encore modélisées</li>
+						<li><span class="dejafait"><a href="graphismes.html#atele">atèle</a> (singe-araignée) avec armature</span> </li>
+						<li><span class="dejafait"><a href="graphismes.html#capucin">capucin</a> avec armature</span></li>
+						<li><span class="dejafait"><a href="graphismes.html#ara">ara</a> (perroquet) avec armature</span></li>
+					</ul>
+
+					<p>Pour aider à réaliser ce jeu et ce tutoriel, rendez-vous sur <a href="https://github.com/doudoulolita/Guyana-Dream" target="_blank">github</a> ou  sur le <a href="https://zestedesavoir.com/forums/sujet/9176/mini-rpg-guyanadream/" target="_blank">forum Zeste de Savoir</a>.</p>
+				</article>
+			</section>
+	
+			<footer>
+				<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+				<br />Cette œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</p>
+			</footer>
+		</main>
+	</body>
+</html>
