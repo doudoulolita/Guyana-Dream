@@ -20,7 +20,7 @@ let myReq; // variable pour la fonction requestAnimationFrame qui permet l'anima
 function animeTout() {
 	context.clearRect(0, 0, largeurCanvas, hauteurCanvas); // efface le canvas du image
 
-	animePerso(image, context);
+	dessinePerso(image, context, image.posX, image.posY, image.largeur, image.hauteur); // appel de la fonction qui dessine l'image, en transformant le chiffre de la pose en entier
 
 	 myReq = requestAnimationFrame(animeTout);//on rappelle la fonction qui sera exécutée plusieurs ( une trentaine ) de fois par seconde
 }
@@ -29,7 +29,7 @@ function animeTout() {
 /***** fonction pour afficher le jeu *****/
 function ecranJeu() {
 
-	myReq = requestAnimationFrame(animeTout); // lance l'animation du image
+	animeTout();
 
 	// Lorsqu'une touche est appuyée, lance la fonction qui fait bouger le personnage
 	document.onkeydown = persoBouge; // si on appuie sur une touche, appel de la fonction du fichier clavier.js

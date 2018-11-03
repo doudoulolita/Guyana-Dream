@@ -1,0 +1,25 @@
+class Jeu {
+	constructor(canvas, context, joueurs) {
+		this.canvas = canvas;
+		this.context = context;
+		this.joueurs = joueurs;
+	}
+
+	recupCanvas() {
+		this.canvas = document.querySelector(this.canvas); //on récupère le canvas sur lequel on va dessiner
+		this.context = this.canvas.getContext(this.context); //on indique le contexte
+	}
+
+	updateCanvas() {
+		// efface le canvas
+		this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+		for (let i=0; i<joueurs.length; i++) {
+			this.joueurs[i].deplacePerso(this.canvas, this.context);
+		}
+	
+		requestAnimationFrame(this.updateCanvas.bind(this));
+	}
+
+}
+

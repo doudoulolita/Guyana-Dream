@@ -83,10 +83,3 @@ function persoBouge(e) { // fonction qui sera appelée lors de l'évènement que
 	e.preventDefault(); // evite le scrolling par défaut lorsque l'on appuie sur les flèches haut et bas
 
 }
-
-
-/***** fonction pour animer le personnage image (appelée dans la fonction animeTout du fichier main.js) *****/
-function animePerso(image, context) {
-	dessinePerso(image, context, image.posX, image.posY, image.largeur, image.hauteur); // appel de la fonction qui dessine le image, en transformant le chiffre de la pose en entier
-}
-
