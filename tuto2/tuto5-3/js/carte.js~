@@ -111,7 +111,7 @@ function bloque(posXTuile, posYTuile) {
 }
 
 function bloqueTuiles() { // on va parcourir les cartes pour vérifier si on touche une tuile interdite (appelée dans la fonction animePerso du fichier animation.js)
-	for (j=0; j<cartes1.length; j++) {//carte1 représente toute la carte
+	for (j=0; j<carte1.length; j++) {//carte1 représente toute la carte
 		for(i=0; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
 			for (k=0; k<tuilesInterdites.length; k++) { // parcourt le tableau des tuiles interdites
 				if (carte1[j][i]== tuilesInterdites[k]) {bloque(tailleTuile*i, tailleTuile*j); } // si le numéro de la tuile est dans le tableau, on appelle la fonction de blocage

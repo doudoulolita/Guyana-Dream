@@ -10,7 +10,6 @@ function couleurFond(couleur, x, y, largeur, hauteur) {
 
 /** Création de la carte **/
 
-let cheminTileset = ""; // initialise le chemin de l'image servant de tileset
 let tailleTuile = 32; // largeur de la tuile
 
 let tileset = new Image(); // crée une nouvelle image

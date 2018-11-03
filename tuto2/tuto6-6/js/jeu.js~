@@ -150,6 +150,7 @@ function ecranJeu() {
 
 			initialiseCartes();
 
+
 			context[0].clearRect(0, 0, largeurCanvas, hauteurCanvas); // efface le premier canvas (avant d'afficher la carte)
 			context[4].clearRect(0, 0, largeurCanvas, hauteurCanvas); // efface le canvas des textes
 

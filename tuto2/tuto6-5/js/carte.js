@@ -42,21 +42,15 @@ let cartes = [carte1]; // initialise le tableau des cartes avec la carte1
 
 /*** Fonctions pour dessiner la carte ***/
 
-function calculTileset(num) { // calcule la postion de la tuile en fonction de son numéro sur le tileset (appelée dans la fonction dessineTuiles)
-	ligneTileset = Math.ceil(num/nbColonnesTileset);//indique sur quelle ligne du tileset se trouve la tuile à dessiner car Math.ceil donne l'entier le plus proche supérieur ou égal au chiffre donné par la division
-
-	colonneTileset = num - ((ligneTileset-1)*nbColonnesTileset);//indique sur quelle colonne du tileset se trouve cette tuile 
-}
-
-/* Dessin d'une tuile (appelée dans la fonction dessineTuiles) */
-function dessineUneTuile(num, posX, posY) {
-	context[0].drawImage(tileset, (colonneTileset-1)*tailleTuile, (ligneTileset-1)*tailleTuile, tailleTuile, tailleTuile, posX, posY, tailleTuile, tailleTuile);//on dessine la tuile à l'endroit voulu
-}
-
 /* Dessine les tuiles en fonction de leur numéro et de leur position après calcul (appelée dans la fonction dessineCarte) */
 function dessineTuiles(num, posX, posY) {//en paramètre de la fonction : numéro de la tuile à dessiner et  coordonnées où on va la dessiner
-	calculTileset(num); //appel de la fonction qui calcule où se trouve une tuile en fonction de son numéro
-	dessineUneTuile(num, posX, posY); // appel de la fonction qui dessine une tuile
+	let nbColonnesTileset = tileset.width/tailleTuile;//nombre de tuiles sur la largeur du tileset 
+
+	ligneTileset = Math.ceil(num/nbColonnesTileset);//indique sur quelle ligne du tileset se trouve la tuile à dessiner car Math.ceil donne l'entier le plus proche supérieur ou égal au chiffre donné par la division
+
+	colonneTileset = num - ((ligneTileset-1)*nbColonnesTileset);//indique sur quelle colonne du tileset se trouve cette tuile
+ 
+	context[0].drawImage(tileset, (colonneTileset-1)*tailleTuile, (ligneTileset-1)*tailleTuile, tailleTuile, tailleTuile, posX, posY, tailleTuile, tailleTuile);//on dessine la tuile à l'endroit voulu
 }
 
 /* fonction parcourant le tableau de la carte pour dessiner les tuiles (appelée dans la fonction changeCarte et dans le fichier ecran.js) */

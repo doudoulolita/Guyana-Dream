@@ -17,26 +17,48 @@ let tileset = new Image(); // crée une nouvelle image
 cheminTileset = "tilesets/tileset2.png"; // chemin de l'image servant de tileset
 tileset.src = cheminTileset;// donne le chemin de l'image dont la variable est déclarée plus haut.
 
-/* Tableau comprenant un autre tableau pour chaque ligne de la carte et donnant le numéro des tuiles à placer sur la carte */
-let carte1 = [
-		[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
-		[ 2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2, 14,  2,  2,  2,  2,  2,  2,  2,  2],
-		[ 1,  1,  1,  1,  1,  1,  1,  4,  4,  4,  4,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
-		[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  4,  1, 10,  1,  1,  1,  1,  11, 12, 1,  1],
-		[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  8,  4,  1, 10,  1,  1,  1,  1,  15, 16, 1,  1],
-		[ 2,  2,  2,  6,  1,  1,  1,  4,  4,  4,  1,  1, 10,  1,  1,  1,  1,  1,  1,  8,  1],
-		[ 1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
-		[ 1,  1,  1, 10,  1,  1,  1, 11, 12,  1,  1,  1, 13,  2,  2,  6,  1,  1,  1,  1,  1],
-		[ 1,  1,  1, 10,  1,  1,  1, 15, 16,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1],
-		[ 1,  1,  1, 10,  1,  1,  1,  1,  3,  1,  1,  1,  1,  7,  1, 10,  1,  1,  4,  1,  1],
-		[ 1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1],
-	];
+function initialiseCartes() {
+	/* Tableau comprenant un autre tableau pour chaque ligne de la carte et donnant le numéro des tuiles à placer sur la carte */
+	carte1 = [
+			[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
+			[ 2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2, 14,  2,  2,  2,  2,  2,  2,  2,  2],
+			[ 1,  1,  1,  1,  1,  1,  1,  4,  4,  4,  4,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
+			[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  4,  1, 10,  1,  1,  1,  1,  11, 12, 1,  1],
+			[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  8,  4,  1, 10,  1,  1,  1,  1,  15, 16, 1,  1],
+			[ 2,  2,  2,  6,  1,  1,  1,  4,  4,  4,  1,  1, 10,  1,  1,  1,  1,  1,  1,  8,  1],
+			[ 1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
+			[ 1,  1,  1, 10,  1,  1,  1, 11, 12,  1,  1,  1, 13,  2,  2,  6,  1,  1,  1,  1,  1],
+			[ 1,  1,  1, 10,  1,  1,  1, 15, 16,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1],
+			[ 1,  1,  1, 10,  1,  1,  1,  1,  3,  1,  1,  1,  1,  7,  1, 10,  1,  1,  4,  1,  1],
+			[ 1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1],
+		];
 
+	/* variables lorsqu'il y a plusieurs cartes */
+	numCarte = 1; // première carte au début du jeu
 
-/* variables lorsqu'il y a plusieurs cartes */
-let numCarte = 1; // première carte au début du jeu
+	cartes = [carte1]; // initialise le tableau des cartes avec la carte1
 
-let cartes = [carte1]; // initialise le tableau des cartes avec la carte1
+	/* Tableau comprenant un autre tableau pour chaque ligne de la carte et donnant le numéro des tuiles à placer sur la carte */
+	carte2 = [
+			[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
+			[ 2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2, 14,  2,  2,  2,  2,  2,  2,  2,  2],
+			[ 1,  3,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1, 21,  1],
+			[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  7,  1,  1, 10,  1,  1, 19, 20,  1,  1,  1,  1],
+			[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1, 23, 24,  1,  1,  1,  1],
+			[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
+			[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
+			[ 1,  1,  1,  1,  1,  1,  1, 19, 20,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
+			[ 1, 19, 20,  1,  1,  1,  1, 23, 24,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
+			[ 1, 23, 24,  1,  1,  1,  1,  1,  3,  1,  1,  1, 10,  1,  1,  1,  1,  8,  1,  1,  1],
+			[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1]
+		];
+
+		ajouteCarte(); // appel de la fonction qui ajoute la carte 2 au tableau des cartes
+}
+
+function ajouteCarte() { // ajoute la carte 2 au tableau des cartes
+	cartes.push(carte2);
+}
 
 /*** Fonctions pour dessiner la carte ***/
 
@@ -46,8 +68,7 @@ function dessineTuiles(num, posX, posY) {//en paramètre de la fonction : numér
 
 	ligneTileset = Math.ceil(num/nbColonnesTileset);//indique sur quelle ligne du tileset se trouve la tuile à dessiner car Math.ceil donne l'entier le plus proche supérieur ou égal au chiffre donné par la division
 
-	colonneTileset = num - ((ligneTileset-1)*nbColonnesTileset);//indique sur quelle colonne du tileset se trouve cette tuile
- 
+	colonneTileset = num - ((ligneTileset-1)*nbColonnesTileset);//indique sur quelle colonne du tileset se trouve cette tuile 
 	context[0].drawImage(tileset, (colonneTileset-1)*tailleTuile, (ligneTileset-1)*tailleTuile, tailleTuile, tailleTuile, posX, posY, tailleTuile, tailleTuile);//on dessine la tuile à l'endroit voulu
 }
 
@@ -60,30 +81,11 @@ function dessineCarte() {
 	}
 }
 
-/* Tableau comprenant un autre tableau pour chaque ligne de la carte et donnant le numéro des tuiles à placer sur la carte */
-let carte2 = [
-		[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1],
-		[ 2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2,  2, 14,  2,  2,  2,  2,  2,  2,  2,  2],
-		[ 1,  3,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1, 21,  1],
-		[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  7,  1,  1, 10,  1,  1, 19, 20,  1,  1,  1,  1],
-		[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1, 23, 24,  1,  1,  1,  1],
-		[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
-		[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
-		[ 1,  1,  1,  1,  1,  1,  1, 19, 20,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
-		[ 1, 19, 20,  1,  1,  1,  1, 23, 24,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1],
-		[ 1, 23, 24,  1,  1,  1,  1,  1,  3,  1,  1,  1, 10,  1,  1,  1,  1,  8,  1,  1,  1],
-		[ 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1]
-	];
-
-function ajouteCarte() { // ajoute la carte 2 au tableau des cartes - appelée dans le fichier ecrans.js
-	cartes.push(carte2);
-}
-
-/* fonction gérant le dessin d'une carte en fonction de son numéro dans le tableau des cartes (appelée dans collision-bords.js) */
+/* fonction gérant le dessin d'une carte en fonction de son numéro dans le tableau des cartes */
 function changeCarte(numCarte) {	
 		context[0].clearRect(0, 0, largeurCanvas - (tailleTuile*3), hauteurCanvas); // efface le premier canvas		
 		couleurFond(couleurfondCarte, 0, 0, largeurCanvas - (tailleTuile*3), hauteurCanvas); // on remplit le canvas de couleur sauf sur le côté
-		dessineCarte(numCarte); // dessine la carte en fonction de son numéro dans le tableau des cartes
+		dessineCarte(); // dessine la carte en fonction de son numéro dans le tableau des cartes
 		if (collision === 1) { // s'il y a eu collision avec le pnj
 			bulleTexte(textePnj, pnj.posX2, pnj.posY2); // affiche le texte dans sa bulle
 		}

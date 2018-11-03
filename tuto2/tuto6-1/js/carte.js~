@@ -92,9 +92,6 @@ function changeCarte(numCarte) {
 		context[0].clearRect(0, 0, largeurCanvas - (tailleTuile*3), hauteurCanvas); // efface le premier canvas		
 		couleurFond(couleurfondCarte, 0, 0, largeurCanvas - (tailleTuile*3), hauteurCanvas); // on remplit le canvas de couleur sauf sur le côté
 		dessineCarte(numCarte); // dessine la carte en fonction de son numéro dans le tableau des cartes
-		if (collision === 1) { // s'il y a eu collision avec le pnj
-			bulleTexte(textePnj, pnj.posX2, pnj.posY2); // affiche le texte dans sa bulle
-		}
 }
 
 /** Gestion des collisions avec des tuiles de la carte ***/

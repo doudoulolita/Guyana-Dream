@@ -1,16 +1,15 @@
 /* récupération du canvas et du context */
 
-function recupCanvas() {
-	// récupére tous les canvas sur lesquels on va dessiner (appelée dans le fichier main.js)
-	canvas = document.querySelector('canvas');// récupère le canvas par sa balise
+function recupCanvas() { //  fonction appelée dans le fichier main.js
+	// récupére le canvas sur lequel on va dessiner à partir de sa balise 
+	canvas = document.querySelector('canvas');
 
 	// Largeur et hauteur du canvas
 	largeurCanvas = canvas.width;
 	hauteurCanvas = canvas.height;
 
-
-	context = canvas.getContext('2d');//context[0] contient le context du premier canvas et context[4] celui du cinquième
-
+	// récupération du context qui permet de dessiner sur le canvas
+	context = canvas.getContext('2d');
 }
 
 var couleurfondCarte = "#5b6634"; // couleur de fond du jeu

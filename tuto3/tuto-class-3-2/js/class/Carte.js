@@ -24,8 +24,7 @@ class Carte {
 
 				let colonneTileset = this.map[j][i] - ((ligneTileset-1)*nbColonnesTileset);//indique sur quelle colonne du tileset se trouve cette tuile 
 
-				context.drawImage(this.decor, (colonneTileset-1)*this.tailleTuile, (ligneTileset-1)*this.tailleTuile, this.tailleTuile, this.tailleTuile, this.tailleTuile*i, this.tailleTuile*j, this.tailleTuile, this.tailleTuile);//on dessine la tuile à l'endroit voulu
-				
+				context.drawImage(this.decor, (colonneTileset-1)*this.tailleTuile, (ligneTileset-1)*this.tailleTuile, this.tailleTuile, this.tailleTuile, this.tailleTuile*i, this.tailleTuile*j, this.tailleTuile, this.tailleTuile);//on dessine la tuile à l'endroit voulu				
 			}
 		} 
 	}

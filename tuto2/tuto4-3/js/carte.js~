@@ -77,7 +77,7 @@ function bloqueBords() {
 	}
 }
 
-/* On donne les numéros des tuiles qui bloquent le joueur '(arbres, par ex) */
+/* On donne les numéros des tuiles qui bloquent le joueur (fougères et batons, par ex) */
 
 let tuilesInterdites = [4,7]; // toutes les tuiles où on n'a pas le droit d'être sont répertoriées dans ce tableau
 

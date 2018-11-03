@@ -36,5 +36,3 @@ joueur.src = "choix-joueur2.png"; // chemin de l'image du joueur
 function dessineImage(image, posX, posY) {
 	context.drawImage(image, 0, 0, image.width, image.height, posX, posY, image.width, image.height);//on dessine la tuile à l'endroit voulu
 }
-
-

@@ -16,7 +16,7 @@ class Carte {
 	}
 
 	afficheCarte(canvas, context) {
-				let nbColonnesTileset = this.decor.width/this.tailleTuile;//nombre de tuiles sur la largeur du tileset 
+		let nbColonnesTileset = this.decor.width/this.tailleTuile;//nombre de tuiles sur la largeur du tileset 
 
 		for (let j=0; j<this.map.length; j++) {//On parcourt chaque ligne de la carte
 			for(let i=0; i<this.map[j].length; i++) {//on parcourt chaque numéro de la ligne (soit les colonnes de la carte)

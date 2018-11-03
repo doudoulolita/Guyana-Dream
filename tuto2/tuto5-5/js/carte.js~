@@ -32,26 +32,17 @@ let carte1 = [
 		[ 1,  1,  1, 10,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 10,  1,  1,  1,  1,  1],
 	];
 
-let nbColonnesTileset = tileset.width/tailleTuile;//nombre de tuiles sur la largeur du tileset 
-let nbLignesTilesets = tileset.height/tailleTuile;//nombre de tuiles sur la hauteur du tileset
-
 /*** Fonctions pour dessiner la carte ***/
-
-function calculTileset(num) { // calcule la postion de la tuile en fonction de son numéro sur le tileset (appelée dans la fonction dessineTuiles)
-	ligneTileset = Math.ceil(num/nbColonnesTileset);//indique sur quelle ligne du tileset se trouve la tuile à dessiner car Math.ceil donne l'entier le plus proche supérieur ou égal au chiffre donné par la division
-
-	colonneTileset = num - ((ligneTileset-1)*nbColonnesTileset);//indique sur quelle colonne du tileset se trouve cette tuile 
-}
-
-/* Dessin d'une tuile (appelée dans la fonction dessineTuiles) */
-function dessineUneTuile(num, posX, posY) {
-	context[0].drawImage(tileset, (colonneTileset-1)*tailleTuile, (ligneTileset-1)*tailleTuile, tailleTuile, tailleTuile, posX, posY, tailleTuile, tailleTuile);//on dessine la tuile à l'endroit voulu
-}
 
 /* Dessine les tuiles en fonction de leur numéro et de leur position après calcul (appelée dans la fonction dessineCarte) */
 function dessineTuiles(num, posX, posY) {//en paramètre de la fonction : numéro de la tuile à dessiner et  coordonnées où on va la dessiner
-	calculTileset(num); //appel de la fonction qui calcule où se trouve une tuile en fonction de son numéro
-	dessineUneTuile(num, posX, posY); // appel de la fonction qui dessine une tuile
+	let nbColonnesTileset = tileset.width/tailleTuile;//nombre de tuiles sur la largeur du tileset 
+
+	ligneTileset = Math.ceil(num/nbColonnesTileset);//indique sur quelle ligne du tileset se trouve la tuile à dessiner car Math.ceil donne l'entier le plus proche supérieur ou égal au chiffre donné par la division
+
+	colonneTileset = num - ((ligneTileset-1)*nbColonnesTileset);//indique sur quelle colonne du tileset se trouve cette tuile
+ 
+	context[0].drawImage(tileset, (colonneTileset-1)*tailleTuile, (ligneTileset-1)*tailleTuile, tailleTuile, tailleTuile, posX, posY, tailleTuile, tailleTuile);//on dessine la tuile à l'endroit voulu
 }
 
 /* fonction parcourant le tableau de la carte pour dessiner les tuiles (appelée dans la fonction changeCarte et dans le fichier ecran.js) */
@@ -62,7 +53,6 @@ function dessineCarte() {
 		}
 	}
 }
-
 /** Gestion des collisions avec des tuiles de la carte ***/
 
 /* fonction gérant les changements de direction du personnage près des bords (appelée dans la fonction animePerso du fichier animation.js) */
@@ -111,7 +101,7 @@ function bloque(posXTuile, posYTuile) {
 }
 
 function bloqueTuiles() { // on va parcourir les cartes pour vérifier si on touche une tuile interdite (appelée dans la fonction animePerso du fichier animation.js)
-	for (j=0; j<cartes1.length; j++) {//carte1 représente toute la carte
+	for (j=0; j<carte1.length; j++) {//carte1 représente toute la carte
 		for(i=0; i<carte1[j].length; i++) {//carte1[j] représente maintenant une ligne de la carte	
 			for (k=0; k<tuilesInterdites.length; k++) { // parcourt le tableau des tuiles interdites
 				if (carte1[j][i]== tuilesInterdites[k]) {bloque(tailleTuile*i, tailleTuile*j); } // si le numéro de la tuile est dans le tableau, on appelle la fonction de blocage
